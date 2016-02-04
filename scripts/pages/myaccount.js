@@ -166,7 +166,7 @@
             }
             
             // Set length of page
-            me.model.attributes.items.length = x;
+            me.model.attributes.items.length = pageSize;
             
             // render page
             EditableView.prototype.render.call(me);
