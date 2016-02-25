@@ -1,0 +1,101 @@
+﻿#header1 {
+	.mz-header-search-toggle {
+		position: relative;
+		top: 50%;
+		z-index: 9999;
+		-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+		-ms-transform: translateY(-50%); /* IE 9 */
+		transform: translateY(-50%);
+		display: inline-block;
+		padding: 10px;
+		color: #fff;
+		text-decoration: none;
+		background-color: @header1-features-color;
+		border-radius: 50px;
+		cursor: pointer;
+		@media only screen and (max-width: 991px) {
+			padding-right: 12px;
+			padding-left: 12px;
+		}
+		&:hover {
+			background-color: @header1-features-hover-color;
+		}
+		i.icon {
+			display: inline-block;
+			font-size: 18px;
+			vertical-align: middle;
+		}
+	}
+	#searchbox {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+		-ms-transform: translateY(-50%); /* IE 9 */
+		transform: translateY(-50%);
+		right: ~"calc(100% + 10px)";
+		width: 450px;
+		padding: 10px;
+		background-color: #fff;
+		border: 1px solid @gray2;
+		border-radius: 8px;
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+		cursor: default;
+		> * {
+			float: left;
+			height: 37px;
+		}
+		.mz-searchbox-categories {
+			margin-bottom: 0;
+			width: 143px;
+		}
+		input {
+			height: 100%;
+			width: 200px;
+			margin-bottom: 0;
+		    border-right: 0;
+		    border-left: 0;
+	    	border-color: @gray2;
+		    &:focus {
+		    	border-color: @gray2;
+		    }
+		}
+		button {
+			min-width: 0;
+			width: 85px;
+		}
+	    .tt-dropdown-menu {
+	        box-sizing: border-box;
+	        border: 1px solid @gray2;
+	        border-width: 1px;
+	        width: 100%;
+	        background: white;
+		    .tt-suggestion {
+	            margin: 0;
+	            padding: 0.4em 1em;
+	            border-bottom: 1px solid #f4f4f4;
+	            &.tt-cursor {
+	                background: #f4f4f4;
+	            }
+	        }
+		    .tt-dataset-terms {
+		        p {
+		            margin: 0;
+		        }
+		    }
+		    .tt-dataset-pages {
+		        .tt-suggestion {
+		            display: table;
+		        }
+		        .mz-itemlisting {
+		            display: table-row;
+		        }
+		        .mz-itemlisting-thumb, .mz-itemlisting-details {
+		            float: none;
+		            display: table-cell;
+		            padding: 0.5em;
+		            vertical-align: top;
+		        }
+		    }
+	    }
+	}
+}

@@ -1,0 +1,77 @@
+﻿@header1-bg-color: 				@gray1;
+@header1-border-bottom-size: 	1px;
+@header1-border-bottom-color: 	@gray4;
+@header1-features-color: 		@gray3; /* Push menu icon & search/cart bg */
+@header1-features-hover-color: 	@primary;
+@header1-link-color: 			@gray3; /* Text links only */
+@header1-link-hover-color: 		@primary;
+@header1-height: 				100px;
+@header1-height-mobile: 		60px;
+
+#header1 {
+	background-color: @header1-bg-color;
+    border-bottom: @header1-border-bottom-size solid @header1-border-bottom-color;
+    @media only screen and (min-width: 992px) {
+		padding-bottom: 20px;
+    }
+    .header-content {
+    	height: @header1-height;
+    	@media only screen and (max-width: 767px) {
+    		height: @header1-height-mobile;
+    	}
+    	> div {
+    		height: 100%;
+    	}
+    	.push-menu-toggle-wrapper {
+    		.push-menu-toggle {
+	    		position: relative;
+	    		top: 50%;
+	    		-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	    		-ms-transform: translateY(-50%); /* IE 9 */
+	    		transform: translateY(-50%);
+	    		display: table;
+	    		cursor: pointer;
+	    	}
+    		i.icon {
+    			float: left;
+    			font-size: 34px;
+    			color: @header1-features-color;
+    			&:hover {
+    				color: @header1-features-hover-color;
+    			}
+    		}
+    	}
+    	.cart-search-wrapper {
+    		text-align: right;
+	    	.mz-header-link-cart {
+	    		position: relative;
+	    		top: 50%;
+	    		-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	    		-ms-transform: translateY(-50%); /* IE 9 */
+	    		transform: translateY(-50%);
+	    		display: inline-block;
+	    		padding: 10px;
+	    		color: #fff;
+	    		text-decoration: none;
+	    		background-color: @header1-features-color;
+	    		border-radius: 50px;
+	    		@media only screen and (min-width: 768px) {
+	    			margin-left: 10px;
+	    		}
+    			&:hover {
+    				background-color: @header1-features-hover-color;
+    			}
+	    		i.icon {
+	    			display: inline-block;
+	    			font-size: 18px;
+	    			vertical-align: middle;
+	    		}
+	    		.mz-cartmonitor {
+	    			display: inline-block;
+	    			margin-left: 5px;
+	    			vertical-align: middle;
+	    		}
+	    	}
+	    }
+    }
+}
