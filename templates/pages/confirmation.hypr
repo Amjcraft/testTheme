@@ -32,7 +32,7 @@
         </div>
         {% if model.hasDirectShip %}
         <div class="mz-l-stack-section">
-            <h4 class="mz-l-stack-sectiontitle">{{ labels.shippingInformation }}</h4>
+            <h4 class="mz-l-stack-sectiontitle">{{ labels.shipTo }}</h4>
             <dl class="mz-propertylist">
                 <dt>{{ labels.shipTo }}</dt>
                 <dd class="mz-addresssummary">{% include "modules/common/address-summary" with model=model.fulfillmentInfo.fulfillmentContact %}</dd>
