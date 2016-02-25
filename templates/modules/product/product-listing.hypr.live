@@ -6,7 +6,11 @@
             {% if model.mainImage.imageUrl %}
                 <img src="{% make_url "image" model.mainImage with max=themeSettings.listProductThumbSize as_parameter %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
             {% else %}
-                <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+                {% if siteContext.generalSettings.missingImageSubstitute %}
+                    <img src="{{siteContext.cdnPrefix}}/cms/files/{{ siteContext.generalSettings.missingImageSubstitute }}?max={{siteContext.themeSettings.listProductThumbSize }}"/>
+                {% else %}
+                    <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+                {% endif %}
             {% endif %}
         </a>
         {% endblock product-image %}
