@@ -48,6 +48,16 @@
                     "xtype": "mz-input-checkbox",
                     "name": "listProductShortDesc",
                     "fieldLabel": "Show product short description in product lists"
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "listProductThumbSize",
+                    "fieldLabel": "Product grid image max thumbnail size (px)"
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "maxProductImageThumbnailSize",
+                    "fieldLabel": "Product page alt image max thumbnail size (px)"
                 }
             ]
         },
@@ -71,27 +81,6 @@
                     "name": "suggestPriorSearchTerms",
                     "fieldLabel": "Show search terms others used on this site in search suggestions",
                     "enableIf": "useSearchAutocomplete"
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
-            "title": "Layout",
-            "collapsed": false,
-            "items": [
-                {
-                    "xtype": "mz-input-dropdown",
-                    "name": "gutterWidth",
-                    "fieldLabel": "Base Margin Width",
-                    "allowBlank": false,
-                    "forceSelection": true,
-                    "store": [
-                        "15px",
-                        "20px",
-                        "25px",
-                        "30px",
-                        "35px"
-                    ]
                 }
             ]
         },
@@ -131,55 +120,6 @@
         },
         {
             "xtype": "panel",
-            "title": "Text",
-            "collapsed": false,
-            "items": [
-                {
-                    "xtype": "mz-input-selectmulti",
-                    "name": "loadGoogleFonts",
-                    "fieldLabel": "Load Google Fonts",
-                    "allowBlank": false,
-                    "forceSelection": true,
-                    "store": [
-                        "Source Sans Pro",
-                        "Open Sans",
-                        "Raleway",
-                        "Lora",
-                        "Rokkitt"
-                    ]
-                },
-                {
-                    "xtype": "mz-input-dropdown",
-                    "name": "primaryFont",
-                    "fieldLabel": "Primary Font",
-                    "allowBlank": false,
-                    "storeFrom": "loadGoogleFonts",
-                    "forceSelection": true
-                },
-                {
-                    "xtype": "mz-input-dropdown",
-                    "name": "fontSize",
-                    "fieldLabel": "Font Size",
-                    "allowBlank": false,
-                    "editable": false,
-                    "forceSelection": true,
-                    "store": [
-                        "12px",
-                        "14px",
-                        "16px",
-                        "18px",
-                        "20px"
-                    ]
-                },
-                {
-                    "xtype": "mz-input-color",
-                    "name": "textColor",
-                    "fieldLabel": "Text Color"
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
             "title": "Paging",
             "collapsed": false,
             "items": [
@@ -191,11 +131,11 @@
                     "allowBlank": false,
                     "forceSelection": true,
                     "store": [
-                        15,
-                        25,
-                        50,
-                        100,
-                        500
+                      12,
+                      24,
+                      48,
+                      96,
+                      300
                     ]
                 },
                 {
@@ -217,16 +157,38 @@
         },
         {
             "xtype": "panel",
+            "title": "Logo",
+            "collapsed": false,
+            "items": [
+                {
+                    "fieldLabel": "Upload your company logo. To update, delete and re-upload.",
+                    "xtype": "mz-input-image",
+                    "name": "themeLogo",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 1
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
             "title": "Navigation",
             "collapsed": false,
             "items": [
                 {
-                    "fieldLabel": "Maximum Items In Main Nav",
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Top Nav</h3><hr>"
+                    }
+                },
+                {
+                    "fieldLabel": "Maximum Items In Top Nav",
                     "xtype": "mz-input-number",
                     "name": "maxTopLevelNavItems",
                     "hideTrigger": false,
                     "allowDecimal": false,
-                    "minValue": 1
+                    "minValue": 1,
+                    "allowBlank": true
                 },
                 {
                     "fieldLabel": "Maximum Nav Item Label Length",
@@ -236,6 +198,450 @@
                     "allowDecimal": false,
                     "minValue": 4,
                     "allowBlank": false
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "alphaSubcats",
+                    "fieldLabel": "Alphabetize subcategories (Top level nav categories must be manually arranged.)"
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Mega Menu</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "enableMegaMenu",
+                    "fieldLabel": "Enable Mega Menu"
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "mm-column-gap-size",
+                    "fieldLabel": "Gap size between columns",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "0px",
+                        "5px",
+                        "10px",
+                        "15px",
+                        "20px",
+                        "25px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "mm-column-divider-width",
+                    "fieldLabel": "Divider size between columns",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "0px",
+                        "1px",
+                        "2px",
+                        "3px",
+                        "4px",
+                        "5px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "mm-column-divider-color",
+                    "fieldLabel": "Divider Color"
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "mm-1-col-end",
+                    "fieldLabel": "2 columns start at how many links?",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 8,
+                    "allowBlank": false
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "mm-2-cols-end",
+                    "fieldLabel": "3 columns start at how many links?",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 12,
+                    "allowBlank": false
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "mm-3-cols-end",
+                    "fieldLabel": "4 columns start at how many links?",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 16,
+                    "allowBlank": false
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Social Media",
+            "collapsed": false,
+            "items": [
+                {
+                    "fieldLabel": "Blogger Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialBloggerUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Facebook Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialFacebookUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Google Plus Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialGooglePlusUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Instagram Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialInstagramUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "LinkedIn Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialLinkedinUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Pinterest Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialPinterestUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Tumblr Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialTumblrUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Twitter Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialTwitterUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Vimeo Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialVimeoUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "YouTube Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialYouTubeUrl",
+                    "allowBlank": true
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Theme Styleguide",
+            "collapsed": false,
+            "items": [
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Theme Colors</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor1",
+                    "fieldLabel": "Theme Primary Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor2",
+                    "fieldLabel": "Theme Secondary Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor3",
+                    "fieldLabel": "Theme Color 3"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor4",
+                    "fieldLabel": "Theme Color 4"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor5",
+                    "fieldLabel": "Theme Color 5"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray1",
+                    "fieldLabel": "Gray 1"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray2",
+                    "fieldLabel": "Gray 2"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray3",
+                    "fieldLabel": "Gray 3"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray4",
+                    "fieldLabel": "Gray 4"
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Notification Colors</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "customInputColor",
+                    "fieldLabel": "Custom Checkbox/Radio Buttons Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "successNotificationColor",
+                    "fieldLabel": "Success Notification Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "warningNotificationColor",
+                    "fieldLabel": "Warning Notification Color"
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Font Details</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-selectmulti",
+                    "name": "loadGoogleFonts",
+                    "fieldLabel": "Load Google Fonts",
+                    "allowBlank": false,
+                    "forceSelection": true,
+                    "store": [
+                        "Droid Serif",
+                        "Lato",
+                        "Merriweather",
+                        "Montserrat",
+                        "Open Sans",
+                        "PT Sans",
+                        "PT Serif",
+                        "Roboto",
+                        "Source Sans Pro"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "primaryFont",
+                    "fieldLabel": "Primary Font",
+                    "allowBlank": false,
+                    "storeFrom": "loadGoogleFonts",
+                    "forceSelection": true
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "secondaryFont",
+                    "fieldLabel": "Secondary Font",
+                    "allowBlank": false,
+                    "storeFrom": "loadGoogleFonts",
+                    "forceSelection": true
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSize",
+                    "fieldLabel": "Desktop Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeMobile",
+                    "fieldLabel": "Mobile/Tablet Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "textColor",
+                    "fieldLabel": "Text Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "hyperlinkColor",
+                    "fieldLabel": "Hyperlink Color"
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH1",
+                    "fieldLabel": "H1 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH2",
+                    "fieldLabel": "H2 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH3",
+                    "fieldLabel": "H3 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH4",
+                    "fieldLabel": "H4 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH5",
+                    "fieldLabel": "H5 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH6",
+                    "fieldLabel": "H6 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
                 }
             ]
         }

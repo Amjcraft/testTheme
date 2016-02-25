@@ -4,8 +4,8 @@
     "defaultLanguage": "en-US",
     "extends": null,
     "isDesktop": true,
-    "isMobile": false,
-    "isTablet": false,
+    "isMobile": true,
+    "isTablet": true,
     "name": "boilerplate",
     "allowProduction": true,
     "baseTheme": "https://github.com/mozu/core-theme.git",
@@ -354,9 +354,72 @@
       "template": "forgot-password",
       "title": "Forgot Password",
       "userCreatable": false
+    },
+    {
+      "documentType": "web_page",
+      "entityType": "webpage",
+      "id": "Style-Guide",
+      "template": "styleguide",
+      "title": "Style Guide",
+      "userCreatable": true
     }
   ],
   "settings": {
+    "themeLogo": "",
+
+    "maxTopLevelNavItems": 8,
+    "maxTopLevelNavLabelLength": 20,
+    "alphaSubcats": "true",
+    "enableMegaMenu": "false",
+    "mm-column-gap-size": "20px",
+    "mm-column-divider-width": "1px",
+    "mm-column-divider-color": "#DDDDDD",
+    "mm-1-col-end": "10",
+    "mm-2-cols-end": "20",
+    "mm-3-cols-end": "30",
+
+    "socialBloggerUrl": "",
+    "socialFacebookUrl": "",
+    "socialGooglePlusUrl": "",
+    "socialInstagramUrl": "",
+    "socialLinkedinUrl": "",
+    "socialPinterestUrl": "",
+    "socialTumblrUrl": "",
+    "socialTwitterUrl": "",
+    "socialVimeoUrl": "",
+    "socialYouTubeUrl": "",
+
+    "themeColor1": "#557CE7",
+    "themeColor2": "#4BAF2E",
+    "themeColor3": "#CF5757",
+    "themeColor4": "#ED9112",
+    "themeColor5": "#9C3883",
+    "themeGray1": "#ECECEC",
+    "themeGray2": "#DDDDDD",
+    "themeGray3": "#666666",
+    "themeGray4": "#2E2E2E",
+    "hyperlinkColor": "#4B71E3",
+    "customInputColor": "#4B71E3",
+    "successNotificationColor": "#42A629",
+    "warningNotificationColor": "#C51A02",
+
+    "loadGoogleFonts": [
+      "Source Sans Pro",
+      "Roboto"
+    ],
+    "primaryFont": "Roboto",
+    "secondaryFont": "Source Sans Pro",
+    "fontSize": "14px",
+    "fontSizeMobile": "16px",
+    "textColor": "#2e2e2e",
+    "fontSizeH1": "30px",
+    "fontSizeH2": "24px",
+    "fontSizeH3": "24px",
+    "fontSizeH4": "20px",
+    "fontSizeH5": "20px",
+    "fontSizeH6": "16px",
+
+
     "backofficeDateTimeFormat": "m/d/Y H:i:s O",
     "extendedPropertiesEnabled": false,
     "extendedPropertyParameters": "",
@@ -383,30 +446,24 @@
         "tagName": "p"
       }
     ],
-    "defaultPageSize": 15,
     "defaultSort": "createDate asc",
     "enablePartialCaching": true,
-    "loadGoogleFonts": [
-      "Source Sans Pro"
-    ],
-    "primaryFont": "Source Sans Pro",
-    "fontSize": "14px",
     "gutterWidth": "25px",
     "internal-themeAddons": [],
     "itemListingThumbSize": 80,
     "listProductCode": true,
     "listProductShortDesc": true,
-    "listProductThumbSize": 160,
+    "listProductThumbSize": 200,
     "maxProductImageThumbnailSize": 50,
     "maxProductSummaryWords": 40,
-    "maxTopLevelNavItems": 8,
-    "maxTopLevelNavLabelLength": 20,
     "pageSizeOptions": [
-      15,
-      25,
-      50,
-      100
+      12,
+      24,
+      48,
+      96,
+      300
     ],
+    "defaultPageSize": 24,
     "preselectCountryCode": "US",
     "productImagesContainerWidth": 350,
     "requireCheckoutAgreeToTerms": true,
@@ -427,7 +484,6 @@
     "showProductDetailProperties": true,
     "showProductDetailShortDesc": true,
     "showProductDetailUPC": true,
-    "textColor": "#444444",
     "usStates": [
       {
         "abbreviation": "AL",
