@@ -64,18 +64,17 @@
                 <option {% if model.expireMonth == "12" %}selected="selected"{% endif %} value="12">12 - {{ labels.december }}</option>
             </select>
             <select class="mz-l-formfieldgroup-halfsize" name="mz-payment-expiration-year" data-mz-value="{{ cardcontext }}expireYear">
-                <option></option>
-                <option {% if model.expireYear == "2014" %}selected="selected"{% endif %} value="2014">2014</option>
-                <option {% if model.expireYear == "2015" %}selected="selected"{% endif %} value="2015">2015</option>
-                <option {% if model.expireYear == "2016" %}selected="selected"{% endif %} value="2016">2016</option>
-                <option {% if model.expireYear == "2017" %}selected="selected"{% endif %} value="2017">2017</option>
-                <option {% if model.expireYear == "2018" %}selected="selected"{% endif %} value="2018">2018</option>
-                <option {% if model.expireYear == "2019" %}selected="selected"{% endif %} value="2019">2019</option>
-                <option {% if model.expireYear == "2020" %}selected="selected"{% endif %} value="2020">2020</option>
-                <option {% if model.expireYear == "2021" %}selected="selected"{% endif %} value="2021">2021</option>
-                <option {% if model.expireYear == "2022" %}selected="selected"{% endif %} value="2022">2022</option>
-                <option {% if model.expireYear == "2023" %}selected="selected"{% endif %} value="2023">2023</option>
-                <option {% if model.expireYear == "2024" %}selected="selected"{% endif %} value="2024">2024</option>
+                <option></option>                
+                <option {% if model.expireYear == "{{ now|date('Y') }}" %}selected="selected"{% endif %} value="{{ now|date('Y') }}">{{ now|date('Y') }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(1) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(1) }}">{{ now|date('Y')|add(1) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(2) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(2) }}">{{ now|date('Y')|add(2) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(3) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(3) }}">{{ now|date('Y')|add(3) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(4) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(4) }}">{{ now|date('Y')|add(4) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(5) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(5) }}">{{ now|date('Y')|add(5) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(6) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(6) }}">{{ now|date('Y')|add(6) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(7) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(7) }}">{{ now|date('Y')|add(7) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(8) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(8) }}">{{ now|date('Y')|add(8) }}</option>
+                <option {% if model.expireYear == "{{ now|date('Y')|add(9) }}" %}selected="selected"{% endif %} value="{{ now|date('Y')|add(9) }}">{{ now|date('Y')|add(9) }}</option>
             </select>
             <span class="mz-validationmessage" data-mz-validationmessage-for="{{ cardcontext }}expireYear"></span>
         </div>
