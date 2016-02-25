@@ -26,14 +26,15 @@
 {% endcomment %}
 
 {% if model.facets %}
-<div data-mz-facets class="mz-l-sidebar">
-	{% dropzone "sidebar-above-facets" scope="template" %}
-    {% include "modules/product/faceting-form" %}
-	{% dropzone "sidebar-below-facets" scope="template" %}
-</div>
+    <div data-mz-facets class="mz-l-sidebar col-xs-12 col-sm-3 col-lg-2">
+    	{% dropzone "sidebar-above-facets" scope="template" %}
+        {% include "modules/product/faceting-form" %}
+    	{% dropzone "sidebar-below-facets" scope="template" %}
+    </div>
+    <div class="mz-l-paginatedlist col-xs-12 col-sm-9 col-lg-10">
+{% else %}
+    <div class="mz-l-paginatedlist col-xs-12">
 {% endif %}
-
-<div class="mz-l-paginatedlist">
     <div class="mz-l-paginatedlist-header">
         <div data-mz-pagesort class="mz-sortby">
             {% include "modules/common/page-sort" %}
