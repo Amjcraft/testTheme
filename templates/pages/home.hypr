@@ -8,5 +8,8 @@
     {% dropzone "home" scope="template" %}
 {% endblock body-content %}
 
+{% block breadcrumbs %}
+{% endblock breadcrumbs %}
+
 {% block body-below-content %}
 {% endblock body-below-content %}
