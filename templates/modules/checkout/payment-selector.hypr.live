@@ -88,6 +88,11 @@
                                     src="{{pageContext.visaCheckoutButtonUrl}}?size=154&amp;color=neutral"/>
                                 </div>
                             {% endif %}
+                            {% if name == "paypalexpress2"%}
+                                <div class="mz-digitalwallets">
+                                    <button>Checkout with PayPal</button>
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
                 {% endwith %}
