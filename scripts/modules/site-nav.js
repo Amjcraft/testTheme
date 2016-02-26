@@ -1,5 +1,24 @@
 require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr) {
-	// $(document).ready(function() {
+	$(document).ready(function() {
+		/* Controls subnav close when clicking elsewhere on tablets in landscape */
+		$('html').click(function() {
+			if ($('.mz-sitenav .mz-sitenav-sub').hasClass('show') || $('.mz-sitenav .mz-sitenav-sub-sub').hasClass('show')) {
+				$('.mz-sitenav .mz-sitenav-sub').removeClass('show');
+				$('.mz-sitenav .mz-sitenav-sub-sub').removeClass('show');
+			}
+		});
+		/* Controls subnav open toggles on tablets in landscape */
+		$('.mz-sitenav .mz-sitenav-list .mz-sitenav-sub-toggle').click(function(){
+			$(this).siblings('.mz-sitenav-sub-toggle').children('.mz-sitenav-sub').removeClass('show').find('.mz-sitenav-sub-sub').removeClass('show');
+			$(this).children('.mz-sitenav-sub').toggleClass('show');
+			event.stopPropagation();
+		});
+		/* Controls sub-subnav open toggles on tablets in landscape */
+		$('.mz-sitenav .mz-sitenav-sub .mz-sitenav-sub-sub-toggle').click(function(){
+			$(this).siblings('.mz-sitenav-sub-sub-toggle').children('.mz-sitenav-sub-sub').removeClass('show');
+			$(this).children('.mz-sitenav-sub-sub').toggleClass('show');
+			event.stopPropagation();
+		});
 
 		/* Adds class to second half of top nav mega menu links */
 		var numTopNavLinks = $('#mega-menu .mz-sitenav-list').children('.mz-sitenav-item').length;
@@ -26,5 +45,5 @@ require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr)
 				$(this).parent('.mz-sitenav-item').addClass('mm-1-col');
 			}
 		});
-	// });
+	});
 });

@@ -43,7 +43,7 @@
                     background-color: @nav-link-hover-bg-color;
                     border-color: @nav-link-hover-border-color;
                 }
-                > .mz-sitenav-sub {
+                &:not(.mz-sitenav-sub-toggle) > .mz-sitenav-sub {
                     display: block;
                 }
             }
@@ -82,10 +82,8 @@
                             color: @subnav-link-hover-color;
                             background-color: @subnav-link-hover-bg-color;
                         }
-                        > .mz-sitenav-sub-sub {
+                        &:not(.mz-sitenav-sub-sub-toggle) > .mz-sitenav-sub-sub {
                             display: block;
-                            top: -1px;
-                            left: 100%;
                         }
                     }
                     > .mz-sitenav-link {
@@ -95,6 +93,10 @@
                         font-size: @subnav-link-font-size;
                         font-weight: @subnav-link-font-weight;
                         text-decoration: none;
+                    }
+                    > .mz-sitenav-sub-sub {
+                        top: -1px;
+                        left: 100%;
                     }
                 }
             }
