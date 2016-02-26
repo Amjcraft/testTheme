@@ -7,14 +7,18 @@ require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr)
 				$('.mz-sitenav .mz-sitenav-sub-sub').removeClass('show');
 			}
 		});
+		/* Prevents subnav close on tablets in landscape when clicking on subnav, but not subnav link/toggle */
+		$('.mz-sitenav .mz-sitenav-sub').click(function(){
+			event.stopPropagation();
+		});
 		/* Controls subnav open toggles on tablets in landscape */
-		$('.mz-sitenav .mz-sitenav-list .mz-sitenav-sub-toggle').click(function(){
+		$('.mz-sitenav .mz-sitenav-sub-toggle').click(function(){
 			$(this).siblings('.mz-sitenav-sub-toggle').children('.mz-sitenav-sub').removeClass('show').find('.mz-sitenav-sub-sub').removeClass('show');
 			$(this).children('.mz-sitenav-sub').toggleClass('show');
 			event.stopPropagation();
 		});
 		/* Controls sub-subnav open toggles on tablets in landscape */
-		$('.mz-sitenav .mz-sitenav-sub .mz-sitenav-sub-sub-toggle').click(function(){
+		$('.mz-sitenav .mz-sitenav-sub-sub-toggle').click(function(){
 			$(this).siblings('.mz-sitenav-sub-sub-toggle').children('.mz-sitenav-sub-sub').removeClass('show');
 			$(this).children('.mz-sitenav-sub-sub').toggleClass('show');
 			event.stopPropagation();
