@@ -140,7 +140,7 @@
 			</div>
 		    <div id="copyright" class="mz-pagefooter-copyright col-xs-12 col-md-6 pull-left">
 		        <span class="mz-pagefooter-copyrighttext">
-		            &copy; {% now "Y" %} {{ siteContext.generalSettings.websiteName }}. {{ labels.allRightsReserved }}
+		            &copy; {% now Y %} {{ siteContext.generalSettings.websiteName }}. {{ labels.allRightsReserved }}
 		        </span> 
 		        <span class="mz-pagefooter-poweredby">
 		             {{ labels.poweredBy }}
