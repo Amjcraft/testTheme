@@ -2,7 +2,7 @@
 {% require_script "modules/push-menu" %}
 <nav id="push-menu" class="mz-mobilenav col-xs-12 no-pad">
   <div class="push-menu-top col-xs-12 no-pad">
-    <ul class="account-links-wrapper col-xs-9 no-pad-r">
+    <ul class="account-links-wrapper">
       {% if user.isAnonymous %}
       <li>
           <a href="/user/login" class="mz-utilitynav-link" alt="{{ labels.logIn }}" title="{{ labels.logIn }}"><button>{{ labels.logIn }}</button></a>
@@ -25,7 +25,7 @@
       </li>
       {% endif %}
     </ul>
-    <div class="exit-push-menu col-xs-3"><i class="icon exit1-circle"></i></div>
+    <div class="exit-push-menu"><i class="icon exit1-circle"></i></div>
     <form id="searchbox" class="mz-searchbox input-status col-xs-12 hidden-sm hidden-md hidden-lg" action="/search">
       <input placeholder="{{ labels.search }}" type="search" class="mz-searchbox-input" autocomplete="off" name="query" data-mz-role="searchquery" />
       <button class="mz-searchbox-button" type="submit"><i class="icon search5"></i></button>

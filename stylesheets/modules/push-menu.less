@@ -1,4 +1,6 @@
 @push-menu-background:          #fff;
+@push-menu-exit-icon-font-size: 26px;
+@push-menu-exit-icon-color:     #000;
 @push-menu-text-color:          @color-text;
 @push-menu-links-bg:            #fff;
 @push-menu-links-color:         @color-text;
@@ -45,11 +47,15 @@ body {
         padding-bottom: 15px;
     }
     .account-links-wrapper {
+        float: left;
+        width: ~"calc(100% - (@{push-menu-exit-icon-font-size} + 15px))";
+        padding-right: 15px;
+        padding-left: 15px;
         list-style: none;
         li {
             float: left;
             &:not(:last-child) {
-                margin-right: 5px;
+                margin-right: 10px;
             }
             #mz-logged-in-notice {
                 margin-bottom: 10px;
@@ -60,21 +66,14 @@ body {
         }
     }
     .exit-push-menu {
+        float: left;
+        width: @push-menu-exit-icon-font-size + 15px;
+        padding-right: 15px;
         text-align: right;
         i.icon {
-            position: relative;
-            height: 26px;
-            width: 26px;
-            font-size: 26px;
-            color: @push-menu-links-color;
-            border-radius: 50%;
+            font-size: @push-menu-exit-icon-font-size;
+            color: @push-menu-exit-icon-color;
             cursor: pointer;
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 1;
-            }
         }
     }
     #searchbox {
