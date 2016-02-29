@@ -4,12 +4,15 @@
 
 {% block body-tag-classes %} mz-homepage {% endblock body-tag-classes %}
 
-{% block body-content %}
-    {% dropzone "home" scope="template" %}
-{% endblock body-content %}
-
 {% block breadcrumbs %}
 {% endblock breadcrumbs %}
+
+{% block body-content %}
+	{% comment %}
+    {% dropzone "home" scope="template" %}
+	{% endcomment %}
+
+{% endblock body-content %}
 
 {% block body-below-content %}
 {% endblock body-below-content %}
