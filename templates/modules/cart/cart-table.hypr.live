@@ -1,19 +1,22 @@
-<thead>
+{% if not model.isEmpty %}
+<thead class="mz-carttable-head hidden-xs">
   <tr>
     <th class="mz-carttable-header-product">{{ labels.product }}</th>
     <th class="mz-carttable-header-price">{{ labels.price }}</th>
     <th class="mz-carttable-header-qty">{{ labels.qty }}</th>
-    <th class="mz-carttable-header-total">{{ labels.itemTotal }}</th>
-    <th>&nbsp;</th>
+    <th class="mz-carttable-header-total" colspan="2">{{ labels.itemTotal }}</th>
   </tr>
 </thead>
 <tbody class="mz-table-cart-{%if Model.IsEmpty %}isempty{% else %}items{% endif %}">
-  {% if not model.isEmpty %}
-  {% for item in model.items %}
+{% for item in model.items %}
   <tr class="mz-carttable-item">
     <td class="mz-carttable-item-product">
-      {% if item.product.imageUrl and themeSettings.showCartItemImage %}
-          <img class="mz-carttable-item-image" src="{% make_url "image" item.product with max=80 as_parameters %}" {% if item.product.imageAlternateText %}alt="{{ item.product.imageAlternateText }}"{% endif %} />
+      {% if themeSettings.showCartItemImage %}
+        <div class="mz-carttable-item-image-wrapper">
+          {% if item.product.imageUrl %}
+              <img class="mz-carttable-item-image img-responsive" src="{% make_url "image" item.product with max=80 as_parameters %}" {% if item.product.imageAlternateText %}alt="{{ item.product.imageAlternateText }}"{% endif %} />
+          {% endif %}
+        </div>
       {% endif %}
       <div class="mz-carttable-item-info-wrap{% if not item.product.imageUrl %} mz-no-image{% endif %}">
         <a class="mz-carttable-item-title" href="{{item.product.url}}">{{ item.product.name }}</a>
@@ -52,72 +55,83 @@
       {% include "modules/common/item-price" %}
     </td>
     <td class="mz-carttable-item-qty">
+      <span class="mobile-label visible-xs-inline-block">{{ labels.qty }}:&nbsp;</span>
       <input class="mz-carttable-qty-field" type="number" min="1" {% if model.isLoading %}disabled="disabled"{% endif %} data-mz-cart-item="{{ item.id }}" data-mz-value="quantity" value="{{ item.quantity }}" />
     </td>
     <td class="mz-carttable-item-total">
         {% include "modules/common/item-total" %}
     </td>
     <td class="mz-carttable-item-remove">
-      <a href="javascript:;" data-mz-action="removeItem" data-mz-cart-item="{{ item.id }}" class="mz-icon mz-icon-close">{{ labels.remove }}</a>
+      <a href="javascript:;" data-mz-action="removeItem" data-mz-cart-item="{{ item.id }}"><i class="icon exit1-circle"></i><span class="mobile-label visible-xs-inline-block">&nbsp;{{ labels.remove }}</span></a>
     </td>
   </tr>
 {% endfor %}
-{% else %}
-  <tr class="mz-carttable-noitems">
-    <td colspan="5">
-        {{ labels.cartEmpty }}
-    </td>
-  </tr>
-  {% endif %}
 </tbody>
-<tfoot>
-  <tr class="mz-carttable-shipping-row">
-    <td colspan="4">
-      <em class="mz-auxiliary-text">{{ labels.taxAtCheckout }}</em>
+<tfoot class="mz-carttable-footer">
+  <tr class="mz-carttable-empty-row">
+    <td colspan="5">
+      <a class="mz-carttable-emptylink color-warning" href="javascript:;" data-mz-action="empty"><i class="icon exit1-circle"></i> {{ labels.emptyCart }}</a>
     </td>
-    <td></td>
   </tr>
-
-  {% for discount in model.orderDiscounts %}
-    {% if not discount.excluded %}
-  <tr class="mz-carttable-total-row">
-    <td class="mz-carttable-total-label" colspan="3">
-        {{ discount.discount.name }}:
-    </td>
-    <td class="mz-carttable-total-wrap">
-      <span class="mz-carttable-rowtotal">- {{ discount.impact|currency }}</span>
-    </td>
-    <td></td>
-  </tr>
-    {% endif %}
-  {% endfor %}
-
-
-  <tr class="mz-carttable-total-row">
-    <td class="mz-carttable-total-wrap" colspan="4">
-      {{ labels.orderTotal }}:
-        <span id="mz-carttable-total" class="mz-carttable-total">
-          <strong>{{ model.discountedTotal|currency }}</strong>
-        </span>
-    </td>
-    <td></td>
-  </tr>
-  <tr class="mz-carttable-checkout-row">
-    <td colspan="4">
-      <div class="mz-carttable-checkout-couponcode" id="coupon-code-field" >
+  <tr class="mz-carttable-summary-details-row">
+    <td class="mz-carttable-coupon-cell">
+      <div class="mz-carttable-checkout-couponcode input-status" id="coupon-code-field" >
         {% include "modules/common/coupon-code-field" %}
-      </div>   
-      {% if not model.isEmpty %}<a class="mz-carttable-emptylink" href="javascript:;" data-mz-action="empty">{{ labels.emptyCart }}</a>{% endif %}
+      </div>
+    </td>
+    <td class="mz-carttable-summary-details-cell" colspan="4">
+      <table class="mz-carttable-summary-details-table">
+        <tbody>
+          <tr class="mz-carttable-shipping-row">
+            <td>
+              <em class="mz-auxiliary-text">{{ labels.taxAtCheckout }}</em>
+            </td>
+            <td></td>
+          </tr>
+
+          {% for discount in model.orderDiscounts %}
+            {% if not discount.excluded %}
+              <tr class="mz-carttable-discount-row">
+                <td class="mz-carttable-discount-label">
+                    {{ discount.discount.name }}:
+                </td>
+                <td class="mz-carttable-discount-wrap">
+                  <span class="mz-carttable-discount">- {{ discount.impact|currency }}</span>
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+
+          <tr class="mz-carttable-total-row">
+            <td class="mz-carttable-total-label">
+              {{ labels.orderTotal }}:
+            </td>
+            <td class="mz-carttable-total-wrap">
+              <span id="mz-carttable-total" class="mz-carttable-total">
+                <strong>{{ model.discountedTotal|currency }}</strong>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+
+  
+  <tr class="mz-carttable-checkout-row">
+    <td colspan="5">
       <button id="cart-checkout" class="mz-button mz-button-large mz-carttable-button-active"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
 
       {% if siteContext.checkoutSettings.visaCheckout.isEnabled %}
-      <div>
-        <p>or checkout with</p>
-        <img alt="Visa Checkout" class="v-button" role="button"
-          src="{{pageContext.visaCheckoutButtonUrl}}"/>       
-      </div>
+        <div>
+          <p>{{ labels.orCheckoutWith }}</p>
+          <img alt="Visa Checkout" class="v-button" role="button"
+            src="{{pageContext.visaCheckoutButtonUrl}}"/>       
+        </div>
       {% endif %}
     </td>
-    <td></td>
   </tr>
 </tfoot>
+{% else %}
+  <div class="info-message text-center col-xs-12 col-sm-6 col-sm-offset-3">{{ labels.cartEmpty }}</div>
+{% endif %}
