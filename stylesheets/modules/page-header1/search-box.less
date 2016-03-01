@@ -63,39 +63,49 @@
 			min-width: 0;
 			width: 85px;
 		}
-	    .tt-dropdown-menu {
-	        box-sizing: border-box;
-	        border: 1px solid @gray2;
-	        border-width: 1px;
-	        width: 100%;
-	        background: white;
-		    .tt-suggestion {
-	            margin: 0;
-	            padding: 0.4em 1em;
-	            border-bottom: 1px solid #f4f4f4;
-	            &.tt-cursor {
-	                background: #f4f4f4;
-	            }
-	        }
-		    .tt-dataset-terms {
-		        p {
-		            margin: 0;
-		        }
-		    }
-		    .tt-dataset-pages {
-		        .tt-suggestion {
-		            display: table;
-		        }
+		.tt-dropdown-menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 1000;
+			min-width: 295px;
+			width: 100%;
+			padding: 5px 0;
+			margin: 2px 0 0;
+			list-style: none;
+			font-size: 14px;
+			background-color: #ffffff;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			border-radius: 4px;
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+			.tt-suggestion {
+				display: block;
+				padding: 3px 20px;
+				clear: both;
+				font-weight: normal;
+				line-height: 1.42857143;
+				color: #333333;
+	            display: table;
 		        .mz-itemlisting {
 		            display: table-row;
+			        .mz-itemlisting-thumb, 
+			        .mz-itemlisting-details {
+			            float: none;
+			            display: table-cell;
+			            padding: 0.5em;
+			            vertical-align: top;
+			            text-align: left;
+			        }
+			        .mz-itemlisting-details {
+			        	.mz-itemlisting-title {
+			        		font-size: @font-size;
+			        	}
+			        	.mz-itemlisting-description {
+			        		display: none;
+			        	}
+			        }
 		        }
-		        .mz-itemlisting-thumb, .mz-itemlisting-details {
-		            float: none;
-		            display: table-cell;
-		            padding: 0.5em;
-		            vertical-align: top;
-		        }
-		    }
-	    }
+			}
+		}
 	}
 }
