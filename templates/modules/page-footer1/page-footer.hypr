@@ -61,7 +61,7 @@
 		    	</div>
 		    </div>
 		    <ul class="footer-link-col col-xs-12 col-sm-6 col-md-4">
-				{% if pageContext.isTablet or pageContext.isDesktop %}
+				{% if not pageContext.isMobile %}
 					<li class="title"><h4>{{ labels.helpfulLinks }}</h4></li>
 				{% else %}
 					<a class="title accordion-toggle collapsed" data-toggle="collapse" data-parent="#footer-collapse" href="#footer1-link-col-1" aria-expanded="false"><h4>{{ labels.helpfulLinks }} <i class="icon chevron2-up"></i></h4></a>
@@ -85,7 +85,7 @@
 		    	{% endif %}
 			</ul>
 		    <ul class="footer-link-col col-xs-12 col-sm-6 col-md-4">
-				{% if pageContext.isTablet or pageContext.isDesktop %}
+				{% if not pageContext.isMobile %}
 					<li class="title"><h4>{{ labels.questions }}</h4></li>
 				{% else %}
 					<a class="title accordion-toggle collapsed" data-toggle="collapse" data-parent="#footer-collapse" href="#footer1-link-col-2" aria-expanded="false"><h4>{{ labels.questions }} <i class="icon chevron2-up"></i></h4></a>
@@ -93,7 +93,7 @@
 		    	{% endif %}
 					<li><a class="footer-link" href="tel:123-456-7890" alt="Call us" title="Call us"><i class="icon phone3"></i> 123-456-7890</a></li>
 					<li><a class="footer-link" href="mailto:Info@CompanyName.com" alt="Email us" title="Email us"><i class="icon email2"></i> Info@CompanyName.com</a></li>
-					<li><a class="footer-link" href="/store-locator" target="_blank" alt="Locate us" title="Locate us"><i class="icon map-marker3"></i> <div class="address">101 Waller St<br>
+					<li><a class="footer-link" href="/store-locator" alt="Locate us" title="Locate us"><i class="icon map-marker3"></i> <div class="address">101 Waller St<br>
 					Austin, TX 78702 ({{ labels.map }})</div></a></li>
 				{% if pageContext.isMobile %}
 					</ul>
