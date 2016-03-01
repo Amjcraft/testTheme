@@ -1,8 +1,50 @@
-﻿.mz-facetingform {
-    h4 {
+﻿.mobile-facets-toggle {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    &.open {
+        i.icon {
+            -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+            -ms-transform: rotate(180deg); /* IE 9 */
+            transform: rotate(180deg);
+        }
+    }
+    .hide-filters,
+    .show-filters {
+        float: left;
+    }
+    i.icon {
+        float: right;
+        -webkit-transition:transform 0.3s linear; /* For Safari and Chrome */
+        -moz-transition:transform 0.3s linear; /* For Firefox */
+        -o-transition:transform 0.3s linear; /* For Opera */
+        transition:transform 0.3s linear; /* Standard syntax */
+    }
+}
+.mz-facetingform {
+    .accordion-toggle {
+        text-decoration: none;
+        &.collapsed {
+            i.icon {
+                -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+                -ms-transform: rotate(-180deg); /* IE 9 */
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    h6 {
+        margin-bottom: 5px;
+        padding-right: 20px;
         border-bottom: 1px solid #eee;
-        margin: 0 0 5px;
-        font-size: @fontSizeLarger;
+        i.icon {
+            position: absolute;
+            right: 0;
+            font-size: 12px;
+            -webkit-transition:transform 0.3s linear; /* For Safari and Chrome */
+            -moz-transition:transform 0.3s linear; /* For Firefox */
+            -o-transition:transform 0.3s linear; /* For Opera */
+            transition:transform 0.3s linear; /* Standard syntax */
+        }
     }
     .mz-facetingform-facet {
         list-style-type: none;

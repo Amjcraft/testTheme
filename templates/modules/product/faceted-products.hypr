@@ -35,25 +35,25 @@
 {% else %}
     <div class="mz-l-paginatedlist col-xs-12">
 {% endif %}
-    <div class="mz-l-paginatedlist-header">
-        <div data-mz-pagesort class="mz-sortby">
+    <div class="mz-l-paginatedlist-header col-xs-12 no-pad">
+        <div data-mz-pagesort class="mz-sortby col-xs-12 col-sm-12 col-lg-4 no-pad-l">
             {% include "modules/common/page-sort" %}
         </div>
-        <div data-mz-pagenumbers class="mz-pagenumbers">
+        <div data-mz-pagenumbers class="mz-pagenumbers col-xs-12 col-md-6 col-lg-4 no-pad">
             {% include "modules/common/page-numbers" %}
         </div>
-        <div data-mz-pagingcontrols class="mz-pagingcontrols">
+        <div data-mz-pagingcontrols class="mz-pagingcontrols col-xs-12 col-md-6 col-lg-4 no-pad-r">
             {% include "modules/common/paging-controls" %}
         </div>
     </div>
-    <div data-mz-productlist class="mz-l-paginatedlist-list">
+    <div data-mz-productlist class="mz-l-paginatedlist-list col-xs-12 no-pad">
         {% include "modules/product/product-list-tiled" %}
     </div>
-    <div class="mz-l-paginatedlist-footer">
-        <div data-mz-pagenumbers class="mz-pagenumbers">
+    <div class="mz-l-paginatedlist-footer col-xs-12 no-pad">
+        <div data-mz-pagenumbers class="mz-pagenumbers col-xs-12 col-md-6 col-lg-4 no-pad-l">
             {% include "modules/common/page-numbers" %}
         </div>
-        <div data-mz-pagingcontrols class="mz-pagingcontrols">
+        <div data-mz-pagingcontrols class="mz-pagingcontrols col-xs-12 col-md-6 col-lg-4 no-pad-r">
             {% include "modules/common/paging-controls" %}
         </div>
     </div>
