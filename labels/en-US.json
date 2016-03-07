@@ -187,6 +187,7 @@
   "inStockBlob2" : "<p>TO ADD THE ITEMS TO YOUR CART: <a href=\"http://{0}/p/{1}\">CLICK HERE</a>.</p>",
   "item" : "Item",
   "itemTotal" : "Item Total",
+  "itemsIncluded" : "Items Included",
   "itemsShipped" : "Shipment Details",
   "lastName" : "Last Name",
   "lastNameMissing" : "Last name required",
@@ -335,7 +336,7 @@
   "returnDetails" : "Return Details",
   "returnInfo" : "Please fill out this form to request a return. Returns are requested per item, rather than per order or shipment. View the <a href=\"/returnpolicy\" target=\"_blank\">Return Policy</a> to learn more.",
   "returnNumber" : "RMA #",
-  "returnOrReplace" : "Return or Replace Items",
+  "returnOrReplace" : "Return or Replace Item",
   "returnOtherBlob1" : "<p>Thank you for shopping at {0}. We wanted to let you know that your return status is now {1}.</p>",
   "returnOtherBlob2" : "<p>You will receive another email when we have processed your return.</p>",
   "returnReceivedBlob1" : "<p>Thank you for shopping at {0}. We wanted to let you know that we have received the following returned items:</p>",
@@ -419,6 +420,7 @@
   "useShippingAddress" : "Use my shipping address",
   "verification" : "Verification",
   "verifyWith" : "Verify With",
+  "view" : "View",
   "viewAll" : "View All",
   "viewCart" : "View Cart",
   "viewOrderHistory" : "View order history",
@@ -430,5 +432,5 @@
   "wrongCountryForType" : "Please select a country supported for this contact type",
   "yes" : "Yes",
   "yourAccount" : "Your Account",
-  "yourOrderNumber" : "Your order number is <strong>{0}</strong>."
+  "yourOrderNumber" : "Your order number is <span class=\"mz-confirmation-order-number\">{0}</span>."
 }
