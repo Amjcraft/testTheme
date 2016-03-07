@@ -1,8 +1,4 @@
-﻿@cart-zerbra-color1:                    @gray1;
-@cart-zerbra-color2:                    @gray2;
-@cart-line-item-border-size:            1px;
-@cart-line-item-border-color:           @gray3;
-@cart-item-price-each-color:            @text-color;
+﻿@cart-item-price-each-color:            @text-color;
 @cart-item-price-total-color:           @primary;
 @cart-item-price-crossedout-color:      @gray3;
 @cart-item-discount-color:              @secondary;
@@ -17,32 +13,40 @@
         th {
             padding-right: 15px;
             padding-left: 15px;
-            border-bottom: @cart-line-item-border-size solid @cart-line-item-border-color;
-            &.mz-carttable-header-product {}
-            &.mz-carttable-header-price {
-                text-align: right;
+            border-bottom: 1px solid @gray3;
+            &:not(:first-child) {
+                @media only screen and (min-width: 768px) {
+                    text-align: right;
+                }
             }
-            &.mz-carttable-header-qty {}
-            &.mz-carttable-header-total {}
         }
     }
     .mz-table-cart-items {
         @media only screen and (max-width: 767px) {
             display: block;
         }
-        .mz-carttable-item {
-            border-top: @cart-line-item-border-size solid @cart-line-item-border-color;
-            &:nth-child(2n) {
-                background-color: @cart-zerbra-color1;
+        tr.mz-carttable-item {
+            &:nth-child(even) {
+                background-color: @zebra-bg-light;
             }
-            &:nth-child(2n + 1) {
-                background-color: @cart-zerbra-color2;
-            }
-            &:last-child {
-                border-bottom: @cart-line-item-border-size solid @cart-line-item-border-color;
+            &:nth-child(odd) {
+                background-color: @zebra-bg-dark;
             }
             td {
                 padding: 10px 15px;
+                &:not(:first-child) {
+                    @media only screen and (min-width: 501px) and (max-width: 767px) {
+                        float: none;
+                        display: inline-block;
+                        width: 25%;
+                        margin-top: 10px;
+                        padding-bottom: 20px;
+                        vertical-align: middle;
+                    }
+                    @media only screen and (min-width: 768px) {
+                        text-align: right;
+                    }
+                }
                 @media only screen and (max-width: 767px) {
                     float: left;
                     display: block;
@@ -92,14 +96,14 @@
                             padding-left: 15px;
                         }
                         .mz-carttable-item-title {
+                            font-size: @font-size + 2px;
                             text-decoration: none;
+                            @media only screen and (max-width: 991px) {
+                                font-size: @font-size-mobile + 2px;
+                            }
                         }
                         .mz-propertylist {
                             margin-bottom: 0;
-                            font-size: @font-size - 2px;
-                            @media only screen and (max-width: 767px) {
-                                font-size: @font-size-mobile - 2px;
-                            }
                             > * {
                                 @media only screen and (max-width: 767px) {
                                     float: none;
@@ -109,33 +113,13 @@
                             }
                         }
                         .mz-carttable-item-code {
-                            font-size: @font-size - 2px;
                             color: @gray3;
-                            @media only screen and (max-width: 767px) {
-                                font-size: @font-size-mobile - 2px;
-                            }
                         }
-                    }
-                }
-                &.mz-carttable-item-price,
-                &.mz-carttable-item-qty,
-                &.mz-carttable-item-total,
-                &.mz-carttable-item-remove {
-                    @media only screen and (min-width: 501px) and (max-width: 767px) {
-                        float: none;
-                        display: inline-block;
-                        width: 25%;
-                        margin-top: 10px;
-                        padding-bottom: 20px;
-                        vertical-align: middle;
                     }
                 }
                 &.mz-carttable-item-price {
                     color: @cart-item-price-each-color;
                     @media only screen and (min-width: 501px) and (max-width: 767px) {
-                        text-align: right;
-                    }
-                    @media only screen and (min-width: 768px) {
                         text-align: right;
                     }
                 }
@@ -160,7 +144,7 @@
                         &:not(.is-crossedout) {
                             font-size: @font-size + 2px;
                             color: @cart-item-price-total-color;
-                            @media only screen and (max-width: 767px) {
+                            @media only screen and (max-width: 991px) {
                                 font-size: @font-size-mobile + 2px;
                             }
                         }
@@ -252,8 +236,19 @@
                     width: 50%;
                 }
                 .mz-carttable-checkout-couponcode {
+                    @media only screen and (min-width: 501px) and (max-width: 767px) {
+                        position: relative;
+                        left: 50vw;
+                        -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
+                        -ms-transform: translateX(-50%); /* IE 9 */
+                        transform: translateX(-50%);
+                    }
                     input#coupon-code {
                         float: left;
+                        @media only screen and (max-width: 767px) {
+                            width: ~"calc(100% - 90px)";
+                            max-width: 320px;
+                        }
                     }
                     button#cart-coupon-code {
                         float: left;

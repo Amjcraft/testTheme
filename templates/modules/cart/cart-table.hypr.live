@@ -4,7 +4,8 @@
     <th class="mz-carttable-header-product">{{ labels.product }}</th>
     <th class="mz-carttable-header-price">{{ labels.price }}</th>
     <th class="mz-carttable-header-qty">{{ labels.qty }}</th>
-    <th class="mz-carttable-header-total" colspan="2">{{ labels.itemTotal }}</th>
+    <th class="mz-carttable-header-total">{{ labels.itemTotal }}</th>
+    <th></th>
   </tr>
 </thead>
 <tbody class="mz-table-cart-{%if Model.IsEmpty %}isempty{% else %}items{% endif %}">
@@ -120,7 +121,7 @@
   
   <tr class="mz-carttable-checkout-row">
     <td colspan="5">
-      <button id="cart-checkout" class="mz-button mz-button-large mz-carttable-button-active"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
+      <button id="cart-checkout" class="mz-button mz-carttable-button-active"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
 
       {% if siteContext.checkoutSettings.visaCheckout.isEnabled %}
         <div>
