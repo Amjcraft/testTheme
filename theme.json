@@ -454,6 +454,7 @@
     "listProductCode": true,
     "listProductShortDesc": true,
     "listProductThumbSize": 200,
+    "productImagesContainerWidth": 500,
     "maxProductImageThumbnailSize": 50,
     "maxProductSummaryWords": 40,
     "pageSizeOptions": [
@@ -465,7 +466,6 @@
     ],
     "defaultPageSize": 24,
     "preselectCountryCode": "US",
-    "productImagesContainerWidth": 350,
     "requireCheckoutAgreeToTerms": true,
     "suggestPriorSearchTerms": true,
     "searchExpandOnFocus": true,

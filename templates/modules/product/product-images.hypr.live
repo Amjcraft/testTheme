@@ -4,7 +4,7 @@
 </figure>
 <figure class="mz-productimages-thumbs col-xs-12 no-pad">
     {% for image in model.content.productImages %}
-    <a class="mz-productimages-thumb" data-mz-productimage-thumb="{{ image.sequence }}" href="{% make_url "image" image %}">
+    <a class="mz-productimages-thumb" data-mz-productimage-thumb="{{ image.sequence }}" href="{% make_url "image" image %}" style="width: {{themeSettings.maxProductImageThumbnailSize }}px; height: {{themeSettings.maxProductImageThumbnailSize }}px;">
         <img class="mz-productimages-thumbimage img-responsive"  src="{% make_url "image" image with max=themeSettings.maxProductImageThumbnailSize as_parameters %}" {% if image.altText %}alt="{{ image.altText }}"{% endif %} />
     </a>
     {% endfor %}

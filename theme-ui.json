@@ -53,11 +53,23 @@
                     "xtype": "mz-input-number",
                     "name": "listProductThumbSize",
                     "fieldLabel": "Product grid image max thumbnail size (px)"
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Product Page",
+            "collapsed": false,
+            "items": [
+                {
+                    "xtype": "mz-input-number",
+                    "name": "productImagesContainerWidth",
+                    "fieldLabel": "Main image max size (px)"
                 },
                 {
                     "xtype": "mz-input-number",
                     "name": "maxProductImageThumbnailSize",
-                    "fieldLabel": "Product page alt image max thumbnail size (px)"
+                    "fieldLabel": "Alternate images thumbnail max size (px)"
                 }
             ]
         },
