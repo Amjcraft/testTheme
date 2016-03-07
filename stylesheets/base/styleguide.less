@@ -47,7 +47,7 @@ Anything not listed there will be under variables.less
 @gray4-light: 			lighten(@gray4, 10%);
 @gray4-dark: 			darken(@gray4, 10%);
 
-@color-text: 	@theme-settings-textcolor;
+@color-text: 			@theme-settings-textcolor;
 
 @color-hyperlink: 		@theme-settings-hyperlinkColor;
 @color-hyperlink-light: lighten(@color-hyperlink, 10%);
@@ -64,6 +64,9 @@ Anything not listed there will be under variables.less
 @color-warning: 		@theme-settings-warningNotificationColor;
 @color-warning-light: 	lighten(@color-warning, 10%);
 @color-warning-dark: 	darken(@color-warning, 10%);
+
+@zebra-bg-light: 		lighten(@gray1, 5%);
+@zebra-bg-dark: 		@gray1;
 
 
 
@@ -329,7 +332,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@media only screen and (max-width: 991px) {
-		font-size: @font-size-mobile;
+		@font-size: @font-size-mobile;
+		font-size: @font-size;
 	}
 }
 
@@ -1500,7 +1504,7 @@ i {
 			content: @icon-checkmark2;
 			position: absolute;
 			right: 10px;
-			bottom: 16px;
+			bottom: 8px;
 			color: @color-success;
 			font-family: @font-icons;
 		}
@@ -1515,13 +1519,12 @@ i {
 			content: @icon-alert-warning-circle;
 			position: absolute;
 			right: 10px;
-			bottom: 16px;
+			bottom: 8px;
 			color: @color-warning;
 			font-family: @font-icons;
 		}
 		label {
 			color: @color-warning;
-			margin-bottom: 0;
 		}
 		input,
 		textarea {
@@ -1545,7 +1548,7 @@ i {
 			color: #fff;
 			background-color: @color-warning;
 			&.bottom {
-				top: ~"calc(100% + 5px)";
+				top: ~"calc(100% + 10px)";
 				&:before {
 					content: '';
 					position: absolute;
@@ -1561,7 +1564,7 @@ i {
 				}
 			}
 			&.right {
-				bottom: @font-size;
+				bottom: @font-size - 10px;
 				left: ~"calc(100% + 10px)";
 				&:before {
 					content: '';
@@ -1583,11 +1586,12 @@ i {
 	}
 	label {
 		display: block;
+		margin-bottom: 0;
 		font-weight: bold;
 	}
 	input,
 	textarea {
-		padding: 8px 15px;
+		padding: 9px 15px;
 		min-width: 200px;
 		color: @color-text;
 		border: 1px solid #bbb;
@@ -1599,22 +1603,18 @@ i {
 }
 input {
 	box-sizing: border-box !important;
-	&[disabled] {
+	@media only screen and (max-width: 767px) {
+		width: 100%;
+		max-width: 320px;
+	}
+	&[disabled],
+	&.is-disabled {
 		cursor: not-allowed;
 	}
-	&:not([type="radio"]),
-	&:not([type="checkbox"]) {
+	&:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
 		background-color: #fff;
 		border-radius: 0;
 		box-shadow: none;
-	}
-	&[type="button"],
-	&[type="number"],
-	&[type="password"],
-	&[type="phone"],
-	&[type="search"],
-	&[type="submit"],
-	&[type="text"] {
 	    -webkit-appearance: none;
 	    -moz-appearance: none;
 	    appearance: none;
@@ -1701,29 +1701,36 @@ input {
 	    box-shadow: inset 0 0 0 1px @color-warning;
 	}
 }
-select.styled {
-	display: inline-block;
-	height: auto;
-	width: auto;
-	padding: 8px 30px 8px 15px;
-	font-weight: normal;
-	color: @gray4;
-	border: 1px solid @gray2;
-	border-radius: 0;
-	background-image: url("../resources/images/chevron-toggle-select.png");
-	background-color: #f7f7f7;
-	background-repeat: no-repeat;
-	background-position: ~"calc(100% - 12px)" center;
-	background-size: auto 11px;
-	box-shadow: none;
-	cursor: pointer;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
-	-o-appearance: none;
-	appearance: none;
-    &::-ms-expand {
-	    display: none;
+select {
+	margin-bottom: 0;
+	@media only screen and (max-width: 767px) {
+		width: 100%;
+		max-width: 320px;
+	}
+	&.styled {
+		display: inline-block;
+		height: auto;
+		width: auto;
+		padding: 8px 30px 8px 15px;
+		font-weight: normal;
+		color: @gray4;
+		border: 1px solid @gray2;
+		border-radius: 0;
+		background-image: url("../resources/images/chevron-toggle-select.png");
+		background-color: #f7f7f7;
+		background-repeat: no-repeat;
+		background-position: ~"calc(100% - 12px)" center;
+		background-size: auto 11px;
+		box-shadow: none;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+	    &::-ms-expand {
+		    display: none;
+		}
 	}
 }
 
@@ -1735,7 +1742,6 @@ input[type="submit"] {
 	min-width: 120px;
 	color: #fff;
 	font-family: @font1;
-	font-size: 14px;
 	font-weight: bold;
 	cursor: pointer;
 	background-color: @color1;
@@ -1755,6 +1761,7 @@ input[type="submit"] {
 		background-color: @color1-dark;
 	}
 	&.icon {
+		font-size: 14px;
 		&.exit {
 			padding-left: 56px;
 			&:before {
@@ -1900,7 +1907,8 @@ input[type="submit"] {
 			background-color: @gray3-dark;
 		}
 	}
-	&[disabled] {
+	&[disabled],
+	&.is-disabled {
 		color: @gray3-light !important;
 		background-color: @gray2 !important;
 		border-color: @gray2-dark;
@@ -1940,6 +1948,19 @@ input[type="submit"] {
 	max-height: 100%;
 }
 
+table.zebra-stripe {
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: @zebra-bg-light;
+			}
+			&:nth-child(odd) {
+				background-color: @zebra-bg-dark;
+			}
+		}
+	}
+}
+
 
 /* Styles the debug module */
 #debug-module {
@@ -1953,21 +1974,24 @@ input[type="submit"] {
 			float: right;
 		}
 	}
+	label {
+		margin-bottom: 5px;
+	}
 }
 
 /* Start Mozu Overrides */
-	.mz-cms-row {
-		min-width: 0 !important;
-		max-width: 100% !important;
-	}
-	.mz-cms-content {
-		padding: 0 !important;
-	}
-	.mz-cms-col-12-12 {
-		padding: 0 !important;
-	}
-	/* Hides tracking pixel */
-	body > img[data-mztp] {
-		display: none;
-	}
+.mz-cms-row {
+	min-width: 0 !important;
+	max-width: 100% !important;
+}
+.mz-cms-content {
+	padding: 0 !important;
+}
+.mz-cms-col-12-12 {
+	padding: 0 !important;
+}
+/* Hides tracking pixel */
+body > img[data-mztp] {
+	display: none;
+}
 /* End Mozu Overrides */

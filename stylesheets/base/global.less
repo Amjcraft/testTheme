@@ -57,7 +57,7 @@ input[type="color"],
 .mz-uneditable-input {
   display: inline-block;
   padding: 4px 6px;
-  margin-bottom: 9px;
+  // margin-bottom: 9px;
   font-family: @fontFamily;
 }
 
@@ -124,7 +124,7 @@ input[type="file"] {
 
 // Make select elements obey height by applying a border
 select {
-  width: 220px; // default input width + 10px of padding that doesn't get applied
+  min-width: 200px; // default input width + 10px of padding that doesn't get applied
   border: 1px solid @inputBorder;
 }
 
