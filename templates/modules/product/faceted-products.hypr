@@ -50,10 +50,10 @@
         {% include "modules/product/product-list-tiled" %}
     </div>
     <div class="mz-l-paginatedlist-footer col-xs-12 no-pad">
-        <div data-mz-pagenumbers class="mz-pagenumbers col-xs-12 col-md-6 col-lg-4 no-pad-l">
+        <div data-mz-pagenumbers class="mz-pagenumbers col-xs-12 col-sm-11 col-sm-offset-1 col-md-5 no-pad-l">
             {% include "modules/common/page-numbers" %}
         </div>
-        <div data-mz-pagingcontrols class="mz-pagingcontrols col-xs-12 col-md-6 col-lg-4 no-pad-r">
+        <div data-mz-pagingcontrols class="mz-pagingcontrols col-xs-12 col-sm-11 col-sm-offset-1 col-md-6 col-md-offset-0 no-pad-r">
             {% include "modules/common/paging-controls" %}
         </div>
     </div>
