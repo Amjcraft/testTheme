@@ -1,11 +1,10 @@
 ﻿<h3 class="mz-l-stack-sectiontitle">{{ labels.digitalCredit }}</h3>
-<div class="mz-accountstorecredit-form">
+<div class="mz-accountstorecredit-form col-xs-12 no-pad">
   <input type="text" placeholder="{{ labels.enterDigitalCredit }}" class="mz-accountstorecredit-input" data-mz-entering-credit />
-  <button class="mz-button mz-button-small mz-accountstorecredit-add" data-mz-action="addStoreCredit">{{ labels.add }}</button>
+  <button class="mz-button mz-accountstorecredit-add" data-mz-action="addStoreCredit">{{ labels.add }}</button>
 </div>
-<div class="mz-accountstorecredit-table">
-  {% if model.credits %}
-  <table class="mz-table">
+{% if model.credits.length %}
+  <table class="mz-accountstorecredit-table mz-table col-xs-12 no-pad">
     <thead>
       <tr>
         <th class="mz-accountstorecredit-header-creditnumber">{{ labels.digitalCreditCode }}</th>
@@ -17,10 +16,10 @@
     <tbody>
       {% for credit in model.credits %}
       <tr class="mz-accountstorecredit-row">
-        <td class="mz-accountstorecredit-cell-storecreditnumber">{{ credit.code }}</td>
-        <td class="mz-accountstorecredit-cell-creditdate">{{ credit.activationDate|date("F j, Y") }}</td>
-        <td class="mz-accountstorecredit-cell-creditamount">{{ credit.initialBalance|currency }}</td>
-        <td class="mz-accountstorecredit-cell-remaining">{{ credit.currentBalance|currency }}</td>
+        <td class="mz-accountstorecredit-cell-storecreditnumber"><span class="visible-xs-inline">{{ labels.digitalCreditCode }}: </span>{{ credit.code }}</td>
+        <td class="mz-accountstorecredit-cell-creditdate"><span class="visible-xs-inline">{{ labels.creditDate }}: </span>{{ credit.activationDate|date("F j, Y") }}</td>
+        <td class="mz-accountstorecredit-cell-creditamount"><span class="visible-xs-inline">{{ labels.creditAmount }}: </span>{{ credit.initialBalance|currency }}</td>
+        <td class="mz-accountstorecredit-cell-remaining"><span class="visible-xs-inline">{{ labels.remaining }}: </span>{{ credit.currentBalance|currency }}</td>
       </tr>
       {% endfor %}
     </tbody>
@@ -34,9 +33,7 @@
         </td>
       </tr>
     </tfoot>
-    </tbody>
   </table>
-  {% else %}
-  {{ labels.accountNoCredits }}
-  {% endif %}
-</div>
+{% else %}
+  <div class="info-message">{{ labels.accountNoCredits }}</div>
+{% endif %}
