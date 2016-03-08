@@ -16,9 +16,13 @@
     {% endblock item-name %}
     {% block item-details %}
     <div class="mz-itemlisting-description">
-      <div class="mz-itemlisting-option">{% for option in model.product.options %}{{ option.name }}: {{ option.value }} {% endfor %}</div>
+      {% for option in model.product.options %}
+        <div class="mz-itemlisting-option">{{ option.name }}: {{ option.value }}</div>
+      {% endfor %}
       <div class="mz-itemlisting-product-code">{{ model.product.variationProductCode|default(model.product.productCode) }}</div>
-      <div class="mz-itemlisting-weight">{% if model.product.measurements.packageWeight.value %}{{ model.product.measurements.packageWeight.value }}{{model.measurements.packageWeight.unit }}{% endif %}</div>
+      {% if model.product.measurements.packageWeight.value %}
+        <div class="mz-itemlisting-weight">{{ model.product.measurements.packageWeight.value }}{{model.measurements.packageWeight.unit }}</div>
+      {% endif %}
     </div>
     {% endblock item-details %}
   </div>
