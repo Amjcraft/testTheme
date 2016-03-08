@@ -14,7 +14,17 @@
 
 	<h1 class="mz-pagetitle col-xs-12" itemprop="name">{{ model.content.productName }}</h1>
 	
-    <div data-mz-productimages class="mz-productimages mz-l-sidebar col-xs-12 col-sm-5">
+    {% if themeSettings.pdpImgAlign == "Left" %}
+        <div data-mz-productimages class="mz-productimages mz-l-sidebar align-left col-xs-12 col-sm-5">
+        {% else %}
+            {% if themeSettings.pdpImgAlign == "Center" %}
+                <div data-mz-productimages class="mz-productimages mz-l-sidebar align-center col-xs-12 col-sm-5">
+                {% else %}
+            {% if themeSettings.pdpImgAlign == "Right" %}
+                <div data-mz-productimages class="mz-productimages mz-l-sidebar align-right col-xs-12 col-sm-5">
+            {% endif %}
+        {% endif %}
+    {% endif %}
         {% include "modules/product/product-images" %}
     </div>
 

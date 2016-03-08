@@ -36,23 +36,23 @@
         },
         {
             "xtype": "panel",
-            "title": "Product Lists",
+            "title": "Product Grid",
             "collapsed": false,
             "items": [
                 {
                     "xtype": "mz-input-checkbox",
                     "name": "listProductCode",
-                    "fieldLabel": "Show product code in product lists"
+                    "fieldLabel": "Show product code in product grid"
                 },
                 {
                     "xtype": "mz-input-checkbox",
                     "name": "listProductShortDesc",
-                    "fieldLabel": "Show product short description in product lists"
+                    "fieldLabel": "Show product short description in product grid"
                 },
                 {
                     "xtype": "mz-input-number",
                     "name": "listProductThumbSize",
-                    "fieldLabel": "Product grid image max thumbnail size (px)"
+                    "fieldLabel": "Product grid max image size (px)"
                 }
             ]
         },
@@ -70,6 +70,19 @@
                     "xtype": "mz-input-number",
                     "name": "maxProductImageThumbnailSize",
                     "fieldLabel": "Alternate images thumbnail max size (px)"
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "pdpImgAlign",
+                    "fieldLabel": "Align product images",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "Left",
+                        "Center",
+                        "Right"
+                    ]
                 }
             ]
         },

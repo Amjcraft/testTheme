@@ -456,6 +456,7 @@
     "listProductThumbSize": 200,
     "productImagesContainerWidth": 500,
     "maxProductImageThumbnailSize": 50,
+    "pdpImgAlign": "Left",
     "maxProductSummaryWords": 40,
     "pageSizeOptions": [
       12,
