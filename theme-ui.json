@@ -74,7 +74,7 @@
                 {
                     "xtype": "mz-input-dropdown",
                     "name": "pdpImgAlign",
-                    "fieldLabel": "Align product images",
+                    "fieldLabel": "Align product images (\"Right\" aligns left on mobile)",
                     "allowBlank": false,
                     "editable": false,
                     "forceSelection": true,
