@@ -42,12 +42,12 @@
                 {
                     "xtype": "mz-input-checkbox",
                     "name": "listProductCode",
-                    "fieldLabel": "Show product code in product grid"
+                    "fieldLabel": "Show product code in the product grid"
                 },
                 {
                     "xtype": "mz-input-checkbox",
                     "name": "listProductShortDesc",
-                    "fieldLabel": "Show product short description in product grid"
+                    "fieldLabel": "Show product short description in the product grid"
                 },
                 {
                     "xtype": "mz-input-number",
@@ -160,7 +160,12 @@
                       24,
                       48,
                       96,
-                      300
+                      300,
+                      10,
+                      25,
+                      50,
+                      100,
+                      500
                     ]
                 },
                 {
@@ -259,7 +264,7 @@
                 {
                     "xtype": "mz-input-dropdown",
                     "name": "mm-column-divider-width",
-                    "fieldLabel": "Divider size between columns",
+                    "fieldLabel": "Divider line size between columns",
                     "allowBlank": false,
                     "editable": false,
                     "forceSelection": true,
