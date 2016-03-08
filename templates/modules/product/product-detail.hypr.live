@@ -90,7 +90,7 @@
 {% if model.properties and themeSettings.showProductDetailProperties %}
 <div class="mz-productdetail-properties mz-l-stack-section">
   <h4 class="mz-l-stack-sectiontitle">{{ labels.properties }}</h4>
-  <dl class="mz-propertylist mz-propertylist-justified">
+  <dl class="mz-propertylist mz-propertylist-justified zebra-striped">
     {% for property in model.properties %}
       {% if property.values and not property.isHidden %}
         <dr class="col-xs-12">
@@ -108,7 +108,7 @@
 {% if model.measurements and themeSettings.showProductDetailMeasurements and not model.bundledProducts %}
 <div class="mz-productdetail-measurements mz-l-stack-section">
   <h4 class="mz-l-stack-sectiontitle">{{ labels.measurements }}</h4>
-  <dl class="mz-propertylist mz-propertylist-justified">
+  <dl class="mz-propertylist mz-propertylist-justified zebra-striped">
     <dr class="col-xs-12">
       <dt>{{ labels.weight }}</dt>
       <dd itemprop="weight" itemscope itemtype="http://schema.org/QuantitativeValue">

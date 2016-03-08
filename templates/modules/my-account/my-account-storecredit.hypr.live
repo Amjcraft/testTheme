@@ -3,8 +3,8 @@
   <input type="text" placeholder="{{ labels.enterDigitalCredit }}" class="mz-accountstorecredit-input" data-mz-entering-credit />
   <button class="mz-button mz-accountstorecredit-add" data-mz-action="addStoreCredit">{{ labels.add }}</button>
 </div>
-{% if model.credits.totalCreditAmount != 0 %}
-  <table class="mz-accountstorecredit-table mz-table col-xs-12 no-pad">
+{% if model.totalCreditAmount != 0 %}
+  <table class="mz-accountstorecredit-table mz-table zebra-striped col-xs-12 no-pad">
     <thead>
       <tr>
         <th class="mz-accountstorecredit-header-creditnumber">{{ labels.digitalCreditCode }}</th>

@@ -2804,11 +2804,12 @@
     <table class="border">
       <tr>
 	      <td style="white-space: nowrap;">
-          table.zebra-stripe
-          <div class="primary">Only affects cells in &lt;tbody&gt; element.</div>
+          table.zebra-striped<br>
+          .mz-propertylist.zebra-striped
+          <div class="primary">Only affects rows in &lt;tbody&gt;<br>and ".mz-propertylist" elements.</div>
         </td>
         <td>
-			<table class="zebra-stripe no-border">
+			<table class="zebra-striped no-border">
 			  <tr>
 			    <td>&nbsp;</td>
 			  </tr>

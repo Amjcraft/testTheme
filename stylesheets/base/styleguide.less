@@ -1948,7 +1948,7 @@ input[type="submit"] {
 	max-height: 100%;
 }
 
-table.zebra-stripe {
+table.zebra-striped {
 	tbody {
 		tr {
 			&:nth-child(even) {
@@ -1957,6 +1957,16 @@ table.zebra-stripe {
 			&:nth-child(odd) {
 				background-color: @zebra-bg-dark;
 			}
+		}
+	}
+}
+.mz-propertylist.zebra-striped {
+	dr {
+		&:nth-child(even) {
+			background-color: @zebra-bg-light;
+		}
+		&:nth-child(odd) {
+			background-color: @zebra-bg-dark;
 		}
 	}
 }
