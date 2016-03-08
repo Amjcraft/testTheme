@@ -1,7 +1,7 @@
 { 
   "aboutUs" : "About Us",
   "accountMyWishlist" : "My Wishlist",
-  "accountNoCredits" : "You have no store credits.",
+  "accountNoCredits" : "You have no active store credits. Enter a gift card or store credit code above to add one to your account.",
   "accountNoOrders" : "You have not placed any orders.",
   "accountNoReturns" : "You have not requested any returns.",
   "accountNoWishlists" : "You do not have any wishlist items.",

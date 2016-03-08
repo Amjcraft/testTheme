@@ -3,7 +3,7 @@
   <input type="text" placeholder="{{ labels.enterDigitalCredit }}" class="mz-accountstorecredit-input" data-mz-entering-credit />
   <button class="mz-button mz-accountstorecredit-add" data-mz-action="addStoreCredit">{{ labels.add }}</button>
 </div>
-{% if model.credits.length %}
+{% if model.credits.totalCreditAmount != 0 %}
   <table class="mz-accountstorecredit-table mz-table col-xs-12 no-pad">
     <thead>
       <tr>
@@ -15,12 +15,14 @@
     </thead>
     <tbody>
       {% for credit in model.credits %}
-      <tr class="mz-accountstorecredit-row">
-        <td class="mz-accountstorecredit-cell-storecreditnumber"><span class="visible-xs-inline">{{ labels.digitalCreditCode }}: </span>{{ credit.code }}</td>
-        <td class="mz-accountstorecredit-cell-creditdate"><span class="visible-xs-inline">{{ labels.creditDate }}: </span>{{ credit.activationDate|date("F j, Y") }}</td>
-        <td class="mz-accountstorecredit-cell-creditamount"><span class="visible-xs-inline">{{ labels.creditAmount }}: </span>{{ credit.initialBalance|currency }}</td>
-        <td class="mz-accountstorecredit-cell-remaining"><span class="visible-xs-inline">{{ labels.remaining }}: </span>{{ credit.currentBalance|currency }}</td>
-      </tr>
+        {% if credit.currentBalance != 0 %}
+          <tr class="mz-accountstorecredit-row">
+            <td class="mz-accountstorecredit-cell-storecreditnumber"><span class="visible-xs-inline">{{ labels.digitalCreditCode }}: </span>{{ credit.code }}</td>
+            <td class="mz-accountstorecredit-cell-creditdate"><span class="visible-xs-inline">{{ labels.creditDate }}: </span>{{ credit.activationDate|date("F j, Y") }}</td>
+            <td class="mz-accountstorecredit-cell-creditamount"><span class="visible-xs-inline">{{ labels.creditAmount }}: </span>{{ credit.initialBalance|currency }}</td>
+            <td class="mz-accountstorecredit-cell-remaining"><span class="visible-xs-inline">{{ labels.remaining }}: </span>{{ credit.currentBalance|currency }}</td>
+          </tr>
+        {% endif %}
       {% endfor %}
     </tbody>
     <tfoot>
@@ -34,6 +36,7 @@
       </tr>
     </tfoot>
   </table>
+
 {% else %}
-  <div class="info-message">{{ labels.accountNoCredits }}</div>
+  <div class="info-message col-xs-12">{{ labels.accountNoCredits }}</div>
 {% endif %}

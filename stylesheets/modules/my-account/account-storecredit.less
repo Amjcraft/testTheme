@@ -60,21 +60,12 @@
             td {
                 &.mz-accountstorecredit-cell-creditamount,
                 &.mz-accountstorecredit-cell-remaining {
-                    text-align: right;
-                }
-                &:not(:last-child) {
-                    @media only screen and (max-width: 767px) {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                    @media only screen and (min-width: 768px) {
+                        text-align: right;
                     }
                 }
                 @media only screen and (max-width: 767px) {
                     display: block;
-                    text-align: right;
-                }
-                span {
-                    @media only screen and (max-width: 767px) {
-                        float: left;
-                    }
                 }
             }
         }
@@ -103,5 +94,8 @@
                 }
             }
         }
+    }
+    .info-message {
+        margin-top: 10px;
     }
 }
