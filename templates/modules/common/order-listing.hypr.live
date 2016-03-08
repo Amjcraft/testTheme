@@ -33,9 +33,10 @@
                 {% for package in order.packages %}
                     {% if package.trackingNumber %}
                         <dl class="mz-propertylist mz-tracking-number-wrapper" data-mz-tracking-number="{{ package.trackingNumber }}" data-mx-shipping-code="{{ package.shippingMethodCode }}" data-mx-shipping-name="{{ package.shippingMethodName }}">
-                            <dt class="tracking-number-title">{{ labels.trackingNumber }}</dt>
-                            <dd class="tracking-number">
-                                <a class="tracking-link" href="https://www.google.com/webhp?hl=en#hl=en&q={{ package.trackingNumber }}">{{ package.trackingNumber }}</a>
+                            <dt class="mz-tracking-number-title">{{ labels.trackingNumber }}</dt>
+                            <dd class="mz-tracking-number">
+                                <div class="mz-tracking-carrier hidden">{{ package.shippingMethodCode }}</div>
+                                <a class="mz-tracking-link" href="https://www.google.com/webhp?hl=en#hl=en&q={{ package.trackingNumber }}" target="_blank">{{ package.trackingNumber }}</a>
                             </dd>
                             {% if package.items.length < order.items.length %}
                                 <dl class="mz-propertylist mz-products-included">
