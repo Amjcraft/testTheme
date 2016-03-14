@@ -8,9 +8,22 @@
 @header1-height: 				100px;
 @header1-height-mobile: 		60px;
 
+.sticky-header-spacer {
+	height: @header1-height + 55px;
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		height: @header1-height;
+	}
+	@media only screen and (max-width: 767px) {
+		height: @header1-height-mobile;
+	}
+}
 #header1 {
 	background-color: @header1-bg-color;
     border-bottom: @header1-border-bottom-size solid @header1-border-bottom-color;
+    &.sticky-header {
+    	position: fixed;
+    	z-index: 99999;
+    }
     .header-content {
     	height: @header1-height;
     	@media only screen and (max-width: 767px) {

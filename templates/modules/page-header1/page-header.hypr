@@ -1,5 +1,8 @@
 ﻿{% require_script "modules/page-header1/page-header" %}
-<header id="header1" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} col-xs-12 no-pad">
+{% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
+	<div class="sticky-header-spacer col-xs-12"></div>
+{% endif %}
+<header id="header1" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
 	<div class="container">
 		<div class="row">
 			<div class="header-content col-xs-12 no-pad">

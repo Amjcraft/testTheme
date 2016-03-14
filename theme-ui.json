@@ -195,9 +195,15 @@
         },
         {
             "xtype": "panel",
-            "title": "Logo",
+            "title": "Header",
             "collapsed": false,
             "items": [
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Logo</h3><hr>"
+                    }
+                },
                 {
                     "fieldLabel": "Upload your company logo. To update, delete and re-upload.",
                     "xtype": "mz-input-image",
@@ -205,14 +211,18 @@
                     "hideTrigger": false,
                     "allowDecimal": false,
                     "minValue": 1
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
-            "title": "Navigation",
-            "collapsed": false,
-            "items": [
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Sticky Header</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "stickyHeader",
+                    "fieldLabel": "Keep header at top when scrolling down"
+                },
                 {
                     "xtype": "box",
                     "autoEl": {

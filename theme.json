@@ -408,12 +408,11 @@
 
 
     "themeLogo": "",
-
-
+    "stickyHeader": false,
     "maxTopLevelNavItems": 8,
     "maxTopLevelNavLabelLength": 20,
-    "alphaSubcats": "true",
-    "enableMegaMenu": "false",
+    "alphaSubcats": true,
+    "enableMegaMenu": false,
     "mm-column-gap-size": "20px",
     "mm-column-divider-width": "1px",
     "mm-column-divider-color": "#DDDDDD",
