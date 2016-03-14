@@ -1,7 +1,7 @@
 ﻿{% if not model.hasPreviousPage %}
 <button class="mz-pagenumbers-prev is-disabled"><i class="icon chevron2-left"></i> {{ labels.prev }}</button>
 {% else %}
-<a class="mz-pagenumbers-prev" href="{% make_url "paging" model with page="previous" %}" rel="previous" data-mz-action="previous"><button><i class="icon chevron2-left"></i> {{ labels.prev }}</button></a>
+<a class="mz-pagenumbers-prev" href="{% make_url "paging" model with page="previous" %}" rel="previous" data-mz-action="previous"><button class="primary"><i class="icon chevron2-left"></i> {{ labels.prev }}</button></a>
 {% endif %}
 {% if model.currentPage == 1 %}
 <span class="mz-pagenumbers-number is-current" data-mz-page-num="1">1</span>
@@ -31,5 +31,5 @@
 {% if not model.hasNextPage %}
 <button class="mz-pagenumbers-next is-disabled">{{ labels.next }} <i class="icon chevron2-right"></i></button>
 {% else %}
-<a class="mz-pagenumbers-next" href="{% make_url "paging" model with page="next" %}" rel="next" data-mz-action="next"><button>{{ labels.next }} <i class="icon chevron2-right"></i></button></a>
+<a class="mz-pagenumbers-next" href="{% make_url "paging" model with page="next" %}" rel="next" data-mz-action="next"><button class="primary">{{ labels.next }} <i class="icon chevron2-right"></i></button></a>
 {% endif %}

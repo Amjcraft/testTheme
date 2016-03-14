@@ -16,5 +16,5 @@
     <div class="info-message mz-accountpaymentmethods-empty">{{ labels.noSavedCards }}</div>
 {% endif %}
 <div class="add-new col-xs-12 no-pad">
-    <a href="javascript:;" data-mz-card="new" data-mz-action="beginEditCard"><button>{{ labels.addNewCard }}</button></a>
+    <a href="javascript:;" data-mz-card="new" data-mz-action="beginEditCard"><button class="primary">{{ labels.addNewCard }}</button></a>
 </div>

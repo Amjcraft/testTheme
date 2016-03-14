@@ -17,7 +17,7 @@
         {% endfor %}
     </div>
     <div class="mz-accountaddressbook-actions col-xs-12 col-sm-4 col-md-3 col-lg-2 no-pad-r">
-      <a class="mz-accountaddressbook-action mz-accountaddressbook-edit" href="javascript:;" data-mz-action="beginEditContact" data-mz-contact="{{ contact.id }}"><button>{{ labels.edit }}</button></a>
+      <a class="mz-accountaddressbook-action mz-accountaddressbook-edit" href="javascript:;" data-mz-action="beginEditContact" data-mz-contact="{{ contact.id }}"><button class="primary">{{ labels.edit }}</button></a>
       <a class="mz-accountaddressbook-action mz-accountaddressbook-delete" href="javascript:;" data-mz-action="beginDeleteContact" data-mz-contact="{{ contact.id }}"><button class="gray">{{ labels.del }}</button></a>
     </div>
   </div>
@@ -30,4 +30,4 @@
 {% else %}
   <div class="info-message mz-accountaddressbook-empty">{{ labels.noSavedContacts }}</div>
 {% endif %}
-<a class="add-new" href="javascript:;" data-mz-action="beginAddContact"><button>{{ labels.addNewContact }}</button></a>
+<a class="add-new" href="javascript:;" data-mz-action="beginAddContact"><button class="primary">{{ labels.addNewContact }}</button></a>

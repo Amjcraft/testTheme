@@ -1,6 +1,6 @@
 ﻿{% extends "modules/common/payment-method" %}
 {% block module-classes %}mz-paymentmethod-myaccount{% endblock %}
 {% block payment-method-actions %}
-    <a class="mz-paymentmethod-action mz-paymentmethod-edit" href="javascript:;" data-mz-action="beginEditCard" data-mz-card="{{ model.id }}"><button>{{ labels.edit }}</button></a>
+    <a class="mz-paymentmethod-action mz-paymentmethod-edit" href="javascript:;" data-mz-action="beginEditCard" data-mz-card="{{ model.id }}"><button class="primary">{{ labels.edit }}</button></a>
     <a class="mz-paymentmethod-action mz-paymentmethod-delete" href="javascript:;" data-mz-action="beginDeleteCard" data-mz-card="{{ model.id }}"><button class="gray">{{ labels.del }}</button></a>
 {% endblock payment-method-actions %}

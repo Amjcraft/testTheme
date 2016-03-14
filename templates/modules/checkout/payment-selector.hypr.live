@@ -96,7 +96,7 @@
                             {% endif %}
                             {% if name == "paypalexpress2"%}
                                 <div class="mz-digitalwallets">
-                                    <button>{{ labels.checkoutWithPaypal }}</button>
+                                    <button class="primary">{{ labels.checkoutWithPaypal }}</button>
                                 </div>
                             {% endif %}
                         </div>
