@@ -1,4 +1,5 @@
 ﻿.mz-ordersummary {
+    margin-top: 20px;
     @media only screen and (max-width: 767px) {
         display: block;
         width: 100%;
@@ -9,6 +10,13 @@
         border-bottom: 1px solid @gray3;
         &.mz-ordersummary-header-product {
             text-align: left;
+        }
+    }
+    td {
+        padding: 10px 15px;
+        @media only screen and (max-width: 767px) {
+            display: block;
+            width: 100%;
         }
     }
     tbody {
@@ -27,6 +35,33 @@
             &:nth-child(odd) {
                 background-color: @zebra-bg-dark;
             }
+            td {
+                &.mz-ordersummary-item-product {
+                    text-align: left;
+                }
+                @media only screen and (max-width: 767px) {
+                    &:not(:first-child) {
+                        padding-top: 5px;
+                    }
+                    &:not(:last-child) {
+                        padding-bottom: 5px;
+                    }
+                }
+                @media only screen and (min-width: 768px) {
+                    text-align: right;
+                }
+                dl {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    &.mz-product-options {
+                        font-size: @font-size - 2px;
+                        color: @gray3;
+                        @media only screen and (max-width: 991px) {
+                            font-size: @font-size-mobile - 2px;
+                        }
+                    }
+                }
+            }
         }
     }
     tfoot {
@@ -41,30 +76,9 @@
             }
         }
         td {
+            padding-top: 5px;
+            padding-bottom: 5px;
             text-align: right;
-        }
-    }
-    td {
-        padding: 10px 15px;
-        @media only screen and (max-width: 767px) {
-            display: block;
-            width: 100%;
-            &:not(:first-child) {
-                padding-top: 5px;
-            }
-            &:not(:last-child) {
-                padding-bottom: 5px;
-            }
-        }
-        @media only screen and (min-width: 768px) {
-            text-align: right;
-        }
-        &.mz-ordersummary-item-product {
-            text-align: left;
-        }
-        dl {
-            margin-top: 0;
-            margin-bottom: 0;
         }
     }
     .mz-ordersummary-totals {
@@ -77,7 +91,11 @@
         display: inline-block;
     }
     .mz-ordersummary-grandtotal {
-        border-top: 1px solid #fff;
+        font-size: @font-size + 6px;
+        color: @primary;
+        @media only screen and (max-width: 991px) {
+            font-size: @font-size-mobile + 6px;
+        }
     }
     .mz-ordersummary-totalvalue, .mz-ordersummary-itemtotal {
         font-weight: bold;
@@ -96,6 +114,5 @@
     .mz-formstep-header {
         margin-bottom: 0;
     }
-    .mz-formstep-body {
-    }
+    .mz-formstep-body {}
 }

@@ -98,7 +98,11 @@
             </tr>
         {% endif %}
 
-        <tr class="mz-ordersummary-grandtotal">
+        {% if model.billingInfo and model.billingInfo.digitalCreditPaymentTotal %}
+          <tr class="mz-ordersummary-grandtotal-before-credits">
+        {% else %}
+          <tr class="mz-ordersummary-grandtotal">
+        {% endif %}
             <td colspan="4">
                 <span class="mz-ordersummary-totalname">{{ labels.total }}:</span>
                 <span class="mz-ordersummary-totalvalue">{{ model.total|currency }}</span>
