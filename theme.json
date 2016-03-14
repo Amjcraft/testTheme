@@ -365,7 +365,50 @@
     }
   ],
   "settings": {
+    "showAddressTypeDropdown": true,
+    "enablePartialCaching": true,
+
+
+    "extendedPropertiesEnabled": false,
+    "extendedPropertyParameters": "",
+
+
+    "zipCodeEnabled": true,
+    "phoneNumberEnabled": true,
+    "billingEmailEnabled": true,
+
+
+    "pageSizeOptions": [
+      12,
+      24,
+      48,
+      96,
+      300
+    ],
+    "defaultPageSize": 24,
+    "defaultSort": "productName asc",
+
+
+    "listProductCode": true,
+    "listProductShortDesc": true,
+    "listProductThumbSize": 200,
+
+
+    "productImagesContainerWidth": 500,
+    "maxProductImageThumbnailSize": 50,
+    "pdpImgAlign": "Left",
+
+
+    "showChildCategoriesInFaceting": true,
+    "useSearchAutocomplete": true,
+    "suggestPriorSearchTerms": true,
+
+
+    "isCvvSuppressed": false,
+
+
     "themeLogo": "",
+
 
     "maxTopLevelNavItems": 8,
     "maxTopLevelNavLabelLength": 20,
@@ -378,6 +421,7 @@
     "mm-2-cols-end": "20",
     "mm-3-cols-end": "30",
 
+
     "socialBloggerUrl": "",
     "socialFacebookUrl": "",
     "socialGooglePlusUrl": "",
@@ -389,19 +433,20 @@
     "socialVimeoUrl": "",
     "socialYouTubeUrl": "",
 
+
     "themeColor1": "#557CE7",
-    "themeColor2": "#4BAF2E",
+    "themeColor2": "#9C3883",
     "themeColor3": "#CF5757",
     "themeColor4": "#ED9112",
-    "themeColor5": "#9C3883",
+    "themeColor5": "#4BAF2E",
     "themeGray1": "#ECECEC",
     "themeGray2": "#DDDDDD",
     "themeGray3": "#666666",
     "themeGray4": "#2E2E2E",
-    "hyperlinkColor": "#4B71E3",
     "customInputColor": "#4B71E3",
     "successNotificationColor": "#42A629",
     "warningNotificationColor": "#C51A02",
+
 
     "loadGoogleFonts": [
       "Source Sans Pro",
@@ -412,6 +457,7 @@
     "fontSize": "14px",
     "fontSizeMobile": "16px",
     "textColor": "#2e2e2e",
+    "hyperlinkColor": "#4B71E3",
     "fontSizeH1": "30px",
     "fontSizeH2": "24px",
     "fontSizeH3": "24px",
@@ -420,13 +466,12 @@
     "fontSizeH6": "16px",
 
 
+
+
+
+
+
     "backofficeDateTimeFormat": "m/d/Y H:i:s O",
-    "extendedPropertiesEnabled": false,
-    "extendedPropertyParameters": "",
-    "isCvvSuppressed": false,
-    "zipCodeEnabled": true,
-    "phoneNumberEnabled": true,
-    "billingEmailEnabled": true,
     "bannerImage": "/resources/images/banner.jpg",
     "bannerImageEnabled": false,
     "bannerImageRepeat": "repeat-x",
@@ -446,38 +491,19 @@
         "tagName": "p"
       }
     ],
-    "defaultSort": "createDate asc",
-    "enablePartialCaching": true,
-    "gutterWidth": "25px",
+    "gutterWidth": "30px",
     "internal-themeAddons": [],
     "itemListingThumbSize": 80,
-    "listProductCode": true,
-    "listProductShortDesc": true,
-    "listProductThumbSize": 200,
-    "productImagesContainerWidth": 500,
-    "maxProductImageThumbnailSize": 50,
-    "pdpImgAlign": "Left",
     "maxProductSummaryWords": 40,
-    "pageSizeOptions": [
-      12,
-      24,
-      48,
-      96,
-      300
-    ],
-    "defaultPageSize": 24,
     "preselectCountryCode": "US",
     "requireCheckoutAgreeToTerms": true,
-    "suggestPriorSearchTerms": true,
     "searchExpandOnFocus": true,
-    "showAddressTypeDropdown": true,
     "showBreadcrumbs": true,
     "showCartItemDimensions": true,
     "showCartItemImage": true,
     "showCartItemOptions": true,
     "showCartItemWeight": true,
     "showCategoryFacets": true,
-    "showChildCategoriesInFaceting": true,
     "showCheckoutCommentsField": true,
     "showMSRP": true,
     "showProductDetailMeasurements": true,
@@ -724,7 +750,6 @@
       }
     ],
     "useDebugScripts": false,
-    "useSearchAutocomplete": true,
     "allowCustomerInitiatedReturns": true,
     "visaCheckoutSdkUrl": "https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js"
   },
