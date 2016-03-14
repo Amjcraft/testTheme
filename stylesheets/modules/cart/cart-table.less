@@ -123,6 +123,9 @@
                         text-align: center;
                     }
                     .mz-carttable-qty-field {
+                        @media only screen and (max-width: 500px) {
+                            max-width: 80px;
+                        }
                         @media only screen and (min-width: 501px) and (max-width: 767px) {
                             max-width: 70px;
                         }
@@ -282,6 +285,11 @@
                     }
                 }
                 .mz-carttable-total-row {
+                    font-size: @font-size + 6px;
+                    color: @primary;
+                    @media only screen and (max-width: 991px) {
+                        font-size: @font-size-mobile + 6px;
+                    }
                     .mz-carttable-total-label {
                         text-align: right;
                     }
@@ -296,8 +304,10 @@
                 width: 100%;
             }
             button#cart-checkout {
-                float: right;
                 margin-top: 40px;
+            }
+            .visa-checkout {
+                text-align: right;
             }
         }
     }

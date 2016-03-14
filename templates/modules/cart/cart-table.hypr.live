@@ -81,7 +81,7 @@
       </div>
     </td>
     <td class="mz-carttable-summary-details-cell" colspan="4">
-      <table class="mz-carttable-summary-details-table">
+      <table class="mz-carttable-summary-details-table col-xs-12 no-pad">
         <tbody>
           <tr class="mz-carttable-shipping-row">
             <td>
@@ -121,18 +121,23 @@
   
   <tr class="mz-carttable-checkout-row">
     <td colspan="5">
-      <button id="cart-checkout" class="mz-button mz-carttable-button-active"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
-
-      {% if siteContext.checkoutSettings.visaCheckout.isEnabled %}
-        <div>
+      <button id="cart-checkout" class="mz-button mz-carttable-button-active pull-right"  {% if model.isEmpty %} disabled="disabled" {% endif %} data-mz-action="proceedToCheckout">{{ labels.proceedToCheckout }}</button>
+    </td>
+  </tr>
+  {% if siteContext.checkoutSettings.visaCheckout.isEnabled %}
+    <tr class="mz-carttable-checkout-row">
+      <td colspan="5">
+        <div class="visa-checkout pull-right">
           <p>{{ labels.orCheckoutWith }}</p>
           <img alt="Visa Checkout" class="v-button" role="button"
             src="{{pageContext.visaCheckoutButtonUrl}}"/>       
         </div>
-      {% endif %}
-    </td>
-  </tr>
+      </td>
+    </tr>
+  {% endif %}
 </tfoot>
 {% else %}
-  <div class="info-message text-center col-xs-12 col-sm-6 col-sm-offset-3">{{ labels.cartEmpty }}</div>
+  <div class="col-xs-12">
+    <div class="info-message text-center col-xs-12 col-sm-6 col-sm-offset-3">{{ labels.cartEmpty }}</div>
+  </div>
 {% endif %}
