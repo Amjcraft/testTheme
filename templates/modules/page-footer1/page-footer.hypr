@@ -130,7 +130,7 @@
 			    {% for externalPayment in siteContext.checkoutSettings.externalPaymentWorkflowSettings %}
 					{% if externalPayment.isEnabled %}
 			            {% if externalPayment.name|lower == "visacheckout" %}
-							<i><b>Visa Checkout</b></i>
+							<i><b><i class="icon cc-visa"></i> {{ labels.checkout }}</b></i>
 			            {% endif %}
 			            {% if externalPayment.name|lower == "paypalexpress2" %}
 							<i class="icon cc-paypal"></i>
