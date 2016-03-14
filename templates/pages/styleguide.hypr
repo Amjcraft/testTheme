@@ -10,56 +10,6 @@
 {% block body-content %}
 
 {% require_script "pages/styleguide" %}
-
-<style>
-  .styleguide table td {
-    vertical-align: middle;
-  }
-  .styleguide table.solid td {
-    min-width: 150px;
-    padding: 20px 10px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .styleguide table:not(.solid) td {
-    min-width: 60px;
-    padding: 5px;
-  }
-  .styleguide table.border td {
-    border: 1px solid;
-  }
-  .styleguide table.no-border td {
-    border: 0;
-  }
-  .styleguide table.icons i.icon {
-  	display: block;
-    font-size: 40px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .styleguide table.icons i.icon:hover {
-  	color: {{ themeSettings.themeColor1 }};
-  }
-  .styleguide table.icons .icon-details {
-    position: absolute;
-    z-index: 1;
-    display: none;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
-  }
-  .styleguide table.icons .icon-details label {
-  	cursor: default;
-  }
-  .styleguide table.icons .icon-details input {
-  	width: 300px;
-  }
-  .styleguide table.icons .icon-details > * {
-  	display: block;
-  }
-</style>
 <div class="container">
 	<div class="col-xs-12">
 	  <h1>Color Variables</h1>
