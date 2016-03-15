@@ -1,0 +1,45 @@
+﻿{% require_script "modules/page-header1/page-header" %}
+{% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
+	<div class="sticky-header-spacer col-xs-12"></div>
+{% endif %}
+<header id="header1" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
+	<div class="container">
+		<div class="row">
+			<div class="header-content col-xs-12 no-pad">
+				<div class="push-menu-toggle-wrapper col-xs-2 col-sm-3 no-pad-r hidden-md hidden-lg">
+					<div class="push-menu-toggle">
+						<i class="icon menu7"></i>
+					</div>
+				</div>
+				<div class="utlility-nav-wrapper col-xs-4 hidden-xs hidden-sm">
+				    {% block utility-nav %}
+				        {% include "modules/page-header1/utility-nav" %}
+				    {% endblock utility-nav %}
+				</div>
+				<div class="logo-wrapper col-xs-6 col-md-4">
+				   {% block store-branding %}
+				        {% include "modules/page-header1/store-branding" %}
+				    {% endblock store-branding %}
+			    </div>
+				<div class="cart-search-wrapper col-xs-4 col-sm-3 col-md-4 no-pad-l">
+					<div class="mz-header-search-toggle hidden-xs">
+						<i class="icon search5"></i>
+					    {% block search-box %}
+					        {% include "modules/page-header1/search-box" %}
+					    {% endblock search-box %}
+					</div>
+
+		            <a class="mz-header-link-cart" href="{% make_url "cart" %}">
+			            <i class="icon cart4"></i> <span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>
+			            {% require_script "modules/cart-monitor" %}
+		            </a>
+				</div>
+			</div>
+			<div class="col-xs-12 hidden-xs hidden-sm">
+			    {% block site-nav %}
+			    	{% include "modules/site-nav" %}
+			    {% endblock site-nav %}
+		    </div>
+	    </div>
+    </div>
+</header>

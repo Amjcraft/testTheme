@@ -114,6 +114,9 @@
             {% endblock utility-bar %}
 
             {% block page-header %}
+                {% comment %}
+                    Specify "/page-header1/" - "/page-header15/". http://volusion.github.io/blocks/headers.html
+                {% endcomment %}
                 {% include "modules/page-header1/page-header" %}
             {% endblock page-header %}
     
@@ -138,7 +141,10 @@
             </div>
 
             {% block page-footer %}
-            {% include "modules/page-footer1/page-footer" %}
+                {% comment %}
+                    Specify "/page-footer1/" - "/page-footer15/". http://volusion.github.io/blocks/footers.html
+                {% endcomment %}
+            {% include "modules/page-footer3/page-footer" %}
             {% endblock page-footer %}
 
         </div>

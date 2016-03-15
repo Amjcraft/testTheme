@@ -1,0 +1,25 @@
+﻿#header1 {
+    .mz-utilitynav {
+    	position: absolute;
+    	top: 50%;
+    	-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+    	-ms-transform: translateY(-50%); /* IE 9 */
+    	transform: translateY(-50%);
+    	.mz-utilitynav-item {
+    		display: inline-block;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+    		.mz-utilitynav-link {
+                color: @header1-link-color;
+    			text-decoration: none;
+                &:hover {
+                    color: @header1-link-hover-color;
+                }
+    		}
+            #mz-logged-in-notice {
+                text-transform: capitalize;
+            }
+    	}
+    }
+}
