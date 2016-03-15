@@ -1162,6 +1162,157 @@
       "validPageTypes": [
         "*"
       ]
+    },
+    {
+      "displayName": "Promo Blocks",
+      "displayTemplate": "cms/promo-blocks",
+      "icon": "/resources/admin/widgets/30_promo-blocks.png",
+      "id": "promo-blocks",
+      "validPageTypes": [
+        "*"
+      ],
+      "defaultConfig": {
+        "promoStyle": "slideUp",
+        "promoSlideUpHeight": 250,
+        "promoTextboxBg": "rgba(59, 69, 168, 0.4)",
+        "promoTextColor": "#FFFFFF",
+        "promoTextShadow": true,
+        "promoButtonColor": "Primary",
+        "promoButtonAlign": "Left",
+        "promoButtonFullWidth": true
+      },
+      "editViewFields": [
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "promoStyle",
+          "fieldLabel": "Select your style of promo",
+          "allowBlank": false,
+          "store": [
+            [
+              "slideUp",
+              "Details slide up on hover"
+            ],
+            [
+              "detailsOnHover",
+              "Details appear on image hover"
+            ],
+            [
+              "imgAboveDetails",
+              "Image above details"
+            ],
+            [
+              "detailsOverlayImg",
+              "Details overlay image"
+            ]
+          ]
+        },
+        {
+          "xtype": "mz-input-number",
+          "name": "promoSlideUpHeight",
+          "fieldLabel": "Promo height (px). \"Slide Up\" style only.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "promoGraphic",
+          "fieldLabel": "Upload your promo graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoTextboxBg",
+          "fieldLabel": "Textbox Background Color",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoTextColor",
+          "fieldLabel": "Text Color",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "promoTextShadow",
+          "fieldLabel": "Enable Text Shadow",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "promoTitle",
+          "fieldLabel": "Title (Leave empty to hide.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-textarea",
+          "name": "promoDescription",
+          "fieldLabel": "Description (Leave empty to hide.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "promoLinkUrl",
+          "fieldLabel": "Link URL",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "promoLinkAll",
+          "fieldLabel": "Link whole promo box",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "promoButtonText",
+          "fieldLabel": "Button Text (Leave empty to hide.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "promoButtonColor",
+          "fieldLabel": "Button Color (Colors assigned in Theme Settings)",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Primary",
+            "Secondary",
+            "Color3",
+            "Color4",
+            "Color5",
+            "Gray",
+            "Custom"
+          ]
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoButtonBgColorCustom",
+          "fieldLabel": "Custom Button Background Color (Requires \"Custom\" button color.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoButtonTextColorCustom",
+          "fieldLabel": "Custom Button Text Color (Requires \"Custom\" button color.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "promoButtonAlign",
+          "fieldLabel": "Align Button",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Left",
+            "Center",
+            "Right"
+          ]
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "promoButtonFullWidth",
+          "fieldLabel": "Button is full width",
+          "allowBlank": true
+        }
+      ]
     }
   ]
 }
