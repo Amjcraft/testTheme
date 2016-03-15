@@ -80,26 +80,30 @@
 			border-radius: 4px;
 			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 			.tt-suggestion {
-				display: block;
-				padding: 3px 20px;
-				clear: both;
-				font-weight: normal;
-				line-height: 1.42857143;
-				color: #333333;
-	            display: table;
+				display: table;
+				padding: 3px 0;
+	            &:hover {
+	            	background-color: @header1-search-recommendation-hover-color;
+	            }
 		        .mz-itemlisting {
 		            display: table-row;
 			        .mz-itemlisting-thumb, 
 			        .mz-itemlisting-details {
 			            float: none;
 			            display: table-cell;
-			            padding: 0.5em;
+			            padding: 0;
 			            vertical-align: top;
 			            text-align: left;
 			        }
+			        .mz-itemlisting-thumb {
+			        	width: 30%;
+			        	padding-right: 15px;
+			        }
 			        .mz-itemlisting-details {
+			        	width: 70%;
 			        	.mz-itemlisting-title {
 			        		font-size: @font-size;
+			        		text-decoration: none;
 			        	}
 			        	.mz-itemlisting-description {
 			        		display: none;
