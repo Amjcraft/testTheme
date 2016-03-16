@@ -1,4 +1,4 @@
-﻿#header1 {
+﻿#header2 {
 	.mz-storebranding {
 		height: 100%;
 		margin-top: 0;
@@ -6,13 +6,12 @@
 		padding-top: 15px;
 		padding-bottom: 15px;
 		@media only screen and (max-width: 767px) {
-			padding-top: 5px;
-			padding-bottom: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 		a {
-			@media only screen and (min-width: 768px) {
-				height: 100%;
-			}
+			display: inline-block;
+			height: 100%;
 			@media only screen and (max-width: 767px) {
 				position: relative;
 				top: 50%;
@@ -21,14 +20,6 @@
 				transform: translateY(-50%);
 				display: block;
 
-			}
-			img {
-				display: block;
-				margin-right: auto;
-				margin-left: auto;
-				@media only screen and (max-width: 767px) {
-					max-height: @header1-height-mobile - 10px;
-				}
 			}
 		}
 	}
