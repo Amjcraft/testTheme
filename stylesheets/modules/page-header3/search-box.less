@@ -1,4 +1,4 @@
-﻿#header1 {
+﻿#header3 {
 	.mz-header-search-toggle {
 		position: relative;
 		top: 50%;
@@ -7,23 +7,21 @@
 		-ms-transform: translateY(-50%); /* IE 9 */
 		transform: translateY(-50%);
 		display: inline-block;
-		padding: 10px;
-		color: #fff;
 		text-decoration: none;
-		background-color: @header1-features-color;
-		border-radius: 50px;
+		color: @header3-icons-color;
 		cursor: pointer;
 		@media only screen and (max-width: 991px) {
 			padding-right: 12px;
 			padding-left: 12px;
 		}
 		&:hover {
-			background-color: @header1-features-hover-color;
+			color: @header3-icons-hover-color;
 		}
 		i.icon {
 			display: inline-block;
-			font-size: 18px;
+			font-size: 20px;
 			vertical-align: middle;
+			line-height: 32px;
 		}
 	}
 	#searchbox {
@@ -83,7 +81,7 @@
 				display: table;
 				padding: 3px 0;
 	            &:hover {
-	            	background-color: @header1-search-recommendation-hover-color;
+	            	background-color: @header3-search-recommendation-hover-color;
 	            }
 		        .mz-itemlisting {
 		            display: table-row;

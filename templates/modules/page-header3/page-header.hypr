@@ -1,8 +1,8 @@
-﻿{% require_script "modules/page-header1/page-header" %}
+﻿{% require_script "modules/page-header3/page-header" %}
 {% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
-	<div class="sticky-header-spacer col-xs-12"></div>
+	<div class="header3-sticky-header-spacer col-xs-12"></div>
 {% endif %}
-<header id="header1" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
+<header id="header3" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
 	<div class="container">
 		<div class="row">
 			<div class="header-content col-xs-12 no-pad">
@@ -11,21 +11,21 @@
 						<i class="icon menu7"></i>
 					</div>
 				</div>
-				<div class="utlility-nav-wrapper col-xs-4 hidden-xs hidden-sm">
-				    {% block utility-nav %}
-				        {% include "modules/page-header1/utility-nav" %}
-				    {% endblock utility-nav %}
-				</div>
 				<div class="logo-wrapper col-xs-6 col-md-4">
 				   {% block store-branding %}
-				        {% include "modules/page-header1/store-branding" %}
+				        {% include "modules/page-header3/store-branding" %}
 				    {% endblock store-branding %}
 			    </div>
+				<div class="utlility-nav-wrapper col-xs-4 hidden-xs hidden-sm">
+				    {% block utility-nav %}
+				        {% include "modules/page-header3/utility-nav" %}
+				    {% endblock utility-nav %}
+				</div>
 				<div class="cart-search-wrapper col-xs-4 col-sm-3 col-md-4 no-pad-l">
 					<div class="mz-header-search-toggle hidden-xs">
 						<i class="icon search5"></i>
 					    {% block search-box %}
-					        {% include "modules/page-header1/search-box" %}
+					        {% include "modules/page-header3/search-box" %}
 					    {% endblock search-box %}
 					</div>
 
