@@ -1,8 +1,14 @@
 ﻿{% require_script "modules/page-header1/page-header" %}
 {% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
-	<div class="sticky-header-spacer col-xs-12"></div>
+	<div class="header1-sticky-header-spacer{% if themeSettings.stickyHeader %} sticky-header{% endif %} col-xs-12"></div>
 {% endif %}
-<header id="header1" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
+<header id="header1" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %}{% if themeSettings.stickyHeader %} sticky-header{% endif %} col-xs-12 no-pad">
+
+	<div class="header1-promo col-xs-12 no-pad">
+		<div class="container">
+			{% dropzone "header1-promo" scope="template" %}
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="header-content col-xs-12 no-pad">
@@ -23,14 +29,14 @@
 			    </div>
 				<div class="cart-search-wrapper col-xs-4 col-sm-3 col-md-4 no-pad-l">
 					<div class="mz-header-search-toggle hidden-xs">
-						<i class="icon search5"></i>
+						<i class="icon search2"></i>
 					    {% block search-box %}
 					        {% include "modules/page-header1/search-box" %}
 					    {% endblock search-box %}
 					</div>
 
 		            <a class="mz-header-link-cart" href="{% make_url "cart" %}">
-			            <i class="icon cart4"></i> <span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>
+			            <i class="icon cart2"></i> <span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>
 			            {% require_script "modules/cart-monitor" %}
 		            </a>
 				</div>

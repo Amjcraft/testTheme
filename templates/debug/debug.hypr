@@ -1,5 +1,5 @@
 {% if themeSettings.stickyHeader %}
-  <div class="sticky-header-spacer col-xs-12"></div>
+  <div class="debug-sticky-header-spacer col-xs-12"></div>
 {% endif %}
 {% if pageContext.isDesktop %}
   {% with pageContext.isDebugMode as debugMode %}
