@@ -1252,7 +1252,7 @@
           "xtype": "mz-input-text",
           "name": "promoLinkUrl",
           "fieldLabel": "Link URL",
-          "allowBlank": true
+          "allowBlank": false
         },
         {
           "xtype": "mz-input-checkbox",

@@ -13,23 +13,23 @@
 					{{ model.config.promoTitle }}
 				</div>
 			{% endif %}
-			{% if model.config.promoDescription or model.config.promoButtonText %}
+			{% if model.config.promoDescription %}
 				<div class="promo-description col-xs-12 no-pad">
 					{{ model.config.promoDescription }}
-					{% if model.config.promoButtonText %}
-						<div class="promo-link-wrapper col-xs-12 no-pad">
-							{% if model.config.promoLinkAll %}
-									<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
-									{{ model.config.promoButtonText }}
-								</button>
-							{% else %}
-								<a class="promo-link {% if model.config.promoButtonFullWidth %}full-width{% endif %}" href="{{ model.config.promoLinkUrl }}" href="{{ model.config.promoLinkUrl }}">
-									<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
-										{{ model.config.promoButtonText }}
-									</button>
-								</a>
-							{% endif %}
-						</div>
+				</div>
+			{% endif %}
+			{% if model.config.promoButtonText %}
+				<div class="promo-link-wrapper col-xs-12 no-pad">
+					{% if model.config.promoLinkAll %}
+							<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
+							{{ model.config.promoButtonText }}
+						</button>
+					{% else %}
+						<a class="promo-link {% if model.config.promoButtonFullWidth %}full-width{% endif %}" href="{{ model.config.promoLinkUrl }}" href="{{ model.config.promoLinkUrl }}">
+							<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
+								{{ model.config.promoButtonText }}
+							</button>
+						</a>
 					{% endif %}
 				</div>
 			{% endif %}
@@ -51,23 +51,23 @@
 					{{ model.config.promoTitle }}
 				</div>
 			{% endif %}
-			{% if model.config.promoDescription or model.config.promoButtonText %}
+			{% if model.config.promoDescription %}
 				<div class="promo-description col-xs-12 no-pad">
 					{{ model.config.promoDescription }}
-					{% if model.config.promoButtonText %}
-						<div class="promo-link-wrapper col-xs-12 no-pad">
-							{% if model.config.promoLinkAll %}
-									<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
-									{{ model.config.promoButtonText }}
-								</button>
-							{% else %}
-								<a class="promo-link {% if model.config.promoButtonFullWidth %}full-width{% endif %}" href="{{ model.config.promoLinkUrl }}">
-									<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
-										{{ model.config.promoButtonText }}
-									</button>
-								</a>
-							{% endif %}
-						</div>
+				</div>
+			{% endif %}
+			{% if model.config.promoButtonText %}
+				<div class="promo-link-wrapper col-xs-12 no-pad">
+					{% if model.config.promoLinkAll %}
+							<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
+							{{ model.config.promoButtonText }}
+						</button>
+					{% else %}
+						<a class="promo-link {% if model.config.promoButtonFullWidth %}full-width{% endif %}" href="{{ model.config.promoLinkUrl }}">
+							<button class="promo-button{% if model.config.promoButtonColor == 'Primary' %} primary{% endif %}{% if model.config.promoButtonColor == 'Secondary' %} secondary{% endif %}{% if model.config.promoButtonColor == 'Color3' %} color3{% endif %}{% if model.config.promoButtonColor == 'Color4' %} color4{% endif %}{% if model.config.promoButtonColor == 'Color5' %} color5{% endif %}{% if model.config.promoButtonColor == 'Gray' %} gray{% endif %}{% if model.config.promoButtonFullWidth %} full-width{% endif %}{% if model.config.promoButtonAlign == 'Left' %} align-left{% endif %}{% if model.config.promoButtonAlign == 'Center' %} align-center{% endif %}{% if model.config.promoButtonAlign == 'Right' %} align-right{% endif %}" {% if model.config.promoButtonColor == 'Custom' %}style="color: {{model.config.promoButtonTextColorCustom}}; background-color: {{model.config.promoButtonBgColorCustom}};"{% endif %}>
+								{{ model.config.promoButtonText }}
+							</button>
+						</a>
 					{% endif %}
 				</div>
 			{% endif %}

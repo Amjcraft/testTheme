@@ -16,18 +16,19 @@
 		&.hovered {
 			.promo-textbox {
 				@media only screen and (min-width: 992px) {
-					top: 0;
+					height: 100%;
 				}
 			}
 		}
 		.promo-textbox {
 			@media only screen and (min-width: 992px) {
 				position: absolute;
-				top: ~"calc(100% - @{slide-up-title-bar-height})";
-				-webkit-transition:top 0.3s linear; /* For Safari and Chrome */
-				-moz-transition:top 0.3s linear; /* For Firefox */
-				-o-transition:top 0.3s linear; /* For Opera */
-				transition:top 0.3s linear; /* Standard syntax */
+				bottom: 0;
+				-webkit-transition: height 0.3s linear; /* For Safari and Chrome */
+				-moz-transition: height 0.3s linear; /* For Firefox */
+				-o-transition: height 0.3s linear; /* For Opera */
+				transition: height 0.3s linear; /* Standard syntax */
+				height: @slide-up-title-bar-height;
 			}
 			.promo-title {
 				margin-bottom: 15px;
@@ -57,9 +58,11 @@
 	}
 	&.img-above-details {
 		.promo-textbox {
-			margin-top: 15px;
 			padding-top: 0;
 			padding-bottom: 0;
+			.promo-title {
+				margin-top: 10px;
+			}
 		}
 	}
 	&.details-overlay-img {
