@@ -1,14 +1,15 @@
-@push-menu-background:          #fff;
-@push-menu-exit-icon-font-size: 26px;
-@push-menu-exit-icon-color:     #000;
-@push-menu-text-color:          @color-text;
-@push-menu-links-bg:            #fff;
-@push-menu-links-color:         @color-text;
-@push-menu-links-border-color:  @gray2;
-@push-menu-links-border-width:  1px;
-@push-menu-sublinks-bg:         @gray1;
-@push-menu-sublinks-color:      @color-text;
-@push-menu-sublinks-hover-bg:   @gray2;
+@push-menu-width :               320px;
+@push-menu-background :          #fff;
+@push-menu-exit-icon-font-size : 26px;
+@push-menu-exit-icon-color :     #000;
+@push-menu-text-color :          @color-text;
+@push-menu-links-bg :            #fff;
+@push-menu-links-color :         @color-text;
+@push-menu-links-border-color :  @gray2;
+@push-menu-links-border-width :  1px;
+@push-menu-sublinks-bg :         @gray1;
+@push-menu-sublinks-color :      @color-text;
+@push-menu-sublinks-hover-bg :   @gray2;
 
 
 body {
@@ -30,10 +31,10 @@ body {
 }
 #push-menu {
     position: absolute;
-    left: -320px;
+    left: 0 - @push-menu-width;
     width: 100vw;
     z-index: 9999;
-    max-width: 320px;
+    max-width: @push-menu-width;
     height: 100vh;
     padding-bottom: 80px; /* Counters iOS browser overlays */
     background-color: @push-menu-background  ;
@@ -54,8 +55,11 @@ body {
         list-style: none;
         li {
             float: left;
-            &:not(:last-child) {
-                margin-right: 10px;
+            &.welcome {
+                width: 100%;
+            }
+            &:last-child {
+                margin-left: 10px;
             }
             #mz-logged-in-notice {
                 margin-bottom: 10px;

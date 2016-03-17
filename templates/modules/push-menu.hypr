@@ -11,12 +11,11 @@
           <a href="/user/signup" class="mz-utilitynav-link" alt="{{ labels.register }}" title="{{ labels.register }}"><button class="gray">{{ labels.register }}</button></a>
       </li>
       {%else%}
-      <li>
+      <li class="welcome">
           <div id="mz-logged-in-notice">
               {{ labels.welcome }}, {{user.firstName|default(user.emailAddress)}}!
           </div> 
       </li>
-      <br>
       <li>
           <a href="/myaccount" alt="{{ labels.myAccount }}" title="{{ labels.myAccount }}"><button class="primary">{{ labels.myAccount }}</button></a>
       </li>
