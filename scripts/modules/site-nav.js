@@ -28,7 +28,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr)
 		var numTopNavLinks = $('#mega-menu .mz-sitenav-list').children('.mz-sitenav-item').length;
 		var	halfTopNavLinks = numTopNavLinks/2;
 		$('#mega-menu .mz-sitenav-list').children('.mz-sitenav-item').each(function(){
-			if ($(this).index() > halfTopNavLinks) {
+			if ($(this).index() >= halfTopNavLinks) {
 				$(this).addClass('mm-float-right');
 			}
 		});
