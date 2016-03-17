@@ -2,11 +2,11 @@
     <ul class="mz-utilitynav-list">
         {% if user.isAnonymous %}
         <li class="mz-utilitynav-item">
-            <a href="/user/login" class="mz-utilitynav-link" alt="{{ labels.logIn }}" title="{{ labels.logIn }}">{{ labels.logIn }}</a>
+            <a href="/user/login" class="mz-utilitynav-link" alt="{{ labels.logIn }}" title="{{ labels.logIn }}" rel="nofollow">{{ labels.logIn }}</a>
         </li>
         <li class="mz-utilitynav-item">/</li>
         <li class="mz-utilitynav-item">
-            <a href="/user/signup" class="mz-utilitynav-link" alt="{{ labels.register }}" title="{{ labels.register }}">{{ labels.register }}</a>
+            <a href="/user/signup" class="mz-utilitynav-link" alt="{{ labels.register }}" title="{{ labels.register }}" rel="nofollow">{{ labels.register }}</a>
         </li>
         {%else%}
         <li class="mz-utilitynav-item">
@@ -15,10 +15,10 @@
             </div> 
         </li>
         <li class="mz-utilitynav-item">
-            <a href="/myaccount" class="mz-utilitynav-link">{{ labels.myAccount }}</a>
+            <a href="/myaccount" class="mz-utilitynav-link" alt="{{ labels.myAccount }}" title="{{ labels.myAccount }}" rel="nofollow">{{ labels.myAccount }}</a>
         </li>
         <li class="mz-utilitynav-item">
-            <a href="/logout" class="mz-utilitynav-link" alt="{{ labels.logout }}" title="{{ labels.logout }}">{{ labels.logout }}</a>
+            <a href="/logout" class="mz-utilitynav-link" alt="{{ labels.logout }}" title="{{ labels.logout }}" rel="nofollow">{{ labels.logout }}</a>
         </li>
         {% endif %}
     </ul>

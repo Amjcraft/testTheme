@@ -24,7 +24,7 @@
 					    {% endblock search-box %}
 					</div>
 
-		            <a class="mz-header-link-cart" href="{% make_url "cart" %}">
+		            <a class="mz-header-link-cart" href="{% make_url "cart" %}" rel="nofollow">
 			            <i class="icon cart2"></i> <span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>
 			            {% require_script "modules/cart-monitor" %}
 		            </a>
