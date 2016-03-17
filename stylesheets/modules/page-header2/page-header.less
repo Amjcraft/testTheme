@@ -3,19 +3,20 @@
 @header2-border-top-color : 					@primary;
 @header2-nav-border-size : 						1px;
 @header2-nav-border-color : 					@gray2;
+@header2-nav-bg-color : 						#fff;
 @header2-icons-color : 							@gray3;
 @header2-icons-hover-color : 					@gray4;
 @header2-search-recommendation-hover-color :	@gray1;
 @header2-height : 								80px;
 @header2-height-mobile : 						60px;
 
-.sticky-header-spacer {
-	height: @header2-height + 55px;
+.header2-sticky-header-spacer {
+	height: @header2-height + @header2-border-top-size;
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
-		height: @header2-height;
+		height: @header2-height + @header2-border-top-size;
 	}
 	@media only screen and (max-width: 767px) {
-		height: @header2-height-mobile;
+		height: @header2-height-mobile + @header2-border-top-size;
 	}
 }
 #header2 {

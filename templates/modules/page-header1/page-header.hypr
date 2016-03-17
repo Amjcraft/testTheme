@@ -6,7 +6,8 @@
 
 	<div class="header1-promo col-xs-12 no-pad">
 		<div class="container">
-			{% dropzone "header1-promo" scope="template" %}
+			{% comment %} Editable under Site Editor > Templates > Default Site Template {% endcomment %}
+			{% dropzone "header1-promo" scope="site" %}
 		</div>
 	</div>
 	<div class="container">

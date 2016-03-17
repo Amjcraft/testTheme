@@ -3,9 +3,9 @@
 	<div class="header2-sticky-header-spacer col-xs-12"></div>
 {% endif %}
 <header id="header2" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
-	<div class="container">
-		<div class="row">
-			<div class="header-content col-xs-12 no-pad">
+	<div class="header-content-wrapper col-xs-12 no-pad">
+		<div class="container">
+			<div class="header-content row">
 				<div class="push-menu-toggle-wrapper col-xs-2 col-sm-3 no-pad-r hidden-md hidden-lg">
 					<div class="push-menu-toggle">
 						<i class="icon menu7"></i>
@@ -29,18 +29,18 @@
 			            {% require_script "modules/cart-monitor" %}
 		            </a>
 				</div>
-			</div>
-	    </div>
-    </div>
-</header>
-<div id="header2-site-nav" class="col-xs-12 no-pad">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 hidden-xs hidden-sm">
-			    {% block site-nav %}
-			    	{% include "modules/site-nav" %}
-			    {% endblock site-nav %}
 		    </div>
 	    </div>
     </div>
-</div>
+	<div id="header2-site-nav" class="col-xs-12 no-pad">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 hidden-xs hidden-sm">
+				    {% block site-nav %}
+				    	{% include "modules/site-nav" %}
+				    {% endblock site-nav %}
+			    </div>
+		    </div>
+	    </div>
+	</div>
+</header>

@@ -12,12 +12,12 @@
 @header1-height-mobile : 						60px;
 
 .header1-sticky-header-spacer {
-	height: @header1-height + @header1-promo-height + 55px;
+	height: @header1-height + @header1-promo-height + 32px + @header1-border-bottom-size;
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
-		height: @header1-height;
+		height: @header1-height + @header1-border-bottom-size;
 	}
 	@media only screen and (max-width: 767px) {
-		height: @header1-height-mobile;
+		height: @header1-height-mobile + @header1-border-bottom-size;
 	}
 }
 #header1 {
