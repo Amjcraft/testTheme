@@ -1,24 +1,21 @@
 ﻿#header3 {
-    .mz-utilitynav {
-    	position: absolute;
+    .utlility-nav-wrapper {
+    	position: relative;
     	top: 50%;
     	-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
     	-ms-transform: translateY(-50%); /* IE 9 */
     	transform: translateY(-50%);
+        margin-right: 20px;
     	.mz-utilitynav-item {
     		display: inline-block;
 			&:not(:last-child) {
 				margin-right: 10px;
 			}
-    		.mz-utilitynav-link {
-                color: @header3-link-color;
-    			text-decoration: none;
-                &:hover {
-                    color: @header3-link-hover-color;
-                }
-    		}
             #mz-logged-in-notice {
                 text-transform: capitalize;
+            }
+            .mz-utilitynav-link {
+                text-decoration: none;
             }
     	}
     }

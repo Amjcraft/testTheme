@@ -1,12 +1,12 @@
-﻿{% require_script "modules/page-header3/page-header" %}
+﻿{% require_script "modules/page-header" %}
 {% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
-	<div class="header3-sticky-header-spacer col-xs-12"></div>
+	<div class="header3-sticky-header-spacer{% if themeSettings.stickyHeader %} sticky-header{% endif %} col-xs-12"></div>
 {% endif %}
-<header id="header3" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %} {% if themeSettings.stickyHeader %}sticky-header{% endif %} col-xs-12 no-pad">
+<header id="header3" class="mz-pageheader {% if themeSettings.themeLogo %}mz-pageheader-hasbanner{% endif %}{% if themeSettings.stickyHeader %} sticky-header{% endif %} col-xs-12 no-pad">
 	<div class="container">
 		<div class="row">
 			<div class="header-content col-xs-12 no-pad">
-				<div class="push-menu-toggle-wrapper col-xs-2 col-sm-3 no-pad-r hidden-md hidden-lg">
+				<div class="push-menu-toggle-wrapper col-xs-2 col-sm-3 hidden-md hidden-lg">
 					<div class="push-menu-toggle">
 						<i class="icon menu7"></i>
 					</div>
@@ -16,23 +16,33 @@
 				        {% include "modules/page-header3/store-branding" %}
 				    {% endblock store-branding %}
 			    </div>
-				<div class="utlility-nav-wrapper col-xs-4 hidden-xs hidden-sm">
-				    {% block utility-nav %}
-				        {% include "modules/page-header3/utility-nav" %}
-				    {% endblock utility-nav %}
-				</div>
-				<div class="cart-search-wrapper col-xs-4 col-sm-3 col-md-4 no-pad-l">
-					<div class="mz-header-search-toggle hidden-xs">
-						<i class="icon search5"></i>
-					    {% block search-box %}
-					        {% include "modules/page-header3/search-box" %}
-					    {% endblock search-box %}
+				<div class="col-xs-4 col-sm-3 col-md-8 no-pad-l">
+					<table class="icon-links-wrapper pull-right">
+						<tr>
+							<td class="hidden-xs">
+								<div class="mz-header-search-toggle">
+									<i class="icon search2"></i>
+								    {% block search-box %}
+								        {% include "modules/page-header3/search-box" %}
+								    {% endblock search-box %}
+								</div>
+							</td>
+							<td class="hidden-xs">
+								<a class="wishlist-link" href="/myaccount#account-wishlist" alt="{{ labels.accountMyWishlist }}" title="{{ labels.accountMyWishlist }}"><i class="icon favorite1-punched"></i></a>
+							</td>
+							<td>
+							    <a class="mz-header-link-cart" href="{% make_url "cart" %}" rel="nofollow">
+							        <i class="icon cart4"></i> <span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>
+							        {% require_script "modules/cart-monitor" %}
+							    </a>
+							</td>
+						</tr>
+					</table>
+					<div class="utlility-nav-wrapper pull-right hidden-xs hidden-sm">
+					    {% block utility-nav %}
+					        {% include "modules/page-header3/utility-nav" %}
+					    {% endblock utility-nav %}
 					</div>
-
-		            <a class="mz-header-link-cart" href="{% make_url "cart" %}" rel="nofollow">
-			            <i class="icon cart4"></i> <span class="mz-cartmonitor" data-mz-role="cartmonitor">0</span>
-			            {% require_script "modules/cart-monitor" %}
-		            </a>
 				</div>
 			</div>
 			<div class="col-xs-12 hidden-xs hidden-sm">
