@@ -72,11 +72,11 @@ Anything not listed there will be under variables.less
 @font-icons : 					'icons-font';
 @font-face {
     font-family: 'icons-font';
-    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot');
-    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot#iefix') format('embedded-opentype'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.ttf') format('truetype'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.woff') format('woff'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.svg#icons-font') format('svg');
+    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?uvuqef');
+    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?uvuqef#iefix') format('embedded-opentype'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.ttf?uvuqef') format('truetype'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.woff?uvuqef') format('woff'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.svg?uvuqef#icons-font') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -284,6 +284,13 @@ Anything not listed there will be under variables.less
 @icon-zoom-in2 : "\ea10";
 @icon-zoom-out1 : "\ea11";
 @icon-zoom-out2 : "\ea12";
+@icon-profile : "\e918";
+@icon-profile-punched : "\e919";
+@icon-profile-circle-punched : "\e91a";
+@icon-cart1-right : "\e91b";
+@icon-cart2-right : "\e91c";
+@icon-cart3-right : "\e91d";
+@icon-cart4-right : "\e91f";
 
 
 
@@ -1385,6 +1392,41 @@ i {
 		        content: @icon-zoom-out2;
 		    }
 		}
+		&.cart1-right {
+		    &:before {
+		        content: @icon-cart1-right;
+		    }
+		}
+		&.cart2-right {
+		    &:before {
+		        content: @icon-cart2-right;
+		    }
+		}
+		&.cart3-right {
+		    &:before {
+		        content: @icon-cart3-right;
+		    }
+		}
+		&.cart4-right {
+		    &:before {
+		        content: @icon-cart4-right;
+		    }
+		}
+		&.profile {
+		    &:before {
+		        content: @icon-profile;
+		    }
+		}
+		&.profile-punched {
+		    &:before {
+		        content: @icon-profile-punched;
+		    }
+		}
+		&.profile-circle-punched {
+		    &:before {
+		        content: @icon-profile-circle-punched;
+		    }
+		}
 	}
 }
 
@@ -2022,53 +2064,55 @@ body > img[data-mztp] {
 
 /* Styles styleguide page */
 .styleguide {
-	table {
-		td {
-			vertical-align: middle;
-		}
-		&.solid td {
-			min-width: 150px;
-			padding: 20px 10px;
-			font-weight: bold;
-			color: #fff;
-		}
-		&:not(.solid) td {
-			min-width: 60px;
-			padding: 5px;
-		}
-		&.border td {
-			border: 1px solid;
-		}
-		&.no-border td {
-			border: 0;
-		}
-		&.icons {
-			i.icon {
-				display: block;
-				font-size: 40px;
-				text-align: center;
-				cursor: pointer;
-				&:hover {
-					color: @primary;
-				}
+	#page-content {
+		table {
+			td {
+				vertical-align: middle;
 			}
-			.icon-details {
-				position: absolute;
-				z-index: 1;
-				display: none;
-				padding: 10px;
-				font-size: 14px;
-				background-color: #fff;
-				border: 1px solid #ddd;
-				box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
-				label {
-					cursor: default;
-				}
-				input {
-					width: 300px;
-				}
-				> * {
+			&.solid td {
+				min-width: 150px;
+				padding: 20px 10px;
+				font-weight: bold;
+				color: #fff;
+			}
+			&:not(.solid) td {
+				min-width: 60px;
+				padding: 5px;
+			}
+			&.border td {
+				border: 1px solid;
+			}
+			&.no-border td {
+				border: 0;
+			}
+			&.icons {
+				i.icon {
 					display: block;
+					font-size: 40px;
+					text-align: center;
+					cursor: pointer;
+					&:hover {
+						color: @primary;
+					}
+				}
+				.icon-details {
+					position: absolute;
+					z-index: 1;
+					display: none;
+					padding: 10px;
+					font-size: 14px;
+					background-color: #fff;
+					border: 1px solid #ddd;
+					box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+					label {
+						cursor: default;
+					}
+					input {
+						width: 300px;
+					}
+					> * {
+						display: block;
+					}
 				}
 			}
 		}

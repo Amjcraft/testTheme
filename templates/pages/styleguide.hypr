@@ -602,7 +602,7 @@
   </div>
 
 
-  <div class="col-xs-12">
+<div class="col-xs-12">
     <h1>Icons - Alerts</h1>
     <table class="border icons">
       <tr>
@@ -653,8 +653,8 @@
         </td>
       </tr>
     </table>
-  </div>
-  <div class="col-xs-12">
+</div>
+<div class="col-xs-12">
     <h1>Icons - Arrows</h1>
     <table class="border icons">
       <tr>
@@ -972,6 +972,8 @@
         		<input type="text" value="@icon-basket2">
         	</div>
         </td>
+    </tr>
+    <tr>
         <td>
         	<i class="icon cart1"></i>
         	<div class="icon-details">
@@ -1006,6 +1008,44 @@
         		<input type="text" value='<i class="icon cart4"></i>'>
         		<label>LESS</label>
         		<input type="text" value="@icon-cart4">
+        	</div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        	<i class="icon cart1-right"></i>
+        	<div class="icon-details">
+        		<label>HTML</label>
+        		<input type="text" value='<i class="icon cart1-right"></i>'>
+        		<label>LESS</label>
+        		<input type="text" value="@icon-cart1-right">
+        	</div>
+        </td>
+        <td>
+        	<i class="icon cart2-right"></i>
+        	<div class="icon-details">
+        		<label>HTML</label>
+        		<input type="text" value='<i class="icon cart2-right"></i>'>
+        		<label>LESS</label>
+        		<input type="text" value="@icon-cart2-right">
+        	</div>
+        </td>
+        <td>
+        	<i class="icon cart3-right"></i>
+        	<div class="icon-details">
+        		<label>HTML</label>
+        		<input type="text" value='<i class="icon cart3-right"></i>'>
+        		<label>LESS</label>
+        		<input type="text" value="@icon-cart3-right">
+        	</div>
+        </td>
+        <td>
+        	<i class="icon cart4-right"></i>
+        	<div class="icon-details">
+        		<label>HTML</label>
+        		<input type="text" value='<i class="icon cart4-right"></i>'>
+        		<label>LESS</label>
+        		<input type="text" value="@icon-cart4-right">
         	</div>
         </td>
       </tr>
@@ -1292,6 +1332,58 @@
     </table>
   </div>
   <div class="col-xs-12">
+    <h1>Icons - My Account</h1>
+    <table class="border icons">
+		<tr>
+			<td>
+				<i class="icon profile"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon profile"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-profile">
+				</div>
+			</td>
+			<td>
+				<i class="icon profile-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon profile-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-profile-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon profile-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon profile-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-profile-circle-punched">
+				</div>
+			</td>
+	        <td>
+	        	<i class="icon favorite1-punched"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon favorite1-punched"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-favorite1-punched">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon favorite1"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon favorite1"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-favorite1">
+	        	</div>
+	        </td>
+		</tr>
+    </table>
+</div>
+  <div class="col-xs-12">
     <h1>Icons - Payments</h1>
     <table class="border icons">
       <tr>
@@ -1346,91 +1438,71 @@
   <div class="col-xs-12">
     <h1>Icons - Product Pages</h1>
     <table class="border icons">
-      <tr>
-				<td>
-					<i class="icon star-empty"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon star-empty"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-star-empty">
-					</div>
-				</td>
-				<td>
-					<i class="icon star-half"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon star-half"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-star-half">
-					</div>
-				</td>
-				<td>
-					<i class="icon star-full"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon star-full"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-star-full">
-					</div>
-				</td>
-        <td>
-        	<i class="icon more-photos"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon more-photos"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-more-photos">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon printer"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon printer"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-printer">
-        	</div>
-        </td>
-			<tr>
-			</tr>
-        <td>
-        	<i class="icon favorite1-punched"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon favorite1-punched"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-favorite1-punched">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon favorite1"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon favorite1"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-favorite1">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon favorite2-punched"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon favorite2-punched"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-favorite2-punched">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon favorite2"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon favorite2"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-favorite2">
-        	</div>
-        </td>
-      </tr>
+		<tr>
+			<td>
+				<i class="icon star-empty"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon star-empty"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-star-empty">
+				</div>
+			</td>
+			<td>
+				<i class="icon star-half"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon star-half"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-star-half">
+				</div>
+			</td>
+			<td>
+				<i class="icon star-full"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon star-full"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-star-full">
+				</div>
+			</td>
+	        <td>
+	        	<i class="icon more-photos"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon more-photos"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-more-photos">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon printer"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon printer"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-printer">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon favorite2-punched"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon favorite2-punched"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-favorite2-punched">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon favorite2"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon favorite2"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-favorite2">
+	        	</div>
+	        </td>
+		</tr>
     </table>
   </div>
   <div class="col-xs-12">
@@ -1488,224 +1560,224 @@
   <div class="col-xs-12">
     <h1>Icons - Other</h1>
     <table class="border icons">
-      <tr>
-        <td>
-        	<i class="icon home1"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon home1"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-home1">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon home2"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon home2"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-home2">
-        	</div>
-        </td>
-      <tr>
-      </tr>
-        <td>
-        	<i class="icon back"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon back"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-back">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon disabled"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon disabled"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-disabled">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon edit"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon edit"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-edit">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon refresh"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon refresh"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-refresh">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon save"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon save"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-save">
-        	</div>
-        </td>
-      <tr>
-      </tr>
-				<td>
-					<i class="icon trash1"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon trash1"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-trash1">
-					</div>
-				</td>
-				<td>
-					<i class="icon trash2"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon trash2"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-trash2">
-					</div>
-				</td>
-				<td>
-					<i class="icon trash3"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon trash3"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-trash3">
-					</div>
-				</td>
-      </tr>
+    	<tr>
+	        <td>
+	        	<i class="icon home1"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon home1"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-home1">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon home2"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon home2"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-home2">
+	        	</div>
+	        </td>
+	      <tr>
+	      </tr>
+	        <td>
+	        	<i class="icon back"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon back"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-back">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon disabled"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon disabled"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-disabled">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon edit"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon edit"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-edit">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon refresh"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon refresh"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-refresh">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon save"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon save"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-save">
+	        	</div>
+	        </td>
+		<tr>
+		</tr>
+			<td>
+				<i class="icon trash1"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon trash1"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-trash1">
+				</div>
+			</td>
+			<td>
+				<i class="icon trash2"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon trash2"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-trash2">
+				</div>
+			</td>
+			<td>
+				<i class="icon trash3"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon trash3"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-trash3">
+				</div>
+			</td>
+		</tr>
     </table>
   </div>
   <div class="col-xs-12">
     <h1>Icons - Searches</h1>
     <table class="border icons">
-      <tr>
-        <td>
-        	<i class="icon search1"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon search1"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-search1">
-        	</div>
-        </td>
-        <td>
-        	<i class="icon search2"></i>
-        	<div class="icon-details">
-        		<label>HTML</label>
-        		<input type="text" value='<i class="icon search2"></i>'>
-        		<label>LESS</label>
-        		<input type="text" value="@icon-search2">
-        	</div>
-        </td>
-        <td>
-					<i class="icon search3"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon search3"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-search3">
-					</div>
-				</td>
-				<td>
-					<i class="icon search4"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon search4"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-search4">
-					</div>
-				</td>
-				<td>
-					<i class="icon search5"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon search5"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-search5">
-					</div>
-				</td>
-      </tr>
+		<tr>
+	        <td>
+	        	<i class="icon search1"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon search1"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-search1">
+	        	</div>
+	        </td>
+	        <td>
+	        	<i class="icon search2"></i>
+	        	<div class="icon-details">
+	        		<label>HTML</label>
+	        		<input type="text" value='<i class="icon search2"></i>'>
+	        		<label>LESS</label>
+	        		<input type="text" value="@icon-search2">
+	        	</div>
+	        </td>
+	        <td>
+				<i class="icon search3"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon search3"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-search3">
+				</div>
+			</td>
+			<td>
+				<i class="icon search4"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon search4"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-search4">
+				</div>
+			</td>
+			<td>
+				<i class="icon search5"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon search5"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-search5">
+				</div>
+			</td>
+		</tr>
     </table>
   </div>
   <div class="col-xs-12">
     <h1>Icons - Shipping</h1>
     <table class="border icons">
-      <tr>
-				<td>
-					<i class="icon shipping-box"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-box"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-box">
-					</div>
-				</td>
-				<td>
-					<i class="icon shipping-truck1-left"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-truck1-left"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-truck1-left">
-					</div>
-				</td>
-				<td>
-					<i class="icon shipping-truck1-right"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-truck1-right"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-truck1-right">
-					</div>
-				</td>
-				<td>
-					<i class="icon shipping-truck2-left"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-truck2-left"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-truck2-left">
-					</div>
-				</td>
-				<td>
-					<i class="icon shipping-truck2-right"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-truck2-right"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-truck2-right">
-					</div>
-				</td>
-				<td>
-					<i class="icon shipping-truck3-left"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-truck3-left"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-truck3-left">
-					</div>
-				</td>
-				<td>
-					<i class="icon shipping-truck3-right"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon shipping-truck3-right"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-shipping-truck3-right">
-					</div>
-				</td>
-      </tr>
+		<tr>
+			<td>
+				<i class="icon shipping-box"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-box"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-box">
+				</div>
+			</td>
+			<td>
+				<i class="icon shipping-truck1-left"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-truck1-left"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-truck1-left">
+				</div>
+			</td>
+			<td>
+				<i class="icon shipping-truck1-right"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-truck1-right"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-truck1-right">
+				</div>
+			</td>
+			<td>
+				<i class="icon shipping-truck2-left"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-truck2-left"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-truck2-left">
+				</div>
+			</td>
+			<td>
+				<i class="icon shipping-truck2-right"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-truck2-right"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-truck2-right">
+				</div>
+			</td>
+			<td>
+				<i class="icon shipping-truck3-left"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-truck3-left"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-truck3-left">
+				</div>
+			</td>
+			<td>
+				<i class="icon shipping-truck3-right"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon shipping-truck3-right"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-shipping-truck3-right">
+				</div>
+			</td>
+		</tr>
     </table>
   </div>
   <div class="col-xs-12">
