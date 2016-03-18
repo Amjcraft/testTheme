@@ -2853,8 +2853,8 @@
     <table class="border">
       <tr>
 	      <td style="white-space: nowrap;">
-          table.zebra-striped<br>
-          .mz-propertylist.zebra-striped
+          table.zebra-striped<br><br>
+          .mz-propertylist.zebra-striped<br><br>
           <div class="primary">Only affects rows in &lt;tbody&gt;<br>and ".mz-propertylist" elements.</div>
         </td>
         <td>
@@ -2887,10 +2887,11 @@
       <tr>
 	    <td style="white-space: nowrap;">
           .img-responsive
-          <div class="primary">This example does not work in FF<br>due to a browser bug with tables.</div>
         </td>
-        <td style="width: 400px;">
-          <img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+        <td>
+	        <div style="width: 400px; height: 300px;">
+	        	<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+			</div>
         </td>
       </tr>
     </table>
@@ -2903,17 +2904,42 @@
     <table class="border">
       <tr>
 	    <td style="white-space: nowrap;">
-          .loading-spinner.spinner5
-          <div class="primary">
-	          Specify "spinner1" - "spinner6".<br>
-	          Accepts all font color classes<br>
-	          and ".white" (shown)
-          </div>
-          <div class="color-warning">Parent must have "position: relative;"</div>
+			.loading-spinner.spinner5.white<br><br>
+			<div class="primary">
+				Option of ".black-bg" and ".white-bg".<br><br>
+				Specify "spinner1" - "spinner6".<br><br>
+				Accepts all font color classes<br>
+				and ".white" (shown)<br><br>
+			</div>
+			<div class="color-warning">Parent must have "position: relative;"</div>
         </td>
-        <td style="width: 400px; position: relative;">
-          <img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
-          <div class="loading-spinner spinner5 white"></div>
+        <td>
+	        <div style="position: relative; width: 400px; height: 267px;">
+				<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+				<div class="loading-spinner spinner5 white"></div>
+			</div>
+        </td>
+      </tr>
+      <tr>
+	    <td style="white-space: nowrap;">
+          .loading-spinner<span class="primary">.white-bg</span>.spinner4.primary
+        </td>
+        <td>
+	        <div style="position: relative; width: 400px; height: 267px;">
+				<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+				<div class="loading-spinner white-bg spinner4 primary"></div>
+			</div>
+        </td>
+      </tr>
+      <tr>
+	    <td style="white-space: nowrap;">
+          .loading-spinner<span class="primary">.black-bg</span>.spinner3.secondary
+        </td>
+        <td>
+	        <div style="position: relative; width: 400px; height: 267px;">
+				<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+				<div class="loading-spinner black-bg spinner3 secondary"></div>
+			</div>
         </td>
       </tr>
     </table>

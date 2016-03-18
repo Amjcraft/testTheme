@@ -21,8 +21,11 @@
     	{% dropzone "hero" scope="template" %}
 	</div>
 	<div class="promos-widget-wrapper promos-row-1 col-xs-12 no-pad">
-		<div class="promo promo-1 col-xs-12">
+		<div class="promo promo-1 col-xs-12 col-sm-6">
 	    	{% dropzone "promo1" scope="template" %}
+		</div>
+		<div class="promo promo-1 col-xs-12 col-sm-6">
+	    	{% dropzone "promo1-right" scope="template" %}
 		</div>
 	</div>
 	<div class="promos-widget-wrapper promos-row-2 col-xs-12 no-pad">
