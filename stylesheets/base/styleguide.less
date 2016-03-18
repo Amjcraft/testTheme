@@ -2066,6 +2066,10 @@ table.zebra-striped {
 	&.spinner3 {
 		&:before {
 			content: '@{icon-spinner3}';
+			-webkit-animation: loading-spinner 1.5s steps(12) infinite; /* Safari 4+ */
+			-moz-animation: loading-spinner 1.5s steps(12) infinite; /* Fx 5+ */
+			-o-animation: loading-spinner 1.5s steps(12) infinite; /* Opera 12+ */
+			animation: loading-spinner 1.5s steps(12) infinite; /* IE 10+, Fx 29+ */
 		}
 	}
 	&.spinner4 {
@@ -2081,6 +2085,10 @@ table.zebra-striped {
 	&.spinner6 {
 		&:before {
 			content: '@{icon-spinner6}';
+			-webkit-animation: loading-spinner 1s steps(8) infinite; /* Safari 4+ */
+			-moz-animation: loading-spinner 1s steps(8) infinite; /* Fx 5+ */
+			-o-animation: loading-spinner 1s steps(8) infinite; /* Opera 12+ */
+			animation: loading-spinner 1s steps(8) infinite; /* IE 10+, Fx 29+ */
 		}
 	}
 	&.gray1,
