@@ -2,6 +2,9 @@
 @my-account-section-border-color    : @gray2;
 
 .mz-myaccount {
+    #header1 + #page-content .mz-scrollnav.affix.sticky-header {
+        top: 150px
+    }
     .mz-myaccount-nav {
         float: left;
         width: @my-account-left-nav-width;
@@ -13,10 +16,6 @@
                 position: static;
                 top: 0;
             }
-        }
-        .mz-scrollnav-item {
-            margin-top: 0;
-            margin-bottom: 0;
         }
         .mz-scrollnav-link {
             text-decoration: none;
