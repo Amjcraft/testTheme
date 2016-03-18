@@ -72,11 +72,11 @@ Anything not listed there will be under variables.less
 @font-icons : 					'icons-font';
 @font-face {
     font-family: 'icons-font';
-    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?uvuqef');
-    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?uvuqef#iefix') format('embedded-opentype'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.ttf?uvuqef') format('truetype'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.woff?uvuqef') format('woff'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.svg?uvuqef#icons-font') format('svg');
+    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?63spws');
+    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?63spws#iefix') format('embedded-opentype'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.ttf?63spws') format('truetype'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.woff?63spws') format('woff'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.svg?63spws#icons-font') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -231,7 +231,9 @@ Anything not listed there will be under variables.less
 @icon-social-facebook : "\e9d8";
 @icon-social-flickr1 : "\e9d9";
 @icon-social-flickr2 : "\e9da";
+@icon-social-google-plus1-square : "\e920";
 @icon-social-google-plus1-circle : "\e9db";
+@icon-social-google-plus1-circle-punched : "\e924";
 @icon-social-google-plus1 : "\e9dc";
 @icon-social-google-plus2-circle : "\e9dd";
 @icon-social-google-plus2 : "\e9de";
@@ -262,6 +264,9 @@ Anything not listed there will be under variables.less
 @icon-social-twitter-square : "\e9f9";
 @icon-social-twitter : "\e9fa";
 @icon-social-vimeo : "\e9fc";
+@icon-social-vimeo-square : "\e921";
+@icon-social-vimeo-circle : "\e922";
+@icon-social-vimeo-circle-punched : "\e923";
 @icon-social-youtube1-circle-punched : "\e9fd";
 @icon-social-youtube1-circle : "\e9fe";
 @icon-social-youtube1-square : "\e9ff";
@@ -1132,6 +1137,16 @@ i {
 		        content: @icon-social-google-plus1-circle;
 		    }
 		}
+		&.social-google-plus1-circle-punched {
+		    &:before {
+		        content: @icon-social-google-plus1-circle-punched;
+		    }
+		}
+		&.social-google-plus1-square {
+		    &:before {
+		        content: @icon-social-google-plus1-square;
+		    }
+		}
 		&.social-google-plus1 {
 		    &:before {
 		        content: @icon-social-google-plus1;
@@ -1280,6 +1295,21 @@ i {
 		&.social-vimeo {
 		    &:before {
 		        content: @icon-social-vimeo;
+		    }
+		}
+		&.social-vimeo-square {
+		    &:before {
+		        content: @icon-social-vimeo-square;
+		    }
+		}
+		&.social-vimeo-circle {
+		    &:before {
+		        content: @icon-social-vimeo-circle;
+		    }
+		}
+		&.social-vimeo-circle-punched {
+		    &:before {
+		        content: @icon-social-vimeo-circle-punched;
 		    }
 		}
 		&.social-youtube1-circle-punched {

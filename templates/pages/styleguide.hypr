@@ -2083,416 +2083,443 @@
   <div class="col-xs-12">
     <h1>Icons - Social Circle Punched</h1>
     <table class="border icons">
-      <tr>
-				<td>
-					<i class="icon social-blogger-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-blogger-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-blogger-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-facebook-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-facebook-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-facebook-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus3-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus3-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus3-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-instagram-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-instagram-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-instagram-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-linkedin-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-linkedin-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-linkedin-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-pinterest-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-pinterest-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-pinterest-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-tumblr-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-tumblr-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-tumblr-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-twitter-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-twitter-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-twitter-circle-punched">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-youtube1-circle-punched"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-youtube1-circle-punched"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-youtube1-circle-punched">
-					</div>
-				</td>
-      </tr>
+    	<tr>
+			<td>
+				<i class="icon social-blogger-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-blogger-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-blogger-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-facebook-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-facebook-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-facebook-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus1-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus1-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus1-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus3-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus3-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus3-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-instagram-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-instagram-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-instagram-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-linkedin-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-linkedin-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-linkedin-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-pinterest-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-pinterest-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-pinterest-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-tumblr-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-tumblr-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-tumblr-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-twitter-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-twitter-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-twitter-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-vimeo-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-vimeo-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-vimeo-circle-punched">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-youtube1-circle-punched"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-youtube1-circle-punched"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-youtube1-circle-punched">
+				</div>
+			</td>
+    	</tr>
     </table>
   </div>
   <div class="col-xs-12">
     <h1>Icons - Social Circle</h1>
     <table class="border icons">
-      <tr>
-				<td>
-					<i class="icon social-blogger-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-blogger-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-blogger-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-facebook-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-facebook-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-facebook-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus1-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus1-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus1-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus2-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus2-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus2-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus3-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus3-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus3-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-instagram-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-instagram-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-instagram-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-linkedin-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-linkedin-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-linkedin-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-pinterest-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-pinterest-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-pinterest-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-tumblr-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-tumblr-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-tumblr-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-twitter-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-twitter-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-twitter-circle">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-youtube1-circle"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-youtube1-circle"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-youtube1-circle">
-					</div>
-				</td>
-      </tr>
+    	<tr>
+			<td>
+				<i class="icon social-blogger-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-blogger-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-blogger-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-facebook-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-facebook-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-facebook-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus1-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus1-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus1-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus3-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus3-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus3-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-instagram-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-instagram-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-instagram-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-linkedin-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-linkedin-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-linkedin-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-pinterest-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-pinterest-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-pinterest-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-tumblr-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-tumblr-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-tumblr-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-twitter-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-twitter-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-twitter-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-vimeo-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-vimeo-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-vimeo-circle">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-youtube1-circle"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-youtube1-circle"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-youtube1-circle">
+				</div>
+			</td>
+    	</tr>
     </table>
   </div>
   <div class="col-xs-12">
     <h1>Icons - Social Square</h1>
     <table class="border icons">
-      <tr>
-				<td>
-					<i class="icon social-blogger-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-blogger-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-blogger-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-facebook-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-facebook-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-facebook-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus3-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus3-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus3-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-instagram-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-instagram-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-instagram-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-pinterest-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-pinterest-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-pinterest-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-linkedin-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-linkedin-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-linkedin-sqare">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-tumblr-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-tumblr-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-tumblr-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-twitter-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-twitter-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-twitter-square">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-youtube1-square"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-youtube1-square"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-youtube1-square">
-					</div>
-				</td>
-      </tr>
+    	<tr>
+			<td>
+				<i class="icon social-blogger-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-blogger-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-blogger-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-facebook-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-facebook-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-facebook-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus1-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus1-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus1-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus3-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus3-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus3-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-instagram-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-instagram-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-instagram-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-linkedin-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-linkedin-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-linkedin-sqare">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-pinterest-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-pinterest-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-pinterest-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-tumblr-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-tumblr-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-tumblr-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-twitter-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-twitter-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-twitter-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-vimeo-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-vimeo-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-vimeo-square">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-youtube1-square"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-youtube1-square"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-youtube1-square">
+				</div>
+			</td>
+    	</tr>
     </table>
   </div>
   <div class="col-xs-12">
     <h1>Icons - Social</h1>
     <table class="border icons">
-      <tr>
-				<td>
-					<i class="icon social-blogger"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-blogger"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-blogger">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-facebook"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-facebook"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-facebook">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus1"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus1"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus1">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus2"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus2"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus2">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-google-plus3"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-google-plus3"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-google-plus3">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-instagram"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-instagram"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-instagram">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-linkedin"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-linkedin"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-linkedin">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-pinterest"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-pinterest"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-pinterest">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-tumblr"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-tumblr"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-tumblr">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-twitter"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-twitter"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-twitter">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-vimeo"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-vimeo"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-vimeo">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-youtube1"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-youtube1"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-youtube1">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-youtube2"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-youtube2"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-youtube2">
-					</div>
-				</td>
-				<td>
-					<i class="icon social-youtube3"></i>
-					<div class="icon-details">
-						<label>HTML</label>
-						<input type="text" value='<i class="icon social-youtube3"></i>'>
-						<label>LESS</label>
-						<input type="text" value="@icon-social-youtube3">
-					</div>
-				</td>
-      </tr>
+    	<tr>
+			<td>
+				<i class="icon social-blogger"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-blogger"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-blogger">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-facebook"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-facebook"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-facebook">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus1"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus1"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus1">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-google-plus3"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-google-plus3"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-google-plus3">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-instagram"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-instagram"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-instagram">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-linkedin"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-linkedin"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-linkedin">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-pinterest"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-pinterest"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-pinterest">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-tumblr"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-tumblr"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-tumblr">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-twitter"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-twitter"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-twitter">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-vimeo"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-vimeo"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-vimeo">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-youtube1"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-youtube1"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-youtube1">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-youtube2"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-youtube2"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-youtube2">
+				</div>
+			</td>
+			<td>
+				<i class="icon social-youtube3"></i>
+				<div class="icon-details">
+					<label>HTML</label>
+					<input type="text" value='<i class="icon social-youtube3"></i>'>
+					<label>LESS</label>
+					<input type="text" value="@icon-social-youtube3">
+				</div>
+			</td>
+    	</tr>
     </table>
   </div>
   <div class="col-xs-12">
