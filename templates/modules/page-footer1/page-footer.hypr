@@ -7,55 +7,164 @@
 		    		<a class="newsletter-link" href="#" alt="{{ labels.signUpNewsletter }}" title="{{ labels.signUpNewsletter }}" target="_blank" rel="nofollow"><button class="primary">{{ labels.signUpNewsletter }} <i class="icon chevron2-right"></i></button></a>
 	    		</div>
 		    	<div class="social-links-wrapper col-xs-12 col-sm-6 col-md-12 no-pad">
-
 		    		{% if themeSettings.socialBloggerUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialBloggerUrl }}" alt="{{ labels.followBlog }}" title="{{ labels.followBlog }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-blogger-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-blogger"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-blogger-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-blogger-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-blogger-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialFacebookUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialFacebookUrl }}" alt="{{ labels.followFacebook }}" title="{{ labels.followFacebook }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-facebook-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-facebook"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-facebook-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-facebook-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-facebook-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialGooglePlusUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialGooglePlusUrl }}" alt="{{ labels.followGooglePlus }}" title="{{ labels.followGooglePlus }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-google-plus3-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-google-plus1"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-google-plus1-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-google-plus1-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-google-plus1-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialInstagramUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialInstagramUrl }}" alt="{{ labels.followInstagram }}" title="{{ labels.followInstagram }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-instagram-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-instagram"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-instagram-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-instagram-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-instagram-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialLinkedInUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialLinkedInUrl }}" alt="{{ labels.followLinkedIn }}" title="{{ labels.followLinkedIn }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-linkedin-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-linkedin"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-linkedin-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-linkedin-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-linkedin-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialPinterestUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialPinterestUrl }}" alt="{{ labels.followPinterest }}" title="{{ labels.followPinterest }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-pinterest-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-pinterest"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-pinterest-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-pinterest-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-pinterest-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialTumblrUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialTumblrUrl }}" alt="{{ labels.followTumblr }}" title="{{ labels.followTumblr }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-tumblr-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-tumblr"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-tumblr-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-tumblr-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-tumblr-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialTwitterUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialTwitterUrl }}" alt="{{ labels.followTwitter }}" title="{{ labels.followTwitter }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-twitter-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-twitter"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-twitter-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-twitter-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-twitter-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialVimeoUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialVimeoUrl }}" alt="{{ labels.followVimeo }}" title="{{ labels.followVimeo }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-vimeo"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-vimeo"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-vimeo-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-vimeo-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-vimeo-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    		{% if themeSettings.socialYouTubeUrl %}
 			    		<a class="social-link" href="{{ themeSettings.socialYouTubeUrl }}" alt="{{ labels.followYouTube }}" title="{{ labels.followYouTube }}" target="_blank" rel="nofollow">
-		    				<i class="icon social-youtube1-circle"></i>
+				    		{% if themeSettings.socialIconStyle == "Simple" %}
+				    			<i class="icon social-youtube1"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle" %}
+				    			<i class="icon social-youtube1-circle"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Circle Punched" %}
+				    			<i class="icon social-youtube1-circle-punched"></i>
+				    		{% endif %}
+				    		{% if themeSettings.socialIconStyle == "Square" %}
+				    			<i class="icon social-youtube1-square"></i>
+				    		{% endif %}
 		    			</a>
 		    		{% endif %}
 		    	</div>

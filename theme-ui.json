@@ -335,6 +335,20 @@
             "collapsed": false,
             "items": [
                 {
+                    "fieldLabel": "Social icon style",
+                    "xtype": "mz-input-dropdown",
+                    "name": "socialIconStyle",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "Simple",
+                        "Circle",
+                        "Circle Punched",
+                        "Square"
+                    ]
+                },
+                {
                     "fieldLabel": "Blogger Page URL",
                     "xtype": "mz-input-text",
                     "name": "socialBloggerUrl",
