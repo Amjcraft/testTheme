@@ -2870,6 +2870,29 @@
   </div>
 </div>
 
+
+  <div class="col-xs-12 col-md-6">
+    <h1>Loading spinner</h1>
+    <table class="border">
+      <tr>
+	    <td style="white-space: nowrap;">
+          .loading-spinner.spinner5
+          <div class="primary">
+	          Specify "spinner1" - "spinner6".<br>
+	          Accepts all font color classes<br>
+	          and ".white" (shown)
+          </div>
+          <div class="color-warning">Parent must have "position: relative;"</div>
+        </td>
+        <td style="width: 400px; position: relative;">
+          <img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+          <div class="loading-spinner spinner5 white"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
 {% endblock body-content %}
 
 {% block body-below-content %}
