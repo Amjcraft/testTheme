@@ -1,6 +1,7 @@
 ﻿@header1-bg-color : 							@gray1;
 @header1-promo-bg-color : 						@gray2;
 @header1-promo-height : 						40px;
+@header1-promo-height-mobile : 					40px;
 @header1-border-bottom-size : 					1px;
 @header1-border-bottom-color : 					@gray4;
 @header1-icons-color : 							@gray3;
@@ -14,10 +15,10 @@
 .header1-sticky-header-spacer {
 	height: @header1-height + @header1-promo-height + 32px + @header1-border-bottom-size;
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
-		height: @header1-height + @header1-border-bottom-size;
+		height: @header1-height + @header1-promo-height + @header1-border-bottom-size;
 	}
 	@media only screen and (max-width: 767px) {
-		height: @header1-height-mobile + @header1-border-bottom-size;
+		height: @header1-height-mobile + @header1-promo-height-mobile + @header1-border-bottom-size;
 	}
 }
 #header1 {
@@ -34,6 +35,9 @@
     		height: @header1-promo-height;
     		padding-top: 10px;
     		padding-bottom: 10px;
+    		@media only screen and (max-width: 767px) {
+    			height: @header1-promo-height-mobile;
+    		}
     	}
     	a {
     		text-decoration: none;
