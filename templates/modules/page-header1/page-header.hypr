@@ -1,4 +1,4 @@
-﻿{% require_script "modules/page-header1/page-header" %}
+﻿{% require_script "modules/page-header" %}
 {% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
 	<div class="header1-sticky-header-spacer{% if themeSettings.stickyHeader %} sticky-header{% endif %} col-xs-12"></div>
 {% endif %}

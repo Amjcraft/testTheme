@@ -1,4 +1,4 @@
-﻿{% require_script "modules/page-header2/page-header" %}
+﻿{% require_script "modules/page-header" %}
 {% if not pageContext.isDebugMode and themeSettings.stickyHeader %}
 	<div class="header2-sticky-header-spacer col-xs-12"></div>
 {% endif %}
@@ -8,7 +8,7 @@
 			<div class="header-content row">
 				<div class="push-menu-toggle-wrapper col-xs-2 col-sm-3 no-pad-r hidden-md hidden-lg">
 					<div class="push-menu-toggle">
-						<i class="icon menu7"></i>
+						<i class="icon menu2"></i>
 					</div>
 				</div>
 				<div class="logo-wrapper col-xs-6 col-md-8">
