@@ -222,7 +222,14 @@
                     "xtype": "mz-input-checkbox",
                     "name": "stickyHeader",
                     "fieldLabel": "Keep header at top when scrolling down"
-                },
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Navigation",
+            "collapsed": false,
+            "items": [
                 {
                     "xtype": "box",
                     "autoEl": {
