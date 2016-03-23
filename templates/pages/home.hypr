@@ -17,11 +17,9 @@
 			{{ labels.toggleDevice }}
 		</div>
 	{% endif %}
-	{% if pageContext.isTablet or pageContext.isDesktop %}
-		<div class="slideshow hero col-xs-12">
-	    	{% dropzone "slideshow" scope="template" %}
-		</div>
-	{% endif %}
+	<div class="slideshow hero col-xs-12">
+    	{% dropzone "slideshow" scope="template" %}
+	</div>
 	<div class="promos-widget-wrapper hero col-xs-12">
     	{% dropzone "hero" scope="template" %}
 	</div>

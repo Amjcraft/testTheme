@@ -1,21 +1,24 @@
-define(['modules/jquery-mozu', 'hyprlive', 'underscore', 'modules/api', 'shim!vendor/bootstrap/js/affix[jquery=jQuery]', 'shim!vendor/bootstrap/js/scrollspy[jquery=jQuery]'], function ($, Hypr, _, api) {
-	$(document).ready(function(){
-
-		$("#mz-slideshow").carousel({
-			interval: 5000,
-			pause: "hover",
-			wrap: true,
-			keyboard: false
+require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr) {
+	$.getScript('//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js', function() {
+	    //script is loaded and executed put your dependent JS here
+		$(document).ready(function(){
+			$('.owl-carousel').owlCarousel({
+			    autoplay:true,
+			    autoplayTimeout:5000,
+			    autoplayHoverPause:true,
+	            items:1,
+			    loop:true,
+			    nav:true,
+			    responsiveClass:true,
+			    responsive:{
+			        0:{
+			            dots:false
+			        },
+			        768:{
+			            dots:true
+			        }
+			    }
+			});
 		});
-
-		/* Touch swipe settings */
-		// $.getScript('//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js');
-		// $("#mz-slideshow").swiperight(function() {  
-		// 	$(this).carousel('prev');  
-		// });
-		// $("#mz-slideshow").swipeleft(function() {  
-		// 	$(this).carousel('next');  
-		// });
 	});
-
 });

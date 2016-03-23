@@ -1320,18 +1320,24 @@
     {
       "displayName": "Slideshow",
       "displayTemplate": "cms/slideshow",
-      "icon": "/resources/admin/widgets/30_promo-blocks.png",
+      "icon": "/resources/admin/widgets/31_slideshow.png",
       "id": "slideshow",
       "validPageTypes": [
         "*"
       ],
       "defaultConfig": {
-        "enablePrevNext": true,
+        "enableArrows": true,
         "enableDots": true,
         "dotsStyle": "Circle",
         "dotsAlign": "Center"
       },
       "editViewFields": [
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 1</h3><hr>"
+          }
+        },
         {
           "xtype": "mz-input-image",
           "name": "slide1Graphic",
@@ -1341,13 +1347,13 @@
         {
           "xtype": "mz-input-text",
           "name": "slide1AltTxt",
-          "fieldLabel": "Slide 1 Alt Text",
+          "fieldLabel": "Slide 1 Alt Text (accessability standard)",
           "allowBlank": true
         },
         {
           "xtype": "mz-input-text",
           "name": "slide1Link",
-          "fieldLabel": "Slide 1 Link",
+          "fieldLabel": "Slide 1 Link URL",
           "allowBlank": true
         },
         {
@@ -1355,6 +1361,12 @@
           "name": "slide1Caption",
           "fieldLabel": "Slide 1 Caption (optional)",
           "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 2</h3><hr>"
+          }
         },
         {
           "xtype": "mz-input-image",
@@ -1365,13 +1377,13 @@
         {
           "xtype": "mz-input-text",
           "name": "slide2AltTxt",
-          "fieldLabel": "Slide 2 Alt Text",
+          "fieldLabel": "Slide 2 Alt Text (accessability standard)",
           "allowBlank": true
         },
         {
           "xtype": "mz-input-text",
           "name": "slide2Link",
-          "fieldLabel": "Slide 2 Link",
+          "fieldLabel": "Slide 2 Link URL",
           "allowBlank": true
         },
         {
@@ -1379,6 +1391,12 @@
           "name": "slide2Caption",
           "fieldLabel": "Slide 2 Caption (optional)",
           "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 3</h3><hr>"
+          }
         },
         {
           "xtype": "mz-input-image",
@@ -1389,13 +1407,13 @@
         {
           "xtype": "mz-input-text",
           "name": "slide3AltTxt",
-          "fieldLabel": "Slide 3 Alt Text",
+          "fieldLabel": "Slide 3 Alt Text (accessability standard)",
           "allowBlank": true
         },
         {
           "xtype": "mz-input-text",
           "name": "slide3Link",
-          "fieldLabel": "Slide 3 Link",
+          "fieldLabel": "Slide 3 Link URL",
           "allowBlank": true
         },
         {
@@ -1403,6 +1421,12 @@
           "name": "slide3Caption",
           "fieldLabel": "Slide 3 Caption (optional)",
           "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 4</h3><hr>"
+          }
         },
         {
           "xtype": "mz-input-image",
@@ -1413,13 +1437,13 @@
         {
           "xtype": "mz-input-text",
           "name": "slide4AltTxt",
-          "fieldLabel": "Slide 4 Alt Text",
+          "fieldLabel": "Slide 4 Alt Text (accessability standard)",
           "allowBlank": true
         },
         {
           "xtype": "mz-input-text",
           "name": "slide4Link",
-          "fieldLabel": "Slide 4 Link",
+          "fieldLabel": "Slide 4 Link URL",
           "allowBlank": true
         },
         {
@@ -1427,6 +1451,12 @@
           "name": "slide4Caption",
           "fieldLabel": "Slide 4 Caption (optional)",
           "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 5</h3><hr>"
+          }
         },
         {
           "xtype": "mz-input-image",
@@ -1437,13 +1467,13 @@
         {
           "xtype": "mz-input-text",
           "name": "slide5AltTxt",
-          "fieldLabel": "Slide 5 Alt Text",
+          "fieldLabel": "Slide 5 Alt Text (accessability standard)",
           "allowBlank": true
         },
         {
           "xtype": "mz-input-text",
           "name": "slide5Link",
-          "fieldLabel": "Slide 5 Link",
+          "fieldLabel": "Slide 5 Link URL",
           "allowBlank": true
         },
         {
@@ -1453,9 +1483,15 @@
           "allowBlank": true
         },
         {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Navigation</h3><hr>"
+          }
+        },
+        {
           "xtype": "mz-input-checkbox",
-          "name": "enablePrevNext",
-          "fieldLabel": "Display prev/next icons on the sides",
+          "name": "enableArrows",
+          "fieldLabel": "Display slide nav arrows",
           "allowBlank": true
         },
         {
