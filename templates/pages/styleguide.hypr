@@ -2889,8 +2889,8 @@
           .img-responsive
         </td>
         <td>
-	        <div style="width: 400px; height: 300px;">
-	        	<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+	        <div style="width: 400px; height: 150px;">
+	        	<img class="img-responsive" src="../../resources/images/large_img.jpg">
 			</div>
         </td>
       </tr>
@@ -2914,8 +2914,8 @@
 			<div class="color-warning">Parent must have "position: relative;"</div>
         </td>
         <td>
-	        <div style="position: relative; width: 400px; height: 267px;">
-				<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+	        <div style="position: relative; width: 400px; height: 150px;">
+				<img class="img-responsive" src="../../resources/images/large_img_blank.jpg">
 				<div class="loading-spinner spinner5 white"></div>
 			</div>
         </td>
@@ -2925,8 +2925,8 @@
           .loading-spinner<span class="primary">.white-bg</span>.spinner4.primary
         </td>
         <td>
-	        <div style="position: relative; width: 400px; height: 267px;">
-				<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+	        <div style="position: relative; width: 400px; height: 150px;">
+				<img class="img-responsive" src="../../resources/images/large_img_blank.jpg">
 				<div class="loading-spinner white-bg spinner4 primary"></div>
 			</div>
         </td>
@@ -2936,8 +2936,8 @@
           .loading-spinner<span class="primary">.black-bg</span>.spinner3.secondary
         </td>
         <td>
-	        <div style="position: relative; width: 400px; height: 267px;">
-				<img class="img-responsive" src="//cdn-sb.mozu.com/11433-15298/cms/files/3d429155-eedb-4848-b690-93602a7d3f11">
+	        <div style="position: relative; width: 400px; height: 150px;">
+				<img class="img-responsive" src="../../resources/images/large_img_blank.jpg">
 				<div class="loading-spinner black-bg spinner3 secondary"></div>
 			</div>
         </td>
