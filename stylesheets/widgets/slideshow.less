@@ -1,0 +1,94 @@
+@slide-indicator-icon-color         : #fff;
+@slide-indicator-icon-hover-color   : rgba(255,255,255,0.5);
+@slide-indicator-icon-size          : 12px;
+@slide-caption-bg-color             : rgba(0,0,0,0.4);
+
+#mz-slideshow {
+    .carousel-indicators {
+        width: auto;
+        margin: 0 auto;
+        padding-right: 40px;
+        padding-left: 40px;
+        &.align-left {
+            right: auto;
+            left: 0;
+        }
+        &.align-center {
+            right: 0;
+            left: 0;
+        }
+        &.align-right {
+            right: 0;
+            left: auto;
+        }
+        &.square-icons,
+        &.rectangle-icons {
+            li {
+                border-radius: 0;
+            }
+        }
+        &.rectangle-icons {
+            li {
+                width: @slide-indicator-icon-size * 2;
+            }
+        }
+        li {
+            float: left;
+            width: @slide-indicator-icon-size;
+            height: @slide-indicator-icon-size;
+            margin:  0;
+            border-color: @slide-indicator-icon-color;
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+            &:not(.active):hover {
+                background-color: @slide-indicator-icon-hover-color;
+            }
+            &.active {
+                background-color: @slide-indicator-icon-color;
+            }
+        }
+    }
+    .carousel-inner {
+        img {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        .carousel-caption {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 18px;
+            background: @slide-caption-bg-color;
+            &.dots-on {
+                padding-bottom: 60px;
+            }
+        }
+    }
+    .carousel-control {
+        &.left,
+        &.right {
+            background: none;
+        }
+        i.icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+            -ms-transform: translateY(-50%); /* IE 9 */
+            transform: translateY(-50%);
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 30px;
+            color: @slide-indicator-icon-color;
+        }
+    }
+}

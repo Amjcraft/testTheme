@@ -1,0 +1,88 @@
+{% require_script "widgets/slideshow" %}
+
+<div id="mz-slideshow" class="carousel slide" data-ride="carousel">
+	{% comment %} Indicators {% endcomment %}
+	{% if model.config.enableDots %}
+		<ol class="carousel-indicators hidden-xs{% if model.config.dotsStyle|lower == 'square' %} square-icons{% endif %}{% if model.config.dotsStyle|lower == 'rectangle' %} rectangle-icons{% endif %}{% if model.config.dotsAlign|lower == 'left' %} align-left{% endif %}{% if model.config.dotsAlign|lower == 'center' %} align-center{% endif %}{% if model.config.dotsAlign|lower == 'right' %} align-right{% endif %}">
+			{% if model.config.slide1Graphic %}
+				<li data-target="#mz-slideshow" data-slide-to="0" class="active"></li>
+				{% if model.config.slide2Graphic %}
+					<li data-target="#mz-slideshow" data-slide-to="1"></li>
+					{% if model.config.slide3Graphic %}
+						<li data-target="#mz-slideshow" data-slide-to="2"></li>
+						{% if model.config.slide4Graphic %}
+							<li data-target="#mz-slideshow" data-slide-to="3"></li>
+							{% if model.config.slide5Graphic %}
+								<li data-target="#mz-slideshow" data-slide-to="4"></li>
+							{% endif %}
+						{% endif %}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		</ol>
+	{% endif %}
+
+	{% comment %} Wrapper for slides {% endcomment %}
+	<div class="carousel-inner" role="listbox">
+		{% if model.config.slide1Graphic %}
+			<a class="item active" href="{% if model.config.slide1Link %}{{model.config.slide1Link}}{% else %}#{% endif %}">
+			<img class="img-responsive" src="{{ model.config.slide1Graphic.imageUrl }}" alt="{{ model.config.slide1AltTxt }}">
+				{% if model.config.slide1Caption %}
+					<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
+						{{ model.config.slide1Caption }}
+					</div>
+				{% endif %}
+			</a>
+		{% endif %}
+		{% if model.config.slide2Graphic %}
+			<a class="item" href="{% if model.config.slide2Link %}{{model.config.slide2Link}}{% else %}#{% endif %}">
+				<img class="img-responsive" src="{{ model.config.slide2Graphic.imageUrl }}" alt="{{ model.config.slide2AltTxt }}">
+				{% if model.config.slide2Caption %}
+					<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
+						{{ model.config.slide2Caption }}
+					</div>
+				{% endif %}
+			</a>
+		{% endif %}
+		{% if model.config.slide3Graphic %}
+			<a class="item" href="{% if model.config.slide3Link %}{{model.config.slide3Link}}{% else %}#{% endif %}">
+				<img class="img-responsive" src="{{ model.config.slide3Graphic.imageUrl }}" alt="{{ model.config.slide3AltTxt }}">
+				{% if model.config.slide3Caption %}
+					<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
+						{{ model.config.slide3Caption }}
+					</div>
+				{% endif %}
+			</a>
+		{% endif %}
+		{% if model.config.slide4Graphic %}
+			<a class="item" href="{% if model.config.slide4Link %}{{model.config.slide4Link}}{% else %}#{% endif %}">
+				<img class="img-responsive" src="{{ model.config.slide4Graphic.imageUrl }}" alt="{{ model.config.slide4AltTxt }}">
+				{% if model.config.slide4Caption %}
+					<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
+						{{ model.config.slide4Caption }}
+					</div>
+				{% endif %}
+			</a>
+		{% endif %}
+		{% if model.config.slide5Graphic %}
+			<a class="item" href="{% if model.config.slide5Link %}{{model.config.slide5Link}}{% else %}#{% endif %}">
+				<img class="img-responsive" src="{{ model.config.slide5Graphic.imageUrl }}" alt="{{ model.config.slide5AltTxt }}">
+				{% if model.config.slide5Caption %}
+					<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
+						{{ model.config.slide5Caption }}
+					</div>
+				{% endif %}
+			</a>
+		{% endif %}
+	</div>
+
+	{% comment %} Prev/Next Controls {% endcomment %}
+	{% if model.config.enablePrevNext %}
+		<a class="carousel-control left" href="#mz-slideshow" role="button" data-slide="prev">
+			<i class="icon chevron2-left"></i>
+		</a>
+		<a class="carousel-control right" href="#mz-slideshow" role="button" data-slide="next">
+			<i class="icon chevron2-right"></i>
+		</a>
+	{% endif %}
+</div>

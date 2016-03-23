@@ -1316,6 +1316,179 @@
           "allowBlank": true
         }
       ]
+    },
+    {
+      "displayName": "Slideshow",
+      "displayTemplate": "cms/slideshow",
+      "icon": "/resources/admin/widgets/30_promo-blocks.png",
+      "id": "slideshow",
+      "validPageTypes": [
+        "*"
+      ],
+      "defaultConfig": {
+        "enablePrevNext": true,
+        "enableDots": true,
+        "dotsStyle": "Circle",
+        "dotsAlign": "Center"
+      },
+      "editViewFields": [
+        {
+          "xtype": "mz-input-image",
+          "name": "slide1Graphic",
+          "fieldLabel": "Upload your slide 1 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide1AltTxt",
+          "fieldLabel": "Slide 1 Alt Text",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide1Link",
+          "fieldLabel": "Slide 1 Link",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide1Caption",
+          "fieldLabel": "Slide 1 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide2Graphic",
+          "fieldLabel": "Upload your slide 2 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide2AltTxt",
+          "fieldLabel": "Slide 2 Alt Text",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide2Link",
+          "fieldLabel": "Slide 2 Link",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide2Caption",
+          "fieldLabel": "Slide 2 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide3Graphic",
+          "fieldLabel": "Upload your slide 3 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide3AltTxt",
+          "fieldLabel": "Slide 3 Alt Text",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide3Link",
+          "fieldLabel": "Slide 3 Link",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide3Caption",
+          "fieldLabel": "Slide 3 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide4Graphic",
+          "fieldLabel": "Upload your slide 4 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide4AltTxt",
+          "fieldLabel": "Slide 4 Alt Text",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide4Link",
+          "fieldLabel": "Slide 4 Link",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide4Caption",
+          "fieldLabel": "Slide 4 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide5Graphic",
+          "fieldLabel": "Upload your slide 5 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide5AltTxt",
+          "fieldLabel": "Slide 5 Alt Text",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide5Link",
+          "fieldLabel": "Slide 5 Link",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide5Caption",
+          "fieldLabel": "Slide 5 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "enablePrevNext",
+          "fieldLabel": "Display prev/next icons on the sides",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "enableDots",
+          "fieldLabel": "Display slide indicator dots on the bottom",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "dotsStyle",
+          "fieldLabel": "Inicator dots style",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Circle",
+            "Square",
+            "Rectangle"
+          ]
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "dotsAlign",
+          "fieldLabel": "Inicator dots alignment",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Left",
+            "Center",
+            "Right"
+          ]
+        }
+      ]
     }
   ]
 }
