@@ -27,7 +27,13 @@
 
 .mz-sitenav {
     .mz-sitenav-list {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
         justify-content: space-between;
         background-color: @nav-bg-color;
         > .mz-sitenav-item {

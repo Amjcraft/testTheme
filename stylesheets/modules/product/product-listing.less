@@ -1,14 +1,14 @@
-﻿@productlisting-product-name-color:     @theme-settings-hyperlinkColor;
-@productlisting-description-color:      @text-color;
-@productlisting-product-code-color:     @gray3;
-@productlisting-price-color:            @primary;
-@productlisting-price-crossedout-color: @gray3;
-@productlisting-sale-price-color:       @primary;
+﻿@productlisting-product-name-color :     @theme-settings-hyperlinkColor;
+@productlisting-description-color :      @text-color;
+@productlisting-product-code-color :     @gray3;
+@productlisting-price-color :            @primary;
+@productlisting-price-crossedout-color : @gray3;
+@productlisting-sale-price-color :       @primary;
 
 .mz-productlisting {
     .mz-productlisting-image {
-        @productlisting-max-img-size: @theme-settings-listProductThumbSize;
-        @productlisting-max-img-size: ~"@{theme-settings-listProductThumbSize}px";
+        @productlisting-max-img-size : @theme-settings-listProductThumbSize;
+        @productlisting-max-img-size : ~"@{theme-settings-listProductThumbSize}px";
         height: @productlisting-max-img-size;
         margin-bottom: 10px;
         a {
@@ -29,6 +29,8 @@
                 top: 100%;
                 right: 0;
                 left: 0;
+                -webkit-transform: translateY(-100%); /* Chrome, Safari, Opera */
+                -ms-transform: translateY(-100%); /* IE 9 */
                 transform: translateY(-100%);
                 position: absolute;
             }
