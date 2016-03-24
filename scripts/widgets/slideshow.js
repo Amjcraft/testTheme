@@ -2,7 +2,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr)
 	$.getScript('//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js', function() {
 	    //script is loaded and executed put your dependent JS here
 		$(document).ready(function(){
-			$('.owl-carousel').owlCarousel({
+			$('#mz-slideshow.owl-carousel').owlCarousel({
 			    autoplay:true,
 			    autoplayTimeout:5000,
 			    autoplayHoverPause:true,
