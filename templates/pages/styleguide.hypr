@@ -196,6 +196,9 @@
 	      <td>
 	        <button class="gray icon exit">.gray</button>
 	      </td>
+	      <td>
+	        <button class="icon exit" disabled>disabled</button>
+	      </td>
 	    </tr>
 	    <tr>
 	      <td>
@@ -218,6 +221,9 @@
 	      </td>
 	      <td>
 	        <button class="gray icon plus">.gray</button>
+	      </td>
+	      <td>
+	        <button class="icon plus" disabled>disabled</button>
 	      </td>
 	    </tr>
 	    <tr>
@@ -242,6 +248,9 @@
 	      <td>
 	        <button class="gray icon checkmark">.gray</button>
 	      </td>
+	      <td>
+	        <button class="icon checkmark" disabled>disabled</button>
+	      </td>
 	    </tr>
 	    <tr>
 	      <td>
@@ -264,6 +273,9 @@
 	      </td>
 	      <td>
 	        <button class="gray icon chevron left">.gray</button>
+	      </td>
+	      <td>
+	        <button class="icon chevron left" disabled>disabled</button>
 	      </td>
 	    </tr>
 	    <tr>
@@ -288,6 +300,9 @@
 	      <td>
 	        <button class="gray icon chevron right">.gray</button>
 	      </td>
+	      <td>
+	        <button class="icon chevron right" disabled>disabled</button>
+	      </td>
 	    </tr>
 	    <tr>
 	      <td>
@@ -310,6 +325,9 @@
 	      </td>
 	      <td>
 	        <button class="gray icon chevron up">.gray</button>
+	      </td>
+	      <td>
+	        <button class="icon chevron up" disabled>disabled</button>
 	      </td>
 	    </tr>
 
@@ -335,12 +353,31 @@
 	      <td>
 	        <button class="gray icon chevron down">.gray</button>
 	      </td>
+	      <td>
+	        <button class="icon chevron down" disabled>disabled</button>
+	      </td>
 	    </tr>
 	  </table>
   </div>
   <div class="col-xs-12">
 	  <h1>Text</h1>
 	  <table class="border">
+	    <tr>
+	      <td style="white-space: nowrap;">
+	        @font1
+	      </td>
+	      <td>
+	        <h1 style="margin:0; font-family: {{ themeSettings.primaryFont }}">Primary Font - {{ themeSettings.primaryFont }}</h1>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td style="white-space: nowrap;">
+	        @font2
+	      </td>
+	      <td>
+	        <h1 style="margin:0; font-family: {{ themeSettings.secondaryFont }}">Secondary Font - {{ themeSettings.secondaryFont }}</h1>
+	      </td>
+	    </tr>
 	    <tr>
 	      <td style="white-space: nowrap;">
 	        h1
@@ -536,9 +573,17 @@
 	    </tr>
 	    <tr>
 	      <td style="white-space: nowrap;">
+	        .white
+	      </td>
+	      <td style="background: {{ themeSettings.themeGray3 }}">
+	        <span class="white">This is an example of colored text. <i class="icon cart1"></i> <i class="icon favorite1"></i> <i class="icon star-half"></i></span>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td style="white-space: nowrap;">
 	        .gray1
 	      </td>
-	      <td>
+	      <td style="background: {{ themeSettings.themeGray3 }}">
 	        <span class="gray1">This is an example of colored text. <i class="icon cart1"></i> <i class="icon favorite1"></i> <i class="icon star-half"></i></span>
 	      </td>
 	    </tr>
@@ -546,7 +591,7 @@
 	      <td style="white-space: nowrap;">
 	        .gray2
 	      </td>
-	      <td>
+	      <td style="background: {{ themeSettings.themeGray3 }}">
 	        <span class="gray2">This is an example of colored text. <i class="icon cart1"></i> <i class="icon favorite1"></i> <i class="icon star-half"></i></span>
 	      </td>
 	    </tr>
@@ -2908,8 +2953,7 @@
 			<div class="primary">
 				Option of ".black-bg" and ".white-bg".<br><br>
 				Specify "spinner1" - "spinner6".<br><br>
-				Accepts all font color classes<br>
-				and ".white" (shown)<br><br>
+				Accepts all text color classes<br><br>
 			</div>
 			<div class="color-warning">Parent must have "position: relative;"</div>
         </td>
