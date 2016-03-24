@@ -4,10 +4,10 @@
         {% block product-image %}
         <a href="{% make_url "product" model %}">
             {% if model.mainImage.imageUrl %}
-                <img src="{% make_url "image" model.mainImage with max=themeSettings.listProductThumbSize as_parameter %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
+                <img class="img-responsive" src="{% make_url "image" model.mainImage with max=themeSettings.listProductThumbSize as_parameter %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
             {% else %}
                 {% if siteContext.generalSettings.missingImageSubstitute %}
-                    <img src="{{siteContext.cdnPrefix}}/cms/files/{{ siteContext.generalSettings.missingImageSubstitute }}?max={{siteContext.themeSettings.listProductThumbSize }}"/>
+                    <img class="img-responsive" src="{{siteContext.cdnPrefix}}/cms/files/{{ siteContext.generalSettings.missingImageSubstitute }}?max={{siteContext.themeSettings.listProductThumbSize }}"/>
                 {% else %}
                     <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
                 {% endif %}

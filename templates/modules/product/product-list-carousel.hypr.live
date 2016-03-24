@@ -1,3 +1,8 @@
 ﻿{% extends "modules/product/product-list" %}
+{% block featured-products-carousel %}
+	{% require_script "widgets/featured-products-carousel" %}
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+{% endblock featured-products-carousel %}
 {% block module-classes %}mz-productlist-carousel{% endblock module-classes %}
-{% block list-classes %}mz-l-carousel{% endblock list-classes %}
+{% block featured-products-id %} id="fp-slider"{% endblock featured-products-id %}
+{% block list-classes %}owl-carousel{% endblock list-classes %}
