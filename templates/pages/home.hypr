@@ -20,6 +20,9 @@
 	<div class="slideshow hero col-xs-12">
     	{% dropzone "slideshow" scope="template" %}
 	</div>
+	<div class="countdown-widget col-xs-12">
+    	{% dropzone "countdown" scope="template" %}
+	</div>
 	<div class="promos-widget-wrapper hero col-xs-12">
     	{% dropzone "hero" scope="template" %}
 	</div>

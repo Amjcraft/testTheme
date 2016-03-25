@@ -1335,7 +1335,7 @@
         {
           "xtype": "box",
           "autoEl": {
-              "html": "<br><br><h3>Slide 1</h3><hr>"
+              "html": "<p style='color:red;''>Be sure to make all your images the same size before uploading!</p><br><br><h3>Slide 1</h3><hr>"
           }
         },
         {
@@ -1523,6 +1523,56 @@
             "Center",
             "Right"
           ]
+        }
+      ]
+    },
+    {
+      "displayName": "Countdown",
+      "displayTemplate": "cms/countdown",
+      "icon": "/resources/admin/widgets/32_countdown.png",
+      "id": "countdown",
+      "validPageTypes": [
+        "*"
+      ],
+      "defaultConfig": {
+        "countdownBgColor": "#2e2e2e"
+      },
+      "editViewFields": [
+        {
+          "xtype": "mz-input-image",
+          "name": "countdownBgImg",
+          "fieldLabel": "Countdown background image (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "countdownBgColor",
+          "fieldLabel": "Countdown background color",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "countdownBeforeText",
+          "fieldLabel": "Text before countdown",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-date",
+          "name": "countdownDate",
+          "fieldLabel": "Date for countdown (MM/DD/YYYY)",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "countdownDaysOnly",
+          "fieldLabel": "Only list days in countdown",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "countdownAfterText",
+          "fieldLabel": "Text after countdown",
+          "allowBlank": true
         }
       ]
     }
