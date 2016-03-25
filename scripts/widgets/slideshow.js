@@ -1,4 +1,4 @@
-require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr) {
+define(['modules/jquery-mozu'], function ($) {
 	$.getScript('//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js', function() {
 	    //script is loaded and executed put your dependent JS here
 		$(document).ready(function(){
