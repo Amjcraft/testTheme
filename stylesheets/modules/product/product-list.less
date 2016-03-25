@@ -25,8 +25,9 @@
 			@product-columns-desktop-lg : (100% / @product-columns-desktop-lg);
 			@product-columns-desktop-sm : (100% / @product-columns-desktop-sm);
 			@product-columns-tablet : (100% / @product-columns-tablet);
-			@product-columns-mobile : (100% / @product-columns-mobile);
+			@product-columns-mobile-lg : (100% / @product-columns-mobile);
 			@product-columns-mobile-xs : (100% / @product-columns-mobile-xs);
+			position: relative;
 		    width: @product-columns-mobile-xs;
 		    margin-bottom: 40px;
 		    list-style: none;
@@ -35,7 +36,7 @@
 			    padding-left: 10px;
 			}
 		    @media only screen and (min-width: 501px) and (max-width: 767px) {
-		    	width: @product-columns-mobile;
+		    	width: @product-columns-mobile-lg;
 		    }
 		    @media only screen and (min-width: 768px) and (max-width: 991px) {
 		    	width: @product-columns-tablet;

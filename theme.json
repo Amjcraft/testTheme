@@ -389,6 +389,7 @@
     "defaultSort": "productName asc",
 
 
+    "listProductQuickview": true,
     "listProductCode": true,
     "listProductShortDesc": true,
     "listProductThumbSize": 200,

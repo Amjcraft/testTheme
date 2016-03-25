@@ -113,6 +113,11 @@
             "items": [
                 {
                     "xtype": "mz-input-checkbox",
+                    "name": "listProductQuickview",
+                    "fieldLabel": "Enable product quickview buttons"
+                },
+                {
+                    "xtype": "mz-input-checkbox",
                     "name": "listProductCode",
                     "fieldLabel": "Show product code in the product grid"
                 },
