@@ -613,6 +613,14 @@
 	    </tr>
 	    <tr>
 	      <td style="white-space: nowrap;">
+	        .black
+	      </td>
+	      <td>
+	        <span class="black">This is an example of colored text. <i class="icon cart1"></i> <i class="icon favorite1"></i> <i class="icon star-half"></i></span>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td style="white-space: nowrap;">
 	        .color-success
 	      </td>
 	      <td>
