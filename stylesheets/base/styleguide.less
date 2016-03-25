@@ -1512,28 +1512,28 @@ i {
 	&.color5-dark {
 		color: @color5-dark;
 	}
-	.white {
+	&.white {
 		color: #fff;
 	}
-	.gray1 {
+	&.gray1 {
 		color: @gray1;
 	}
-	.gray2 {
+	&.gray2 {
 		color: @gray2;
 	}
-	.gray3 {
+	&.gray3 {
 		color: @gray3;
 	}
-	.gray4 {
+	&.gray4 {
 		color: @gray4;
 	}
-	.black {
+	&.black {
 		color: #000;
 	}
-	.color-success {
+	&.color-success {
 		color: @color-success;
 	}
-	.color-warning {
+	&.color-warning {
 		color: @color-warning;
 	}
 }
@@ -1820,7 +1820,7 @@ select {
 	}
 }
 
-button,
+button:not(.no-style),
 button.mz-button,
 input[type="submit"] {
 	position: relative;
@@ -2144,6 +2144,10 @@ table.zebra-striped {
 	&.white {
 		color: #fff;
 	}
+}
+
+.modal-backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 
