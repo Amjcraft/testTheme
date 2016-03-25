@@ -7,7 +7,7 @@
 {% block body-content %}
     {% include "modules/common/message-bar" with model=model.messages %}
     <div class="login-wrapper input-status col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0">
-        <h1 class="mz-pagetitle">{{ labels.logIn2 }}</h1>
+        <h2 class="mz-pagetitle">{{ labels.logIn2 }}</h2>
         <p>{{ labels.ordersPlacedWithAccount }}</p>
         {% dropzone "login-top" scope="template" %}
         <form method="post" class="mz-loginform mz-loginform-page" name="mz-loginform">
@@ -54,7 +54,7 @@
         </form>
     </div>
     <div class="order-status-wrapper input-status col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0">
-        <h1 class="mz-pagetitle">{{ labels.orderStatus }}</h1>
+        <h2 class="mz-pagetitle">{{ labels.orderStatus }}</h2>
         <p>{{ labels.ordersPlacedAsGuest }}</p>
         <form method="post" class="mz-loginform mz-loginform-page" name="mz-anonymousorder">
             <input type="hidden" name="order-returnUrl" value="{{ model.returnUrl }}"/>

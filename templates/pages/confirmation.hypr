@@ -10,7 +10,7 @@
 
 <div class="mz-l-container col-xs-12 no-pad">
     <div class="mz-confirmation-message col-xs-12">
-        <h1 class="mz-pagetitle">{{ labels.orderConfirmation }} </h1>
+        <h2 class="mz-pagetitle">{{ labels.orderConfirmation }} </h2>
     	<p>{{ labels.confirmationText }}</p>
         <p>{{ labels.yourOrderNumber|string_format(model.orderNumber)|safe }}</p>
     </div>

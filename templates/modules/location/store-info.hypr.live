@@ -2,7 +2,7 @@
 
     <div class="mz-loc-dialog">
 
-        <h1>{{ labels.storeInformation }}</h1>
+        <h2>{{ labels.storeInformation }}</h2>
 
         <div class="mz-loc-store-address">
             <div class="mz-loc-name">

@@ -17,7 +17,7 @@
 
 {% preload_json model "cart" %}
 
-<h1 class="mz-pagetitle col-xs-12">{{ labels.cart }}</h1>
+<h2 class="mz-pagetitle col-xs-12">{{ labels.cart }}</h2>
 <form method="post" action="{{ siteContext.secureHost }}/cart/checkout" id="cartform">
 	{% dropzone "cart-top" scope="template" %}
 	<input type="hidden" name="id" value="{{model.id}}" />
