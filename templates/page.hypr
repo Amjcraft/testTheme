@@ -141,7 +141,7 @@
                     {% comment %}
                         Specify "/page-footer1/" - "/page-footer15/".
                     {% endcomment %}
-                    {% include "modules/page-footer9/page-footer" %}
+                    {% include "modules/page-footer1/page-footer" %}
                 {% endblock page-footer %}
 
             </div>
