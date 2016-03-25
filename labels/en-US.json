@@ -460,5 +460,6 @@
   "wrongCountryForType" : "Please select a country supported for this contact type",
   "yes" : "Yes",
   "yourAccount" : "Your Account",
-  "yourOrderNumber" : "Your order number is <span class=\"mz-confirmation-order-number\">{0}</span>."
+  "yourOrderNumber" : "Your order number is <span class=\"mz-confirmation-order-number\">{0}</span>.",
+  "youSave" : "You save"
 }
