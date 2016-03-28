@@ -1,12 +1,38 @@
 ﻿<div class="mz-productlisting {% block module-classes %}{% endblock module-classes %}" data-mz-product="{{ model.productCode }}">
-    
     <div class="mz-productlisting-image">
+        {% if themeSettings.listProductQuickview and pageContext.isDesktop %}
+            <!-- Button triggers modal -->
+            <button id="quickview-toggle" class="primary" type="button" data-toggle="modal" data-target="#quickview_{{ model.productCode }}">
+                {{ labels.quickview }}
+            </button>
+
+            <!-- Modal -->
+            <div class="quickview modal fade" id="quickview_{{ model.productCode }}" tabindex="-1" role="dialog" aria-labelledby="Product Quickview">
+                <div class="modal-dialog col-xs-12 no-pad" role="document">
+                    <div class="modal-content col-xs-12 no-pad">
+                        <div class="modal-header col-xs-12">
+                            <h2 class="mz-pagetitle" itemprop="name">
+                                {{ model.content.productName }}
+                                <button type="button" class="close no-style" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon exit1-circle gray4"></i></span></button>
+                            </h2>
+                        </div>
+                        <div class="modal-body col-xs-12 no-pad">
+                            {% include "modules/quickview" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
         {% block product-image %}
         <a href="{% make_url "product" model %}">
             {% if model.mainImage.imageUrl %}
-                <img src="{% make_url "image" model.mainImage with max=themeSettings.listProductThumbSize as_parameter %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
+                <img class="mz-productlisting-image-img img-responsive" src="{% make_url "image" model.mainImage with max=themeSettings.listProductThumbSize as_parameter %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
             {% else %}
-                <span class="mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+                {% if siteContext.generalSettings.missingImageSubstitute %}
+                    <img class="mz-productlisting-image-img img-responsive" src="{{siteContext.cdnPrefix}}/cms/files/{{ siteContext.generalSettings.missingImageSubstitute }}?max={{siteContext.themeSettings.listProductThumbSize }}"/>
+                {% else %}
+                    <span class="mz-productlisting-image-img mz-productlisting-imageplaceholder"><span class="mz-productlisting-imageplaceholdertext">{{ labels.productImagePlaceholder }}</span></span>
+                {% endif %}
             {% endif %}
         </a>
         {% endblock product-image %}
@@ -26,12 +52,12 @@
         {% if dealOfTheDay %}
           {% if dealOfTheDay.savings %}
             {% if model.price.discount.impact %}
-              <p class="mz-productlisting-savings">You save: {{ model.price.discount.impact|currency }}</p>
+              <p class="mz-productlisting-savings">{{ labels.youSave }}: {{ model.price.discount.impact|currency }}</p>
             {% endif %}
           {% endif %}
           {% if dealOfTheDay.expirationDate %}
             {% if model.price.discount.discount.expirationDate %}
-              <p class="mz-productlisting-expirationdate">Expires: {{ model.price.discount.discount.expirationDate|date("F j, Y") }}</p>
+              <p class="mz-productlisting-expirationdate">{{ labels.expires }}: {{ model.price.discount.discount.expirationDate|date("F j, Y") }}</p>
             {% endif %}
           {% endif %}
         {% endif %}

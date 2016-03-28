@@ -3,22 +3,22 @@
 {% else %}
 <h3 class="mz-l-stack-sectiontitle">{{ labels.order }}</h3>
 {% endif %}
-<div class="mz-orderhistory-section mz-l-paginatedlist">
+<div class="mz-orderhistory-section mz-l-paginatedlist col-xs-12 no-pad">
     {% if model.items %}
-    {% if showPaging %}
-    <div data-mz-pagingcontrols class="mz-pagingcontrols">
-        {% include "modules/common/paging-controls" %}
-    </div>
+        {% if showPaging %}
+            <div data-mz-pagingcontrols class="mz-pagingcontrols col-xs-12 no-pad">
+                {% include "modules/common/paging-controls" %}
+            </div>
+        {% endif %}
+        <div data-mz-orderlist class="mz-l-paginatedlist-list mz-orderlist col-xs-12 no-pad">
+          {% include "modules/my-account/order-history-list" %}
+        </div>
+        {% if showPaging %}
+            <div data-mz-pagenumbers class="mz-pagenumbers col-xs-12 no-pad">
+                {% include "modules/common/page-numbers" %}
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="info-message">{{ labels.accountNoOrders }}</div>
     {% endif %}
-    <div data-mz-orderlist class="mz-l-paginatedlist-list">
-      {% include "modules/my-account/order-history-list" %}
-    </div>
-    {% if showPaging %}
-    <div data-mz-pagenumbers class="mz-pagenumbers">
-        {% include "modules/common/page-numbers" %}
-    </div>
-    {% endif %}
-  {% else %}
-    {{ labels.accountNoOrders }}
-  {% endif %}
 </div>

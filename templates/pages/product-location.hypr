@@ -11,7 +11,7 @@
     {% preload_json model "product" %}
 
     <div class="mz-l-container">
-        <h1 class="mz-pagetitle">{{ labels.findAtLocalStore }}</h1>
+        <h2 class="mz-pagetitle">{{ labels.findAtLocalStore }}</h2>
         <div class="mz-l-stack">
             <div class="mz-l-stack-section mz-locationproduct">
                 <h4 class="mz-l-stack-sectiontitle">{{ labels.product }}</h4>

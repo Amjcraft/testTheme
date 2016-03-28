@@ -438,6 +438,20 @@
             messagesEl: $messagesEl
         });
 
+        /* Needs integrated into backbone. Functions in console, but not file. */
+        $('.mz-tracking-number').each(function(){
+            var trackingCarrier = $(this).children('.mz-tracking-carrier').text().toLowerCase();
+            var trackingNumber = $(this).children('.mz-tracking-link').text();
+            var trackingLink = $(this).children('.mz-tracking-link');
+            if(trackingCarrier.indexOf("ups") >= 0) {
+                trackingLink.attr("href", "https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums=" + trackingNumber).text('NEW TRACKING LINK');
+            } else if(trackingCarrier.indexOf("fedex") >= 0) {
+                trackingLink.attr("href", "http://www.fedex.com/Tracking?action=track&tracknumbers=" + trackingNumber).text('NEW TRACKING LINK');
+            } else if(trackingCarrier.indexOf("usps") >= 0) {
+                trackingLink.attr("href", "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=" + trackingNumber).text('NEW TRACKING LINK');
+            }
+        });
+
         // TODO: upgrade server-side models enough that there's no delta between server output and this render,
         // thus making an up-front render unnecessary.
         _.invoke(window.accountViews, 'render');

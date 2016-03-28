@@ -1,55 +1,45 @@
-﻿.mz-myaccount {
-    .mz-myaccount-panels {
-        margin-left: 200px;
-    }
+﻿@my-account-left-nav-width          : 200px;
+@my-account-section-border-color    : @gray2;
 
+.mz-myaccount {
+    #header1 + #page-content .mz-scrollnav.affix.sticky-header {
+        top: 150px
+    }
     .mz-myaccount-nav {
-        width: 200px;
-        box-sizing: border-box;
-    }
-
-    .mz-contacttype-isprimary {
-        font-size: @fontSizeSmall;
-        font-style: italic;
-        display: block;
-        margin-top: 3px;
-        text-indent: @gutter;
-    }
-
-    @media (max-width: 600px) {
-        .mz-myaccount-panels {
-            margin-left: 0;
+        float: left;
+        width: @my-account-left-nav-width;
+        @media only screen and (max-width: 767px) {
+            width: 100%;
         }
-
-        .mz-myaccount-nav {
-            float: none;
-            width: auto;
-            margin-bottom: @gutter;
-            .clearfix();
-
-            .mz-scrollnav-item {
-                float: left;
-                margin: @gutter/4;
+        .mz-scrollnav.affix {
+            @media only screen and (max-width: 767px) {
+                position: static;
+                top: 0;
+            }
+        }
+        .mz-scrollnav-link {
+            text-decoration: none;
+            &:hover {
+                color: @color-text;
+                text-decoration: none;
             }
         }
     }
-
-    .mz-l-stack-section {
-        min-height: inherit;
-    }
-
-    #account-settings {
-        clear: none;
-
-        .mz-link-edit-accountsettings {
-            float: none;
-            line-height: inherit;
+    #account-panels {
+        float: right;
+        width: ~"calc(100% - @{my-account-left-nav-width})";
+        @media only screen and (max-width: 767px) {
+            width: 100%;
         }
-
-        .mz-accountsettings-label {
-            display: block;
-            color: #999;
-            font-size: 80%;
+        .my-account-section {
+            margin-bottom: 50px;
+        }
+        label {
+            font-weight: normal;
+            white-space: nowrap;
+        }
+        button.edit {
+            min-width: 0;
         }
     }
 }

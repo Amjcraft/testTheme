@@ -1,4 +1,4 @@
-﻿    <h3 class="mz-formstep-header mz-checkoutform-header">
+﻿    <h3 class="mz-formstep-header mz-checkoutform-header col-xs-12 no-pad">
         {{ labels.reviewOrder }}
     </h3>
     <div class="mz-formstep-body mz-checkoutform">
@@ -54,8 +54,8 @@
                 {% endif %}
             {% endif %}
 
-            <div class="mz-formstep-next">
-                <button type="button" class="mz-button mz-button-large" data-mz-action="submit">{{ labels.placeOrder }}</button>
+            <div class="mz-formstep-next col-xs-12 no-pad">
+                <button type="button" class="mz-button" data-mz-action="submit">{{ labels.placeOrder }}</button>
             </div>
         {% endif %}
     </div>

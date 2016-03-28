@@ -1,4 +1,4 @@
-﻿<div class="mz-returnform">
+﻿<div class="mz-returnform col-xs-12 no-pad">
   <div class="mz-l-formfieldgroup">
     <div class="mz-l-formfieldgroup-row mz-returnform-returntype">
       <div class="mz-l-formfieldgroup-cell">
@@ -49,7 +49,7 @@
       </div>
       <div class="mz-l-formfieldgroup-cell">
         <button class="mz-button" data-mz-action="finishReturnItem">{{ labels.submit }}</button>
-        <button class="mz-button" data-mz-action="cancelReturnItem">{{ labels.cancel }}</button>
+        <button class="mz-button gray" data-mz-action="cancelReturnItem">{{ labels.cancel }}</button>
       </div>
     </div>
   </div>
