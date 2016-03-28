@@ -1,4 +1,4 @@
-﻿define(['modules/backbone-mozu', 'hyprlive', 'hyprlivecontext', 'modules/jquery-mozu', 'underscore', 'modules/models-customer', 'modules/views-paging', 'modules/editable-view'], function(Backbone, Hypr, HyprLiveContext, $, _, CustomerModels, PagingViews, EditableView) {
+﻿define(['modules/backbone-mozu', 'modules/api', 'hyprlive', 'hyprlivecontext', 'modules/jquery-mozu', 'underscore', 'modules/models-customer', 'modules/views-paging', 'modules/editable-view'], function(Backbone, api, Hypr, HyprLiveContext, $, _, CustomerModels, PagingViews, EditableView) {
 
     var AccountSettingsView = EditableView.extend({
         templateName: 'modules/my-account/my-account-settings',
@@ -99,6 +99,115 @@
 
     var WishListView = EditableView.extend({
         templateName: 'modules/my-account/my-account-wishlist',
+        initialize: function() {
+            var me = this;
+            // Get current user wishlist
+            api.request('GET', '/api/commerce/wishlists/customers/' + require.mozuData('user').accountId  + '/my_wishlist/').then(function(list) {
+                var items;
+                try {
+                    items = list.items;
+                } catch(e) {}
+                
+                // No items in the wishlist
+                if (!items) {
+                        return;
+                }
+                
+                // set items to model and start page at 1
+                me.model.set('items', items);
+                me.model.set('page', 1);
+                me.model.set('pageSize', 20);
+                me.model.set('pages', []);
+                
+                // Set master list of items
+                me.items = me.model.attributes.items.models;
+                for(var i = 0; i < me.model.attributes.items.length/me.model.get('pageSize'); i++){
+                    me.model.attributes.pages[i] = i+1;
+                }
+                
+                // Syn model
+                me.model.trigger('sync');
+                
+                // Start render
+                me.render();
+            }, function(err){
+                // error calling the wishlist
+                me.render();
+            });
+        },
+        render: function() {  
+            var me= this;
+            
+            // Each time render is called, check for begning and end of page
+            var pageEnd = (me.model.get('page')*me.model.get('pageSize'));
+            var pageStart = pageEnd-me.model.get('pageSize');
+            var pageSize = 0;
+            
+            // clear display list of items
+            me.model.attributes.items.models = [];
+            if(me.model.get('displayMode') === undefined){
+            me.model.set('displayMode','grid');
+            }
+            
+            // add items from master list to display list based on start and end location
+            // i = loop index from begning of paged list to end of paged list
+            for(var i=pageStart; i < pageEnd; i++){
+                if(me.items[i]){
+                    me.model.attributes.items.models[pageSize] = me.items[i];
+                    if(i > me.items.length-1){
+                        // end loop if reached the end of wishlist items
+                        break;
+                    }
+                    pageSize++;
+                } else {
+                    pageSize--;
+                    break;
+                }
+            }
+            
+            // Set length of page
+            me.model.attributes.items.length = x;
+            
+            // render page
+            EditableView.prototype.render.call(me);
+            
+            // Optional based on core version 
+            /*
+            $('[addMultipleItemsToCart]').click(me.addMultipleItemsToCart.bind(me));
+            $('[deleteMultipleItemswishlist]').click(me.finishRemoveItem.bind(me));
+            me.getInventory();
+            me.afterRender();
+            */
+            
+        },
+        // change page on click
+        favPage: function(e){
+            var me = this;
+            e.preventDefault();
+            // scroll window to top of page
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            // set page number
+            me.model.set('page', $(e.currentTarget).data('mz-page-num'));
+            me.render();
+        },
+        favPrevious: function(e){
+            var me = this;
+            e.preventDefault();
+            // scroll window to top of page
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            // set page number
+            me.model.set('page', (me.model.get('page')-1));
+            me.render();
+        },
+        favNext: function(e){
+            var me = this;
+            e.preventDefault();
+            // scroll window to top of page
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            // set page number
+            me.model.set('page', (me.model.get('page')+1));
+            me.render();
+        },
         addItemToCart: function (e) {
             var self = this, $target = $(e.currentTarget),
                 id = $target.data('mzItemId');
