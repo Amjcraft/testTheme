@@ -1,8 +1,8 @@
 define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
-  var apiContext = require.mozuData('apicontext')
-  ,   user = require.mozuData('user')
-  ,   customer = null
-  ,   noop = {then: function(win, fail){if(fail)fail();}, always: function(fun){if(fun)fun();}};
+  var apiContext = require.mozuData('apicontext'),
+        user = require.mozuData('user'),
+        customer = null.
+        noop = {then: function(win, fail){if(fail)fail();}, always: function(fun){if(fun)fun();}};
 
   if(!user.isAnonymous) {
     api.get('customer', user.accountId).then(function(cust) {
@@ -53,7 +53,7 @@ define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
       }
     },
     setMyStore: function(storeId, cb) {
-      if(!storeId) return noop;
+      if(!storeId) return apiContext.noop;
       $.cookie('myStore', storeId);
       if(!user || user.isAnonymous) {
         if(cb && typeof cb === 'function') cb();
@@ -76,6 +76,6 @@ define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
         });
       });
     }
-  }
+  };
 
 });

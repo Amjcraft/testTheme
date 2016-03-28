@@ -1,5 +1,36 @@
 define(['modules/jquery-mozu', 'underscore'], function($, _) {
+    var getPosition = function(cb) {
+        var position = window.sessionStorage.getItem('geolocation');
+        var done = false;
+        if(position) position = JSON.parse(position);
+        if(!position) {
+        setTimeout(function() {
+            if(!done) cb(null);
+        }, 10030);
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(pos) {
+            var temp = {coords:{}};
+            for(var x in pos.coords) temp.coords[x] = pos.coords[x];
+            window.sessionStorage.setItem('geolocation', JSON.stringify(temp));
+            done = true;
+            cb(pos);
+            }, function() {
+            done = true;
+            cb(null);
+            },{
+            timeout: 10000
+            });
+        } else  {
+            done = true;
+            cb(null);
+        }
+        } else {
+        done = true;
+        cb(position);
+        }
+    };
   return {
+      getPosition: getPosition,
     Parallel: function(length, finished) {
       var count = 0;
       var validFinish = finished && typeof finished === 'function';
@@ -18,36 +49,6 @@ define(['modules/jquery-mozu', 'underscore'], function($, _) {
           if(length === count && validFinish) finished.call(this);
         }
       }.bind(this);
-    },
-    getPosition: function(cb) {
-      var position = window.sessionStorage.getItem('geolocation');
-      var done = false;
-      if(position) position = JSON.parse(position);
-      if(!position) {
-        setTimeout(function() {
-          if(!done) cb(null);
-        }, 10030);
-        if(navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(pos) {
-            var temp = {coords:{}};
-            for(var x in pos.coords) temp.coords[x] = pos.coords[x];
-            window.sessionStorage.setItem('geolocation', JSON.stringify(temp));
-            done = true;
-            cb(pos);
-          }, function() {
-            done = true;
-            cb(null);
-          },{
-            timeout: 10000
-          });
-        } else  {
-          done = true;
-          cb(null);
-        }
-      } else {
-        done = true;
-        cb(position);
-      }
     },
     getDirections: function(e) {
       e.preventDefault();
@@ -92,7 +93,7 @@ define(['modules/jquery-mozu', 'underscore'], function($, _) {
       newWindow.print();
       newWindow.close();
     }
-  }
+  };
 });
 
 
@@ -118,7 +119,7 @@ Object.prototype.getVal = function(keys) {
     }
   }
   return result;
-}
+};
 
 Array.prototype.clean = function(deleteValue) {
   for(var x = 0; x < this.length; x++) {
