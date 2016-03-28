@@ -1,10 +1,10 @@
-﻿<div class="mz-ordersummary-checkout">
-    <h3 class="mz-formstep-header mz-checkoutform-header">
+﻿<div class="mz-ordersummary-checkout col-xs-12 no-pad">
+    <h3 class="mz-formstep-header mz-checkoutform-header col-xs-12 no-pad">
         {{ labels.orderSummary }}
-        <a href="/cart" class="mz-formstep-edit" data-mz-action="editCart">{{ labels.change }}</a>
+        <a href="/cart" class="mz-formstep-edit" data-mz-action="editCart"><button class="gray">{{ labels.change }}</button></a>
     </h3>
 
-    <div class="mz-formstep-body">
+    <div class="mz-formstep-body col-xs-12 no-pad">
         {% include "modules/common/order-summary" %}
     </div><!-- #order-summary -->
 </div>

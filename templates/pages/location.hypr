@@ -11,7 +11,7 @@
     {% preload_json model "product" %}
 
     <div class="mz-l-container">
-        <h1 class="mz-pagetitle">{{ labels.localStores }}</h1>
+        <h2 class="mz-pagetitle">{{ labels.localStores }}</h2>
         <div class="mz-l-stack">
             <p class="mz-locationsearch-pleasewait">
                 {{ labels.locationWait|safe }}

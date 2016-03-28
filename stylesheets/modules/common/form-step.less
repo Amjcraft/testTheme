@@ -1,41 +1,35 @@
 ﻿.mz-formstep {
-    margin-bottom: @gutter*1.25;
+    margin-bottom: 30px;
     .mz-formstep-header {
         border-bottom: 1px solid #eee;
-        padding: @gutter/4 0;
-        margin-bottom: @gutter;
-        font-size: @fontSizeLarge;
-        font-weight: bold;
-        position: relative;
+        padding-bottom: 5px;
     }
     .mz-formstep-edit {
-        font-size: @fontSize;
+        font-size: @font-size;
         font-weight: normal;
         position: absolute;
         right: 0;
-        bottom: @gutter/4;
+        bottom: 5px;
     }
     .mz-formstep-next {
-        margin-top: @gutter/2;
-    }
-    .mz-formstep-desc {
-        font-size: @fontSizeLarger;
-        font-weight: bold;
+        margin-top: 15px;
     }
     &.is-new {
         //.opacity(.4);
-        .mz-formstep-body, .mz-formstep-edit {
-            display: none;
+        .mz-formstep-body, 
+        .mz-formstep-edit {
+            display: none !important;
         }
     }
-    &.is-invalid, &.is-incomplete {
+    &.is-invalid, 
+    &.is-incomplete {
         .mz-formstep-edit, .mz-formstep-summary {
-            display: none;
+            display: none !important;
         }
     }
     &.is-complete {
         .mz-formstep-fields, .mz-formstep-next {
-            display: none;
+            display: none !important;
         }
     }
     .mz-ordersummary {

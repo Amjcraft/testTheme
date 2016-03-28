@@ -1,39 +1,39 @@
-﻿<nav class="mz-scrollnav" id="account-nav" data-mz-scrollnav="{{ navtarget }}">
+﻿<nav class="mz-scrollnav{% if themeSettings.stickyHeader %} sticky-header{% endif %}" id="account-nav" data-mz-scrollnav="{{ navtarget }}">
     <ul class="mz-scrollnav-list nav">
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#settings">
+            <a class="mz-scrollnav-link" href="#account-settings">
                 {{ labels.accountSettings }}
             </a>
         </li>
         {% if siteContext.generalSettings.isWishlistCreationEnabled %}
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#wishlist">
+            <a class="mz-scrollnav-link" href="#account-wishlist">
                 {{ labels.accountMyWishlist }}
             </a>
         </li>
         {% endif %}
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#orderhistory">
+            <a class="mz-scrollnav-link" href="#account-orderhistory">
                 {{ labels.orderHistory }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#returnhistory">
+            <a class="mz-scrollnav-link" href="#account-returnhistory">
                 {{ labels.returns }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#paymentmethods">
+            <a class="mz-scrollnav-link" href="#account-paymentmethods">
                 {{ labels.paymentMethods }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#addressbook">
+            <a class="mz-scrollnav-link" href="#account-addressbook">
                 {{ labels.addressBook }}
             </a>
         </li>
         <li class="mz-scrollnav-item">
-            <a class="mz-scrollnav-link" href="#{{ labels.digitalCreditsAnchor }}">
+            <a class="mz-scrollnav-link" href="#account-storecredit">
                 {{ labels.digitalCredit }}
             </a>
         </li>

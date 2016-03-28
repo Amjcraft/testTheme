@@ -1,7 +1,7 @@
 ﻿<table {% data_attributes Model%}>
   <tr>
     <td>
-      <h1 {% data_attributes Model.Properties.Title %}> {{Model.Properties.Title}}</h1>
+      <h2 {% data_attributes Model.Properties.Title %}> {{Model.Properties.Title}}</h2>
 
       <br />
       <div {% data_attributes Model.Properties.body %}>
@@ -10,7 +10,7 @@
     </td>
 
     <td>
-      <h1 {% data_attributes Model.Properties.Title2  %}> {{Model.Properties.Title2}}</h1>
+      <h2 {% data_attributes Model.Properties.Title2  %}> {{Model.Properties.Title2}}</h2>
 
       <br />
       <div {% data_attributes Model.Properties.body %}>

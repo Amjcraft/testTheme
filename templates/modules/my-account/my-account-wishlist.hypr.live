@@ -1,6 +1,6 @@
 ﻿<h3 class="mz-l-stack-sectiontitle">{{ labels.accountYourWishlist }}</h3>
 
-<div class="mz-accountwishlist-list">
+<div class="mz-accountwishlist-list col-xs-12 no-pad">
   {% if model.hasItems %}
     {% for item in model.items %}
       {% include "modules/my-account/my-account-wishlist-item-listing" with model=item %}
@@ -48,6 +48,6 @@
         </div>
     </div>
   {% else %}
-    {{ labels.accountNoWishlists }}
+    <div class="info-message">{{ labels.accountNoWishlists }}</div>
   {% endif %}
 </div>

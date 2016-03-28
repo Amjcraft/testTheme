@@ -12,15 +12,25 @@
 
 <div itemscope itemtype="http://schema.org/Product" class="mz-l-container">
 
-	<h1 class="mz-pagetitle" itemprop="name">{{ model.content.productName }}</h1>
+	<h2 class="mz-pagetitle col-xs-12" itemprop="name">{{ model.content.productName }}</h2>
 	
-    <div data-mz-productimages class="mz-productimages mz-l-sidebar">
+    {% if themeSettings.pdpImgAlign == "Left" %}
+        <div data-mz-productimages class="mz-productimages mz-l-sidebar align-left col-xs-12 col-sm-5">
+        {% else %}
+            {% if themeSettings.pdpImgAlign == "Center" %}
+                <div data-mz-productimages class="mz-productimages mz-l-sidebar align-center col-xs-12 col-sm-5">
+                {% else %}
+            {% if themeSettings.pdpImgAlign == "Right" %}
+                <div data-mz-productimages class="mz-productimages mz-l-sidebar align-right col-xs-12 col-sm-5">
+            {% endif %}
+        {% endif %}
+    {% endif %}
         {% include "modules/product/product-images" %}
     </div>
 
-    <div class="mz-productdetail-wrap">
+    <div class="mz-productdetail-wrap col-xs-12 col-sm-7">
         {% include "modules/common/message-bar" %}
-        <div id="product-detail" class="mz-productdetail mz-l-stack">
+        <div id="product-detail" class="mz-productdetail mz-l-stack col-xs-12 no-pad">
             {% include "modules/product/product-detail" %}
         </div>
     </div>

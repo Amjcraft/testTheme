@@ -7,7 +7,7 @@
 {% block body-content %}
 
 <div class="mz-l-container">
-    <h1 class="mz-pagetitle">{{ labels.noResults }}: <span class="mz-searchresults-query">{{ pageContext.search.query }}</span></h1>
+    <h2 class="mz-pagetitle">{{ labels.noResults }}: <span class="mz-searchresults-query">{{ pageContext.search.query }}</span></h2>
 
     <p class="mz-searchresults-noresultstext">{{ labels.noResultsText }}</p>
 

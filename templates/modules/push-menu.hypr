@@ -1,0 +1,64 @@
+{% require_script "modules/contextify" %}
+{% require_script "modules/push-menu" %}
+<nav id="push-menu" class="mz-mobilenav col-xs-12 no-pad">
+  <div class="push-menu-top col-xs-12 no-pad">
+    <ul class="account-links-wrapper">
+      {% if user.isAnonymous %}
+      <li>
+          <a href="/user/login" class="mz-utilitynav-link" alt="{{ labels.logIn }}" title="{{ labels.logIn }}"><button class="primary">{{ labels.logIn }}</button></a>
+      </li>
+      <li>
+          <a href="/user/signup" class="mz-utilitynav-link" alt="{{ labels.register }}" title="{{ labels.register }}"><button class="gray">{{ labels.register }}</button></a>
+      </li>
+      {%else%}
+      <li class="welcome">
+          <div id="mz-logged-in-notice">
+              {{ labels.welcome }}, {{user.firstName|default(user.emailAddress)}}!
+          </div> 
+      </li>
+      <li>
+          <a href="/myaccount" alt="{{ labels.myAccount }}" title="{{ labels.myAccount }}"><button class="primary">{{ labels.myAccount }}</button></a>
+      </li>
+      <li>
+          <a href="/logout" alt="{{ labels.logout }}" title="{{ labels.logout }}"><button class="gray">{{ labels.logout }}</button></a>
+      </li>
+      {% endif %}
+    </ul>
+    <div class="exit-push-menu"><i class="icon exit1-circle"></i></div>
+    <form id="searchbox" class="mz-searchbox input-status col-xs-12 hidden-sm hidden-md hidden-lg" action="/search">
+      <input placeholder="{{ labels.search }}" type="search" class="mz-searchbox-input" autocomplete="off" name="query" data-mz-role="searchquery" />
+      <button class="mz-searchbox-button" type="submit"><i class="icon search5"></i></button>
+    </form>
+  </div>
+  <ul class="mz-mobilenav-list col-xs-12 no-pad" 
+      data-mz-contextify='.mz-mobilenav-link[href="{{ navigation.currentNode.url }}"]'
+      data-mz-contextify-attr='class'
+      data-mz-contextify-val='is-current'>
+    {% partial_cache %}
+      {% for link in navigation.tree  %}
+        {% if not link.isHidden and forloop.counter0 > 0 %}
+          <li class="mz-mobilenav-item">
+            {% if link.items %}
+              <div class="mz-mobilenav-sub-toggle">{{link.name}} <i class="icon chevron2-down"></i></div>
+              <ul class="mz-mobilenav-sub">
+                {% for sublink in link.items|dictsort:"name" %}
+                   {% if not sublink.isHidden %}
+                    <li data-mz-role="sitemenu-item" class="mz-mobilenav-item">
+                        <a class="mz-mobilenav-link" href="{{sublink.url}}">{{sublink.name}}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+                <li data-mz-role="sitemenu-item" class="mz-mobilenav-item">
+                  <a class="mz-mobilenav-link" href="{{link.url}}">{{ labels.viewAll }}</a>
+                </li>
+              </ul>
+            {% else %}
+            <a class="mz-mobilenav-link" href="{{link.url}}">{{link.name}}</a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endpartial_cache %}
+  </ul>
+</nav>
+<div id="push-menu-body-overlay"></div>

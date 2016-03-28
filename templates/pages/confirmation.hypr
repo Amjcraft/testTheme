@@ -8,31 +8,30 @@
 
 {% preload_json model "order" %}
 
-<div class="mz-l-container">
-    <h1 class="mz-pagetitle">{{ labels.orderConfirmation }} </h1>
-
-	<p>{{ labels.confirmationText }}</p>
-
-    <p>{{ labels.yourOrderNumber|string_format(model.orderNumber)|safe }}</p>
-
-    <div class="mz-l-stack">
-        <div class="mz-l-stack-section">
-            <h4 class="mz-l-stack-sectiontitle">{{ labels.payments }}</h4>
+<div class="mz-l-container col-xs-12 no-pad">
+    <div class="mz-confirmation-message col-xs-12">
+        <h2 class="mz-pagetitle">{{ labels.orderConfirmation }} </h2>
+    	<p>{{ labels.confirmationText }}</p>
+        <p>{{ labels.yourOrderNumber|string_format(model.orderNumber)|safe }}</p>
+    </div>
+    <div class="mz-confirmation-wrapper col-xs-12 no-pad">
+        <div class="mz-confirmation-payment-summary col-xs-12 col-sm-6">
+            <h4 class="mz-confirmation-summary-title">{{ labels.payments }}</h4>
 			{% if model.total == 0 %}
 				{% with model.total|currency as total %}
 					<h4 class="mz-confirmation-nopaymentrequired">{{ labels.noPaymentWasRequired|string_format(total) }}</h4>
 				{% endwith %}
 			{% else %}
 				{% for payment in model.payments %}
-				{% if payment.status != "Voided" and payment.status != "Declined" %}
-				{% include "modules/checkout/checkout-payment" with model=payment %}
-				{% endif %}
+    				{% if payment.status != "Voided" and payment.status != "Declined" %}
+    				    {% include "modules/checkout/checkout-payment" with model=payment %}
+    				{% endif %}
 				{% endfor %}
 			{% endif %}
         </div>
         {% if model.hasDirectShip %}
-        <div class="mz-l-stack-section">
-            <h4 class="mz-l-stack-sectiontitle">{{ labels.shippingInformation }}</h4>
+        <div class="mz-confirmation-shipping-summary col-xs-12 col-sm-6">
+            <h4 class="mz-confirmation-summary-title">{{ labels.shipTo }}</h4>
             <dl class="mz-propertylist">
                 <dt>{{ labels.shipTo }}</dt>
                 <dd class="mz-addresssummary">{% include "modules/common/address-summary" with model=model.fulfillmentInfo.fulfillmentContact %}</dd>
@@ -43,8 +42,8 @@
         {% endif %}
         {% for item in model.items %}
         {% if item.fulfillmentMethod == "Pickup" %}
-        <div class="mz-l-stack-section">
-            <h4 class="mz-l-stack-sectiontitle">{{ labels.storePickupFor|string_format(item.product.name)|safe }}</h4>
+        <div class="mz-confirmation-shipping-summary col-xs-12 col-sm-6">
+            <h4 class="mz-confirmation-summary-title">{{ labels.storePickupFor|string_format(item.product.name)|safe }}</h4>
             <dl class="mz-propertylist">
                 <dt>{{ labels.storeName }}</dt>
                 <dd>{{ item.fulfillmentLocationName }}</dd>
@@ -54,8 +53,8 @@
         {% endfor %}
 
 
-        <div class="mz-l-stack-section">
-            <h4 class="mz-l-stack-sectiontitle">{{ labels.orderSummary }} </h4>
+        <div class="mz-confirmation-order-summary col-xs-12">
+            <h4 class="mz-confirmation-summary-title">{{ labels.orderSummary }} </h4>
             {% include "modules/common/order-summary" %}
             {% if model.shopperNotes.comments %}
             <div class="mz-ordercomments">
