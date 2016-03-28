@@ -69,6 +69,11 @@
 
         {% block stylesheets %}
         <link rel="stylesheet" href="{% make_url "stylesheet" "/stylesheets/storefront.less" %}" title="default" />
+        <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+
+        <!-- BOOTSTRAP: Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
         {% endblock stylesheets %}
         
         {% block head-tag-scripts %}
