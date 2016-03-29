@@ -72,11 +72,11 @@ Anything not listed there will be under variables.less
 @font-icons : 					'icons-font';
 @font-face {
     font-family: 'icons-font';
-    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?63spws');
-    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?63spws#iefix') format('embedded-opentype'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.ttf?63spws') format('truetype'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.woff?63spws') format('woff'),
-        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.svg?63spws#icons-font') format('svg');
+    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?oc1ra4');
+    src:url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.eot?oc1ra4#iefix') format('embedded-opentype'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.ttf?oc1ra4') format('truetype'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.woff?oc1ra4') format('woff'),
+        url('https://t15181-s21551.sandbox.mozu.com/resources/fonts/icons-font.svg?oc1ra4#icons-font') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -296,6 +296,12 @@ Anything not listed there will be under variables.less
 @icon-cart2-right : "\e91c";
 @icon-cart3-right : "\e91d";
 @icon-cart4-right : "\e91f";
+@icon-ssl1 : "\e925";
+@icon-ssl2 : "\e926";
+@icon-ssl3 : "\e927";
+@icon-minus1-circle-punched : "\e928";
+@icon-minus1-circle : "\e929";
+@icon-plus2-circle : "\e92a";
 
 
 
@@ -927,6 +933,16 @@ i {
 		        content: @icon-menu7;
 		    }
 		}
+		&.minus1-circle-punched {
+		    &:before {
+		        content: @icon-minus1-circle-punched;
+		    }
+		}
+		&.minus1-circle {
+		    &:before {
+		        content: @icon-minus1-circle;
+		    }
+		}
 		&.minus {
 		    &:before {
 		        content: @icon-minus;
@@ -985,6 +1001,11 @@ i {
 		&.plus2-circle-punch {
 		    &:before {
 		        content: @icon-plus2-circle-punch;
+		    }
+		}
+		&.plus2-circle {
+		    &:before {
+		        content: @icon-plus2-circle;
 		    }
 		}
 		&.plus2 {
@@ -1455,6 +1476,21 @@ i {
 		&.profile-circle-punched {
 		    &:before {
 		        content: @icon-profile-circle-punched;
+		    }
+		}
+		&.ssl1 {
+		    &:before {
+		        content: @icon-ssl1;
+		    }
+		}
+		&.ssl2 {
+		    &:before {
+		        content: @icon-ssl2;
+		    }
+		}
+		&.ssl3 {
+		    &:before {
+		        content: @icon-ssl3;
 		    }
 		}
 	}
