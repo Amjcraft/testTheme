@@ -7,7 +7,7 @@
     "modules/models-product", 
     "modules/views-productimages", 
     "modules/jquery-dateinput-localized",
-    "shim!vendor/imagezoom[jQuery=jquery]",
+    "shim!vendor/imagezoom[jQuery=jquery]"
 ], function ($, _, Hypr, Backbone, CartMonitor, ProductModels, ProductImageViews) {
 
     var ProductView = Backbone.MozuView.extend({
