@@ -1,6 +1,6 @@
 {% if model.content.productImages %}
 <figure class="mz-productimages-main col-xs-12 no-pad">
-  <img itemprop="image" class="mz-productimages-mainimage img-responsive" data-mz-productimage-main src="{% make_url "image" model.mainImage with max=themeSettings.productImagesContainerWidth as_parameters %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} />
+  <img itemprop="image" class="mz-productimages-mainimage img-responsive" data-mz-productimage-main src="{% make_url "image" model.mainImage with max=themeSettings.productImagesContainerWidth as_parameters %}" {% if model.mainImage.altText %}alt="{{ model.mainImage.altText }}"{% endif %} data-imagezoom="true" />
 </figure>
 <figure class="mz-productimages-thumbs col-xs-12 no-pad">
     {% for image in model.content.productImages %}
