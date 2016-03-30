@@ -1,0 +1,23 @@
+@media print {
+	.container {
+		width: 100%;
+	}
+	#push-menu,
+	header,
+	.mz-sitenav,
+	.mz-pagenumbers,
+	.mz-productimages,
+	.mz-productlisting-image {
+		a[href]:after {
+			content: none !important;
+		}
+	}
+	.modal-dialog {
+		background-color: #fff !important;
+	}
+	button:not(.no-style), 
+	button.mz-button, 
+	input[type="submit"] {
+		border-width: @button-border-width + 1px;
+	}
+}
