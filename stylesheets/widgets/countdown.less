@@ -1,6 +1,7 @@
 @countdown-text-color : #fff;
 @countdown-font-size : 30px;
 @countdown-border-radius : 10px;
+@countdown-bg-overlay-color : rgba(255, 255, 255, 0.2);
 
 #countdown {
 	padding: 40px 10%;
@@ -20,10 +21,10 @@
 	background-size: cover;
 	.countdown-before-text,
 	.countdown-after-text {
-		font-size: 50px;
+		font-size: @countdown-font-size + 20px;
 		text-transform: uppercase;
 		@media only screen and (max-width: 767px) {
-			font-size: 30px;
+			font-size: @countdown-font-size;
 		}
 	}
 	.countdown-before-text {
@@ -62,21 +63,24 @@
 	}
 	.time-container {
 	    padding: 20px;
-	    background-color: rgba(255,255,255,0.2);
+	    background-color: @countdown-bg-overlay-color;
 	    border-radius: @countdown-border-radius;
 	    box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
 		.time-unit {
-			font-size: 50px;
-			background-color: rgba(255,255,255,0.2);
+			font-size: @countdown-font-size + 20px;
+			background-color: @countdown-bg-overlay-color;
 			border-radius: @countdown-border-radius;
 			@media only screen and (max-width: 767px) {
-				font-size: 40px;
+				font-size: @countdown-font-size + 10px;
 			}
 		}
 		.time-text {
 			margin-top: 20px;
+			@media only screen and (min-width: 992px) and (max-width: 1199px) {
+				font-size: @countdown-font-size - 2px;
+			}
 			@media only screen and (max-width: 991px) {
-				font-size: 20px;
+				font-size: @countdown-font-size - 10px;
 			}
 		}
 	}
