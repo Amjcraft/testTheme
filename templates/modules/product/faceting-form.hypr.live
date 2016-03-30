@@ -22,10 +22,10 @@
     {% for facet in model.facets %}
     {% if facet.values and facet.facetType != "Hierarchy" %}
     <div class="mz-l-sidebaritem col-xs-12 no-pad">
-        {% if pageContext.isMobile %}{% comment %} Toggles start closed {% endcomment %}
+        {% if pageContext.isMobile %}{% comment %} Toggles closed on mobile {% endcomment %}
             <a class="accordion-toggle collapsed col-xs-12 no-pad" data-toggle="collapse" data-parent="#footer-collapse" href="#facet_{{ forloop.counter0}}" aria-expanded="false"><h6>{{ facet.label }} <i class="icon chevron2-up"></i></h6></a>
             <ul id="facet_{{ forloop.counter0}}" class="mz-facetingform-facet mz-facetingform-facet-hierarchy collapse col-xs-12 no-pad" aria-expanded="false">
-        {% else %}{% comment %} Toggles start opened {% endcomment %}
+        {% else %}{% comment %} Toggles opene on tablet/desktop {% endcomment %}
             <a class="accordion-toggle col-xs-12 no-pad" data-toggle="collapse" data-parent="#footer-collapse" href="#facet_{{ forloop.counter0}}" aria-expanded="true"><h6>{{ facet.label }} <i class="icon chevron2-up"></i></h6></a>
             <ul id="facet_{{ forloop.counter0}}" class="mz-facetingform-facet mz-facetingform-facet-hierarchy collapse in col-xs-12 no-pad" aria-expanded="true">
         {% endif %}
