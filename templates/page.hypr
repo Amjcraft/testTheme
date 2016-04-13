@@ -1,3 +1,8 @@
+{% if pageContext.isDebugMode %}
+  {% require_script "hips/helpers" %}
+  {% require_script "hips/preload" %}
+   {% require_script "hips/store" %}
+{% endif %}
 {% autoescape on %}
 {% block doctype %}
 <!doctype html>
@@ -20,7 +25,7 @@
         }
 
     no-js:
-    The Modernizr library we're using will replace the class "no-js" with "js" if javascript 
+    The Modernizr library we're using will replace the class "no-js" with "js" if javascript
     available. Again you can use this as a way to make sensible fallbacks if javascript
     is not available.
 {% endcomment %}
@@ -30,7 +35,7 @@
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if (gt IE 9)|(!IE) ]><!--> 
+<!--[if (gt IE 9)|(!IE) ]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
 {%endblock open-html-tag %}
@@ -81,20 +86,20 @@
         <!-- BOOTSTRAP: Optional theme -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
         {% endblock stylesheets %}
-        
+
         {% block head-tag-scripts %}
         <script src="{% make_url "cdn" "/scripts/vendor/modernizr.min.js" %}"></script>
         {% include "modules/web-fonts-loader" %}
         {% endblock head-tag-scripts %}
         {% cms_resources %}
-        
+
 
         {%header_content%}
 
 
     </head>
     {% endblock head-tag %}
-    
+
     {% block body-tag %}
 
         {% block open-body-tag %}
@@ -104,13 +109,13 @@
             {% block push-menu %}
                 {% include "modules/push-menu" %}
             {% endblock push-menu %}
-           
+
             <div id="page-wrapper" class="mz-l-pagewrapper">
 
                 {% if pageContext.isDebugMode %}
                   {% include "debug/debug" %}
                 {% endif %}
-        
+
                 {% block utility-bar %}
                     {% include "modules/utility-bar/header" %}
                 {% endblock utility-bar %}
@@ -121,24 +126,24 @@
                     {% endcomment %}
                     {% include "modules/page-header1/page-header" %}
                 {% endblock page-header %}
-        
+
                 <div role="main" id="page-content" class="mz-l-pagecontent container">
                     <div class="row">
-                    
+
                         {% block breadcrumbs %}
                             {% if themeSettings.showBreadcrumbs %}
                                 {% include "modules/breadcrumbs" %}
                             {% endif %}
                         {% endblock breadcrumbs %}
-                        
+
                         {% block body-content %}
                             {% dropzone "body" scope="page" %}
                         {% endblock body-content %}
-                        
+
                         {% block body-below-content %}
                             {% dropzone "body-bottom" scope="template" %}
                         {% endblock body-below-content %}
-                    
+
                     </div>
                 </div>
 
@@ -148,7 +153,6 @@
                     {% endcomment %}
                     {% include "modules/page-footer1/page-footer" %}
                 {% endblock page-footer %}
-
             </div>
 
             {% block trailing-scripts %}

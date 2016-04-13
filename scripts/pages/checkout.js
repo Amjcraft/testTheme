@@ -58,7 +58,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu
         editCart: function () {
             window.location = "/cart";
         },
-        
+
         onOrderCreditChanged: function (order, scope) {
             this.render();
         },
@@ -246,7 +246,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu
                 throw new Error('checkout.applyDigitalCredit could not find target.');
             }
             var amtToApply = this.stripNonNumericAndParseFloat(val);
-            
+
             this.model.applyDigitalCredit(creditCode, amtToApply, true);
             this.render();
         },
@@ -319,7 +319,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu
     var CouponView = Backbone.MozuView.extend({
         templateName: 'modules/checkout/coupon-code-field',
         handleLoadingChange: function (isLoading) {
-            // override adding the isLoading class so the apply button 
+            // override adding the isLoading class so the apply button
             // doesn't go loading whenever other parts of the order change
         },
         initialize: function () {
@@ -429,7 +429,7 @@ require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu
         conf.el.css('opacity',1);
         if (mask) mask.remove();
       }
-      conf.model.on('refresh', killMask); 
+      conf.model.on('refresh', killMask);
       conf.model.on('error', killMask);
       return conf;
     };
@@ -447,36 +447,44 @@ require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu
                 }),
                 steps: {
                     shippingAddress: new ShippingAddressView({
+                        name: 'ShippingAddressView',
                         el: $('#step-shipping-address'),
                         model: checkoutModel.get("fulfillmentInfo").get("fulfillmentContact")
                     }),
                     shippingInfo: new ShippingInfoView({
+                        name: 'ShippingInfoView',
                         el: $('#step-shipping-method'),
                         model: checkoutModel.get('fulfillmentInfo')
                     }),
                     paymentInfo: new BillingInfoView({
+                        name: 'BillingInfoView',
                         el: $('#step-payment-info'),
                         model: checkoutModel.get('billingInfo')
                     })
                 },
                 orderSummary: new OrderSummaryView({
+                    name: 'orderSummaryView',
                     el: $('#order-summary'),
                     model: checkoutModel
                 }),
                 couponCode: new CouponView({
+                    name: 'couponView',
                     el: $('#coupon-code-field'),
                     model: checkoutModel
                 }),
                 comments: Hypr.getThemeSetting('showCheckoutCommentsField') && new CommentsView({
+                    name: 'commentsView',
                     el: $('#comments-field'),
                     model: checkoutModel
                 }),
-                
+
                 reviewPanel: new ReviewOrderView({
+                    name: 'ReviewOrderView',
                     el: $('#step-review'),
                     model: checkoutModel
                 }),
                 messageView: messageViewFactory({
+                    name: 'messageView',
                     el: $checkoutView.find('[data-mz-message-bar]'),
                     model: checkoutModel.messages
                 })

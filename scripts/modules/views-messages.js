@@ -6,6 +6,7 @@
         offset = parseInt(Hypr.getThemeSetting('gutterWidth'), 10) || 10;
     return function(opts) {
         if (!MozuMessagesView) MozuMessagesView = Backbone.MozuView.extend({
+            name: 'messagesView',
             templateName: 'modules/common/message-bar',
             initialize: function() {
                 this.model.on('reset', this.render, this);
