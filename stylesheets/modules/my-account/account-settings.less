@@ -1,68 +1,58 @@
-﻿.mz-accountsettings {
-    .mz-accountsettings-displayname,
-    .mz-accountsettings-displayemail,
-    .mz-accountsettings-displayphone {
-        display: inline-block;
-        margin-right: @gutter/4;
-    }
-
-    .mz-accountsettings-displayname {
-        font-size: @fontSizeLarger;
-        margin: 0 @gutter/4 0 0;
-    }
-
-    .mz-accountsettings-section {
-        padding-top: @gutter/2;
-        min-height: @gutter*1.5;
-    }
-
-    /*.mz-accountsettings-sectionheader {
-        border-top: 1px solid #eee;
-        padding-top: 5px;
-        
-    }*/
-
-    .mz-accountsettings-name {
-        input, button {
-            vertical-align: middle;
-            margin-bottom: 0;
+﻿#account-settings {
+    .mz-l-stack-sectiontitle {
+        @media only screen and (min-width: 768px) {
+            margin-top: 0;
         }
-
     }
-
-    .mz-accountsettings-firstname,
-    .mz-accountsettings-lastname {
-        width: 80px;
-        font-size: @fontSizeLarger;
-        height: @fontSizeLarger + 4;
-    }
-    mz-accountsettings-password {
+    .mz-accountsettings-section {
+        margin-bottom: 10px;
         > div {
-            width: 100%;
-            float: left;
-            margin-bottom: @gutter;
-
-            label, input {
-                display: inline-block;
-                margin-bottom: @gutter;
-                vertical-align: middle;
-                width: 140px;
+            @media only screen and (max-width: 767px) {
+                display: block;
             }
         }
-
-        .mz-password-actions {
-            margin-bottom: @gutter * 2;
+        &.is-editing {
+            .mz-accountsettings-label {
+                display: block;
+            }
         }
     }
-
-    .mz-accountsettings-firstname,
-    .mz-accountsettings-lastname {
-        width: 200px;
-        font-size: @fontSize + .5;
+    label,
+    .mz-accountsettings-label {
+        display: inline-block;
+        color: @gray3;
     }
-
+    .mz-accountsettings-displayname,
+    .mz-accountsettings-displayemail,
+    .mz-accountsettings-acceptsmarketing input,
+    .mz-accountsettings-acceptsmarketing label {
+        display: inline-block;
+    }
+    .mz-accountsettings-lastname {
+        @media only screen and (max-width: 767px) {
+            display: block;
+            margin-top: 10px;
+        }
+    }
     .mz-accountsettings-acceptsmarketing {
-        clear: both;
-        label { vertical-align: middle; }
+        &.is-editing {
+            margin-bottom: 20px;
+            label {
+                cursor: pointer;
+            }
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            white-space: normal;
+            cursor: default;
+        }
+        input {
+            margin-right: 5px;
+        }
+    }
+    .mz-link-edit-accountsettings {
+        display: inline-block;
     }
 }

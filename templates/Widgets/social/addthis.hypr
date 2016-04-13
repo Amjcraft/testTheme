@@ -39,12 +39,12 @@
 <a class="addthis_button_compact"></a>
 <a class="addthis_counter addthis_bubble_style"></a>
 </div>
-<script type="text/javascript" src=http://s7.addthis.com/js/250/addthis_widget.js#pubid={{Model.config.profileId}}"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid={{Model.config.profileId}}"></script>
 <!-- AddThis Button END -->
 {% else %}
 <!-- AddThis Button BEGIN -->
 <a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-52a8f776524a38c4"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
-<script type="text/javascript" src=http://s7.addthis.com/js/250/addthis_widget.js#pubid={{Model.config.profileId}}"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid={{Model.config.profileId}}"></script>
 <!-- AddThis Button END -->
 {%endif%}
 {%endif%}

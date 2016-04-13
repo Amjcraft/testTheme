@@ -5,8 +5,8 @@
 {% block body-tag-classes %} mz-signuppage {% endblock body-tag-classes %}
 
 {% block body-content %}
-    <div class="mz-l-container">
-        <h1 class="mz-pagetitle">{{ labels.signUp }}</h1>
+    <div class="signup-wrapper input-status col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <h2 class="mz-pagetitle">{{ labels.signUp }}</h2>
         {% dropzone "signup-top" scope="template" %}
         <form method="post" class="mz-signupform mz-signup-page" name="mz-signupform">
            {% include "modules/common/message-bar" with model=model.messages %}
@@ -55,7 +55,7 @@
                 <div class="mz-l-formfieldgroup-row">
                     <div class="mz-l-formfieldgroup-cell"></div>
                     <div class="mz-l-formfieldgroup-cell">
-                        <button class="mz-button mz-button-large mz-sign-up-page-button" data-mz-action="signuppage-submit">{{ labels.signUp }}</button>
+                        <button class="mz-button mz-sign-up-page-button" data-mz-action="signuppage-submit">{{ labels.signUp }}</button>
                     </div>
                 </div>
                 <div class="mz-l-formfieldgroup-row">

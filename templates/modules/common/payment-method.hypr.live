@@ -1,9 +1,5 @@
-﻿<div class="mz-paymentmethod {% block module-classes %}{% endblock module-classes %}">
-    <div class="mz-paymentmethod-actions">
-      {% block payment-method-actions %}
-      {% endblock payment-method-actions %}
-    </div>
-   <div class="mz-paymentmethod-methoddetails">
+﻿<div class="mz-paymentmethod {% block module-classes %}{% endblock module-classes %} col-xs-12">
+   <div class="mz-paymentmethod-methoddetails col-xs-12 col-sm-8 col-md-9 col-lg-10 no-pad-l">
      {% block payment-method-details %}
      <strong class="mz-paymentmethod-methodtype">{{ model.cardType }}</strong>
      <div class="mz-paymentmethod-cardnumber">{{ model.cardNumberPart }}</div>
@@ -11,4 +7,8 @@
        {% if model.isDefaultPayMethod %}<em class="is-primary">({{ labels.primary }})</em>{% endif %}
        {% endblock payment-method-details %}
    </div>
+    <div class="mz-paymentmethod-actions col-xs-12 col-sm-4 col-md-3 col-lg-2 no-pad-r">
+      {% block payment-method-actions %}
+      {% endblock payment-method-actions %}
+    </div>
  </div>

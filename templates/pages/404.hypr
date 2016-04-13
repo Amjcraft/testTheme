@@ -6,7 +6,7 @@
 
 {% block body-content %}
 <div class="mz-l-container">
-    <h1 class="mz-pagetitle">{{ labels.pageNotFound }}</h1>
+    <h2 class="mz-pagetitle">{{ labels.pageNotFound }}</h2>
     {% dropzone "notfound" scope="template" %}
 </div>
 {% endblock body-content %}

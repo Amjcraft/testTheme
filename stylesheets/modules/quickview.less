@@ -1,0 +1,48 @@
+#quickview-toggle {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+		-ms-transform: translate(-50%, -50%); /* IE 9 */
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		display: block;
+		opacity: 0;
+		-webkit-transition:opacity 0.2s linear; /* For Safari and Chrome */
+		-moz-transition:opacity 0.2s linear; /* For Firefox */
+		-o-transition:opacity 0.2s linear; /* For Opera */
+		transition:opacity 0.2s linear; /* Standard syntax */
+}
+.quickview {
+	.modal-header {
+		.mz-pagetitle {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+	.modal-dialog {
+		position: absolute;
+	    right: 0;
+	    left: 0;
+		width: auto;
+		max-width: 80%;
+	    margin-right: auto;
+	    margin-left: auto;
+	    @media only screen and (min-width: 1200px) {
+	    	max-width: 1000px;
+	    }
+	}
+}
+
+.mz-category,
+.mz-searchresults {
+	.mz-productlisting-image {
+		&:hover {
+			#quickview-toggle {
+					opacity: 1;
+			}
+		}
+		.quickview {}
+	}
+}

@@ -36,18 +36,130 @@
         },
         {
             "xtype": "panel",
-            "title": "Product Lists",
+            "title": "Anonymous Account Verification Options",
             "collapsed": false,
             "items": [
                 {
                     "xtype": "mz-input-checkbox",
+                    "name": "zipCodeEnabled",
+                    "fieldLabel": "Billing Zip Code"
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "phoneNumberEnabled",
+                    "fieldLabel": "Billing Phone Number"
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "billingEmailEnabled",
+                    "fieldLabel": "Billing Email"
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Paging",
+            "collapsed": false,
+            "items": [
+
+                {
+                    "fieldLabel": "Show these page size options",
+                    "xtype": "mz-input-selectmulti",
+                    "name": "pageSizeOptions",
+                    "allowBlank": false,
+                    "forceSelection": true,
+                    "store": [
+                      12,
+                      24,
+                      48,
+                      96,
+                      300,
+                      10,
+                      25,
+                      50,
+                      100,
+                      500
+                    ]
+                },
+                {
+                    "fieldLabel": "Default items per page",
+                    "xtype": "mz-input-dropdown",
+                    "name": "defaultPageSize",
+                    "allowBlank": false,
+                    "forceSelection": true,
+                    "storeFrom": "pageSizeOptions"
+                },
+                {
+                   "fieldLabel": "Default Sort Order",
+                    "xtype": "mz-input-dropdown",
+                    "name": "defaultSort",
+                    "allowBlank": false,
+                    "forceSelection": true,
+                    "store": [
+                      "price asc",
+                      "price desc",
+                      "productName asc",
+                      "productName desc",
+                      "createDate desc",
+                      "createDate asc"
+                    ]
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Product Grid",
+            "collapsed": false,
+            "items": [
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "listProductQuickview",
+                    "fieldLabel": "Enable product quickview buttons"
+                },
+                {
+                    "xtype": "mz-input-checkbox",
                     "name": "listProductCode",
-                    "fieldLabel": "Show product code in product lists"
+                    "fieldLabel": "Show product code in the product grid"
                 },
                 {
                     "xtype": "mz-input-checkbox",
                     "name": "listProductShortDesc",
-                    "fieldLabel": "Show product short description in product lists"
+                    "fieldLabel": "Show product short description in the product grid"
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "listProductThumbSize",
+                    "fieldLabel": "Product grid max image size (px)"
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Product Page",
+            "collapsed": false,
+            "items": [
+                {
+                    "xtype": "mz-input-number",
+                    "name": "productImagesContainerWidth",
+                    "fieldLabel": "Main image max size (px)"
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "maxProductImageThumbnailSize",
+                    "fieldLabel": "Alternate images thumbnail max size (px)"
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "pdpImgAlign",
+                    "fieldLabel": "Align product images (\"Right\" aligns left on mobile)",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "Left",
+                        "Center",
+                        "Right"
+                    ]
                 }
             ]
         },
@@ -76,64 +188,323 @@
         },
         {
             "xtype": "panel",
-            "title": "Layout",
-            "collapsed": false,
-            "items": [
-                {
-                    "xtype": "mz-input-dropdown",
-                    "name": "gutterWidth",
-                    "fieldLabel": "Base Margin Width",
-                    "allowBlank": false,
-                    "forceSelection": true,
-                    "store": [
-                        "15px",
-                        "20px",
-                        "25px",
-                        "30px",
-                        "35px"
-                    ]
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
-            "title": "Suppress CVV During Express Checkout",
+            "title": "Checkout",
             "collapsed": false,
             "items": [
                 {
                     "xtype": "mz-input-checkbox",
                     "name": "isCvvSuppressed",
-                    "fieldLabel": "CVV Suppressed"
+                    "fieldLabel": "Suppress CVV During Express Checkout"
                 }
             ]
         },
         {
             "xtype": "panel",
-            "title": "Anonymous Account Verification Options",
+            "title": "Header",
             "collapsed": false,
             "items": [
                 {
-                    "xtype": "mz-input-checkbox",
-                    "name": "zipCodeEnabled",
-                    "fieldLabel": "Billing Zip Code"
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Logo</h3><hr>"
+                    }
+                },
+                {
+                    "fieldLabel": "Upload your company logo. To update, delete and re-upload.",
+                    "xtype": "mz-input-image",
+                    "name": "themeLogo",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 1
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Sticky Header</h3><hr>"
+                    }
                 },
                 {
                     "xtype": "mz-input-checkbox",
-                    "name": "phoneNumberEnabled",
-                    "fieldLabel": "Billing Phone Number"
-                },
-                {
-                    "xtype": "mz-input-checkbox",
-                    "name": "billingEmailEnabled",
-                    "fieldLabel": "Billing Email"
+                    "name": "stickyHeader",
+                    "fieldLabel": "Keep header at top when scrolling down"
                 }
             ]
         },
         {
             "xtype": "panel",
-            "title": "Text",
+            "title": "Navigation",
             "collapsed": false,
             "items": [
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Top Nav</h3><hr>"
+                    }
+                },
+                {
+                    "fieldLabel": "Maximum Items In Top Nav",
+                    "xtype": "mz-input-number",
+                    "name": "maxTopLevelNavItems",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 1,
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Maximum Nav Item Label Length",
+                    "xtype": "mz-input-number",
+                    "name": "maxTopLevelNavLabelLength",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 4,
+                    "allowBlank": false
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "alphaSubcats",
+                    "fieldLabel": "Alphabetize subcategories (Top level nav categories must be manually arranged.)"
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Mega Menu</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-checkbox",
+                    "name": "enableMegaMenu",
+                    "fieldLabel": "Enable Mega Menu"
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "mm-column-gap-size",
+                    "fieldLabel": "Gap size between columns",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "0px",
+                        "5px",
+                        "10px",
+                        "15px",
+                        "20px",
+                        "25px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "mm-column-divider-width",
+                    "fieldLabel": "Divider line size between columns",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "0px",
+                        "1px",
+                        "2px",
+                        "3px",
+                        "4px",
+                        "5px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "mm-column-divider-color",
+                    "fieldLabel": "Divider Color"
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "mm-1-col-end",
+                    "fieldLabel": "2 columns start at how many links?",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 8,
+                    "allowBlank": false
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "mm-2-cols-end",
+                    "fieldLabel": "3 columns start at how many links?",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 12,
+                    "allowBlank": false
+                },
+                {
+                    "xtype": "mz-input-number",
+                    "name": "mm-3-cols-end",
+                    "fieldLabel": "4 columns start at how many links?",
+                    "hideTrigger": false,
+                    "allowDecimal": false,
+                    "minValue": 16,
+                    "allowBlank": false
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Social Media",
+            "collapsed": false,
+            "items": [
+                {
+                    "fieldLabel": "Social icon style",
+                    "xtype": "mz-input-dropdown",
+                    "name": "socialIconStyle",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "Simple",
+                        "Circle",
+                        "Circle Punched",
+                        "Square"
+                    ]
+                },
+                {
+                    "fieldLabel": "Blogger Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialBloggerUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Facebook Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialFacebookUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Google Plus Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialGooglePlusUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Instagram Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialInstagramUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "LinkedIn Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialLinkedinUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Pinterest Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialPinterestUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Tumblr Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialTumblrUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Twitter Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialTwitterUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "Vimeo Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialVimeoUrl",
+                    "allowBlank": true
+                },
+                {
+                    "fieldLabel": "YouTube Page URL",
+                    "xtype": "mz-input-text",
+                    "name": "socialYouTubeUrl",
+                    "allowBlank": true
+                }
+            ]
+        },
+        {
+            "xtype": "panel",
+            "title": "Theme Styleguide",
+            "collapsed": false,
+            "items": [
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Theme Colors</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor1",
+                    "fieldLabel": "Theme Primary Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor2",
+                    "fieldLabel": "Theme Secondary Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor3",
+                    "fieldLabel": "Theme Color 3"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor4",
+                    "fieldLabel": "Theme Color 4"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeColor5",
+                    "fieldLabel": "Theme Color 5"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray1",
+                    "fieldLabel": "Gray 1"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray2",
+                    "fieldLabel": "Gray 2"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray3",
+                    "fieldLabel": "Gray 3"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "themeGray4",
+                    "fieldLabel": "Gray 4"
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Notification Colors</h3><hr>"
+                    }
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "customInputColor",
+                    "fieldLabel": "Custom Checkbox/Radio Buttons Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "successNotificationColor",
+                    "fieldLabel": "Success Notification Color"
+                },
+                {
+                    "xtype": "mz-input-color",
+                    "name": "warningNotificationColor",
+                    "fieldLabel": "Warning Notification Color"
+                },
+                {
+                    "xtype": "box",
+                    "autoEl": {
+                        "html": "<br><br><h3>Font Details</h3><hr>"
+                    }
+                },
                 {
                     "xtype": "mz-input-selectmulti",
                     "name": "loadGoogleFonts",
@@ -141,11 +512,15 @@
                     "allowBlank": false,
                     "forceSelection": true,
                     "store": [
-                        "Source Sans Pro",
+                        "Droid Serif",
+                        "Lato",
+                        "Merriweather",
+                        "Montserrat",
                         "Open Sans",
-                        "Raleway",
-                        "Lora",
-                        "Rokkitt"
+                        "PT Sans",
+                        "PT Serif",
+                        "Roboto",
+                        "Source Sans Pro"
                     ]
                 },
                 {
@@ -158,8 +533,31 @@
                 },
                 {
                     "xtype": "mz-input-dropdown",
+                    "name": "secondaryFont",
+                    "fieldLabel": "Secondary Font",
+                    "allowBlank": false,
+                    "storeFrom": "loadGoogleFonts",
+                    "forceSelection": true
+                },
+                {
+                    "xtype": "mz-input-dropdown",
                     "name": "fontSize",
-                    "fieldLabel": "Font Size",
+                    "fieldLabel": "Desktop Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeMobile",
+                    "fieldLabel": "Mobile/Tablet Font Size",
                     "allowBlank": false,
                     "editable": false,
                     "forceSelection": true,
@@ -175,69 +573,156 @@
                     "xtype": "mz-input-color",
                     "name": "textColor",
                     "fieldLabel": "Text Color"
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
-            "title": "Paging",
-            "collapsed": false,
-            "items": [
-
+                },
                 {
-                    "fieldLabel": "Show these page size options",
-                    "xtype": "mz-input-selectmulti",
-                    "name": "pageSizeOptions",
+                    "xtype": "mz-input-color",
+                    "name": "hyperlinkColor",
+                    "fieldLabel": "Hyperlink Color"
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH1",
+                    "fieldLabel": "H1 Font Size",
                     "allowBlank": false,
+                    "editable": false,
                     "forceSelection": true,
                     "store": [
-                        15,
-                        25,
-                        50,
-                        100,
-                        500
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
                     ]
                 },
                 {
-                    "fieldLabel": "Default items per page",
                     "xtype": "mz-input-dropdown",
-                    "name": "defaultPageSize",
+                    "name": "fontSizeH2",
+                    "fieldLabel": "H2 Font Size",
                     "allowBlank": false,
+                    "editable": false,
                     "forceSelection": true,
-                    "storeFrom": "pageSizeOptions"
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
                 },
                 {
-                   "fieldLabel": "Default Sort Order",
-                    "xtype": "mz-input-text",
-                    "name": "defaultSort",
-                    "allowBlank": true      ,
-                    "allowOnlyWhitespace":true           
-                }
-            ]
-        },
-        {
-            "xtype": "panel",
-            "title": "Navigation",
-            "collapsed": false,
-            "items": [
-                {
-                    "fieldLabel": "Maximum Items In Main Nav",
-                    "xtype": "mz-input-number",
-                    "name": "maxTopLevelNavItems",
-                    "hideTrigger": false,
-                    "allowDecimal": false,
-                    "minValue": 1
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH3",
+                    "fieldLabel": "H3 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
                 },
                 {
-                    "fieldLabel": "Maximum Nav Item Label Length",
-                    "xtype": "mz-input-number",
-                    "name": "maxTopLevelNavLabelLength",
-                    "hideTrigger": false,
-                    "allowDecimal": false,
-                    "minValue": 4,
-                    "allowBlank": false
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH4",
+                    "fieldLabel": "H4 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH5",
+                    "fieldLabel": "H5 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
+                },
+                {
+                    "xtype": "mz-input-dropdown",
+                    "name": "fontSizeH6",
+                    "fieldLabel": "H6 Font Size",
+                    "allowBlank": false,
+                    "editable": false,
+                    "forceSelection": true,
+                    "store": [
+                        "12px",
+                        "14px",
+                        "16px",
+                        "18px",
+                        "20px",
+                        "22px",
+                        "24px",
+                        "26px",
+                        "28px",
+                        "30px",
+                        "32px",
+                        "34px",
+                        "36px"
+                    ]
                 }
             ]
         }
+
+
+
+
+
     ]
 }
