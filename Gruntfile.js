@@ -63,7 +63,17 @@ module.exports = function (grunt) {
                     JSON: true,
                     define: true,
                     require: true,
-                    Modernizr: true
+                    clearTimeout: true,
+                    console: true,
+                    document: true,
+                    jQuery: true,
+                    Modernizr: true,
+                    module: true,
+                    process: true,
+                    window: true,
+                    sessionStorage: true,
+                    navigator: true,
+                    location: true
                 }
             }
         },
@@ -133,6 +143,7 @@ module.exports = function (grunt) {
                     'packageconfig.xml',
                     'stylesheets/**/*',
                     'templates/**/*',
+                    'scripts/**/*',
                     '*thumb.png',
                     '*thumb.jpg',
                     '!*.orig',
@@ -196,6 +207,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'build',
         'mozusync:upload',
-        'mozutheme:check'
+        'mozutheme:check',
+        'watch:sync'
     ]);
 };

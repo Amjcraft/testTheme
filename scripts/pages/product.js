@@ -98,12 +98,14 @@
         var productView = new ProductView({
             el: $('#product-detail'),
             model: product,
-            messagesEl: $('[data-mz-message-bar]')
+            messagesEl: $('[data-mz-message-bar]'),
+            name: 'productView'
         });
 
         var productImagesView = new ProductImageViews.ProductPageImagesView({
             el: $('[data-mz-productimages]'),
-            model: product
+            model: product,
+            name: 'productImagesView'
         });
 
         window.productView = productView;

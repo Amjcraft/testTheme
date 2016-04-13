@@ -96,7 +96,7 @@ define(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/m
         var visaCheckoutSettings = HyprLiveContext.locals.siteContext.checkoutSettings.visaCheckout;
         var apiKey = visaCheckoutSettings.apiKey;
         var clientId = visaCheckoutSettings.clientId;
-        
+
         // if this function is being called on init rather than after updating cart total
         if (!model) {
             model = CartModels.Cart.fromCurrent();
@@ -108,14 +108,14 @@ define(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/m
             V.on("payment.success", function(payment) {
                 // payment here is an object, not a string. we'll stringify it later
                 var $form = $('#cartform');
-                
+
                 _.each({
 
                     digitalWalletData: JSON.stringify(payment),
                     digitalWalletType: "VisaCheckout"
 
                 }, function(value, key) {
-                    
+
                     $form.append($('<input />', {
                         type: 'hidden',
                         name: key,
@@ -148,6 +148,7 @@ define(['modules/backbone-mozu', 'underscore', 'modules/jquery-mozu', 'modules/m
             cartViews = {
 
                 cartView: new CartView({
+                    name: 'cartView',
                     el: $('#cart'),
                     model: cartModel,
                     messagesEl: $('[data-mz-message-bar]')

@@ -1,14 +1,9 @@
 define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
-  var apiContext = require.mozuData('apicontext')
-  ,   user = require.mozuData('user')
-  ,   customer = null
-  ,   noop = {then: function(win, fail){if(fail)fail();}, always: function(fun){if(fun)fun();}};
+  var apiContext = require.mozuData('apicontext'),
+  user = require.mozuData('user'),
+  noop = {then: function(win, fail){if(fail)fail();}, always: function(fun){if(fun)fun();}};
 
-  if(!user.isAnonymous) {
-    api.get('customer', user.accountId).then(function(cust) {
-      customer = cust;
-    });
-  }
+
 
   function getApiHeaders(){
     var apiHeaders = api.context.asHeaders();
@@ -18,6 +13,12 @@ define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
   }
 
   return {
+    getCustomer: function(cb) {
+      if(user.isAnonymous) return cb();
+      api.get('customer', user.accountId).then(function(cust) {
+        cb(cust);
+      });
+    },
     getMyStore: function(cb) {
       var store = $.cookie('myStore'),
       cbIsFun = cb && typeof cb === 'function';
@@ -32,7 +33,7 @@ define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
           .then(function(store) {
             if(cbIsFun) cb(store);
           });
-          
+
         } else if(cbIsFun) cb();
       } else {
         api.get('customer', user.accountId).then(function(customer){
@@ -76,6 +77,6 @@ define(['modules/api', 'modules/jquery-mozu'], function(api, $) {
         });
       });
     }
-  }
+  };
 
 });

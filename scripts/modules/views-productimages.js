@@ -1,6 +1,7 @@
 ﻿define(['modules/jquery-mozu', 'underscore', "modules/backbone-mozu", 'hyprlive'], function ($, _, Backbone, Hypr) {
 
     var ProductPageImagesView = Backbone.MozuView.extend({
+        name: 'ProductPageImagesView',
         templateName: 'modules/product/product-images',
         events: {
             'click [data-mz-productimage-thumb]': 'switchImage'

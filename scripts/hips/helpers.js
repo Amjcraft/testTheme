@@ -1,5 +1,36 @@
 define(['modules/jquery-mozu', 'underscore'], function($, _) {
+  var getPosition = function(cb) {
+    var position = window.sessionStorage.getItem('geolocation');
+    var done = false;
+    if(position) position = JSON.parse(position);
+    if(!position) {
+      setTimeout(function() {
+        if(!done) cb(null);
+      }, 10030);
+      if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(pos) {
+          var temp = {coords:{}};
+          for(var x in pos.coords) temp.coords[x] = pos.coords[x];
+          window.sessionStorage.setItem('geolocation', JSON.stringify(temp));
+          done = true;
+          cb(pos);
+        }, function() {
+          done = true;
+          cb(null);
+        },{
+          timeout: 10000
+        });
+      } else  {
+        done = true;
+        cb(null);
+      }
+    } else {
+      done = true;
+      cb(position);
+    }
+  };
   return {
+    getPosition: getPosition,
     Parallel: function(length, finished) {
       var count = 0;
       var validFinish = finished && typeof finished === 'function';
@@ -19,36 +50,7 @@ define(['modules/jquery-mozu', 'underscore'], function($, _) {
         }
       }.bind(this);
     },
-    getPosition: function(cb) {
-      var position = window.sessionStorage.getItem('geolocation');
-      var done = false;
-      if(position) position = JSON.parse(position);
-      if(!position) {
-        setTimeout(function() {
-          if(!done) cb(null);
-        }, 10030);
-        if(navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(pos) {
-            var temp = {coords:{}};
-            for(var x in pos.coords) temp.coords[x] = pos.coords[x];
-            window.sessionStorage.setItem('geolocation', JSON.stringify(temp));
-            done = true;
-            cb(pos);
-          }, function() {
-            done = true;
-            cb(null);
-          },{
-            timeout: 10000
-          });
-        } else  {
-          done = true;
-          cb(null);
-        }
-      } else {
-        done = true;
-        cb(position);
-      }
-    },
+
     getDirections: function(e) {
       e.preventDefault();
       getPosition(function(pos) {
@@ -62,7 +64,7 @@ define(['modules/jquery-mozu', 'underscore'], function($, _) {
         window.open('https://maps.google.com?' + start + '&daddr=' + dest.lat + ',' + dest.lng , '_blank');
 
       }.bind(this));
-      
+
     },
     getCreditCardType: function(ccNumber){
       var result;
@@ -92,40 +94,5 @@ define(['modules/jquery-mozu', 'underscore'], function($, _) {
       newWindow.print();
       newWindow.close();
     }
-  }
+  };
 });
-
-
-Object.prototype.getVal = function(keys) {
-  if(!keys || typeof keys !== 'string') return this;
-  keys = keys.split('.');
-  var result,
-  keyLen = keys.length;
-
-  for (var i = 0; i < keyLen; i++) {
-    if(!result) {
-      if(this && typeof this === 'object') result = this[keys[i]];
-      else {
-        result = null;
-        break;
-      }
-    } else {
-      if(result && typeof result === 'object') result = result[keys[i]];
-      else {
-        result = null;
-        break;
-      }
-    }
-  }
-  return result;
-}
-
-Array.prototype.clean = function(deleteValue) {
-  for(var x = 0; x < this.length; x++) {
-    if(this[x] === deleteValue) {
-      this.splice(x, 1);
-      x -= 1;
-    }
-  }
-  return this;
-};
