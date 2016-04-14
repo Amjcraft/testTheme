@@ -72,24 +72,16 @@
         <link rel="next" href="{{PageContext.CrawlerInfo.NextUrl}}">
         {% endif %}
 
-        {% comment %} Start Bootstrap {% endcomment %}
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
-        {% require_script "modules/bootstrap" %}
-        {% comment %} End Bootstrap {% endcomment %}
-
         {% block stylesheets %}
-        <link rel="stylesheet" href="{% make_url "stylesheet" "/stylesheets/storefront.less" %}" title="default" />
-        <!-- BOOTSTRAP: Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
-
-        <!-- BOOTSTRAP: Optional theme -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% make_url "stylesheet" "/stylesheets/storefront.less" %}" title="default" />
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" crossorigin="anonymous">
         {% endblock stylesheets %}
 
         {% block head-tag-scripts %}
-        <script src="{% make_url "cdn" "/scripts/vendor/modernizr.min.js" %}"></script>
-        {% include "modules/web-fonts-loader" %}
+            <script src="{% make_url "cdn" "/scripts/vendor/modernizr.min.js" %}"></script>
+            {% include "modules/web-fonts-loader" %}
+            {% require_script "modules/bootstrap" %}
         {% endblock head-tag-scripts %}
         {% cms_resources %}
 
@@ -106,6 +98,7 @@
             <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}{% if pageContext.isEditMode %} admin-view{% endif %}">
         {% endblock open-body-tag %}
 
+            {% comment %} Start Icons Font {% endcomment %}
             <style>
             @font-face {
                 font-family: 'icons-font';
@@ -118,6 +111,7 @@
                 font-style: normal;
             }
             </style>
+            {% comment %} End Icons Font {% endcomment %}
 
             {% block push-menu %}
                 {% include "modules/push-menu" %}
