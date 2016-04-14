@@ -1,5 +1,9 @@
-require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr) {
+define(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr) {
 	$(document).ready(function() {
+		bindFacetingForm($);
+	});
+	function bindFacetingForm ($) {
+		if(!$) return;
 		$('.mobile-facets-toggle').click(function(){
 			if ($(this).hasClass('closed')) {
 				$(this).removeClass('closed').addClass('open').children('.show-filters').addClass('hidden').siblings('.hide-filters').removeClass('hidden');
@@ -11,5 +15,8 @@ require(["modules/jquery-mozu", "underscore", "hyprlive"], function ($, _, Hypr)
 				$(this).parent('.mz-facetingform').slideUp().siblings('.mobile-facets-toggle').removeClass('open').addClass('closed').children('.hide-filters').addClass('hidden').siblings('.show-filters').removeClass('hidden');
 			}
 		});
-	});
+	}
+	return {
+		bindFacetingForm: bindFacetingForm
+	};
 });

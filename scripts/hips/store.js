@@ -85,14 +85,18 @@ define(['hips/io'], function(io) {
 
 
 
-  // cb only supported for get/update for simplicity
-  function DataStore(get, update) {
+  // cb get supported only for simplicity
+  // expect shouldFire to be a function that determines whether
+  // the relevant subscriber should be notified of a data change
+  // dataStore(setVal), dataStore(subscribe), dataStore(subscribe, shouldFire)
+  function DataStore(get, shouldFire) {
     var data = null;
-    var preload = [];
     var subscriptions = [];
+    var shouldFireList = [];
     var fire = function() {
-        subscriptions.forEach(function(sub) {
-            sub(data);
+        subscriptions.forEach(function(sub, dex) {
+            if(!shouldFireList[dex]) return store.error('invalid shouldFireList');
+            if(shouldFireList[dex]()) sub(data);
         });
     };
     var getData = function(cb) {
@@ -103,21 +107,14 @@ define(['hips/io'], function(io) {
         if(cb && typeof cb === 'function') cb(data);
       });
     };
-    var updateData = function(cb) {
-      if(!update) return;
-      update(function(res) {
-        get(function(res) {
-          data = res;
-          fire();
-          if(cb && typeof cb === 'function') cb(data);
-        });
-      });
-    };
     var dataStore = function(val) {
       if(typeof val === 'function') {
         if(data) val(data);
-        else subscriptions.push(val);
-        return;
+        else {
+          subscriptions.push(val);
+          shouldFireList.push(shouldFire || function(){ return true; });
+          return;
+        }
       }
 
 
@@ -128,7 +125,6 @@ define(['hips/io'], function(io) {
       else return data;
     };
     dataStore.apiGet = getData;
-    dataStore.update =
     getData();
     return dataStore;
   }
