@@ -367,6 +367,7 @@
   "settings": {
     "showAddressTypeDropdown": true,
     "enablePartialCaching": true,
+    "domainName": "t15242-s21738.sandbox.mozu.com",
 
 
     "extendedPropertiesEnabled": false,
@@ -411,7 +412,7 @@
     "themeLogo": "",
     "stickyHeader": false,
 
-    
+
     "maxTopLevelNavItems": 8,
     "maxTopLevelNavLabelLength": 20,
     "alphaSubcats": true,

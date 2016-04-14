@@ -118,6 +118,30 @@
                 return ret;
             },
 
+            ascertain: function(keys) {
+              if(!keys || typeof keys !== 'string') return this;
+              keys = keys.split('.');
+              var result,
+              keyLen = keys.length;
+
+              for (var i = 0; i < keyLen; i++) {
+                if(!result) {
+                  if(this && typeof this === 'object') result = this[keys[i]];
+                  else {
+                    result = null;
+                    break;
+                  }
+                } else {
+                  if(result && typeof result === 'object') result = result[keys[i]];
+                  else {
+                    result = null;
+                    break;
+                  }
+                }
+              }
+              return result;
+            },
+
             /** @private */
             setRelation: function(attr, val, options) {
                 var relation = this.attributes[attr],
@@ -472,10 +496,10 @@
              *     var Product = Backbone.MozuModel.extend({
              *         mozuType: 'product'
              *     });
-             *     
+             *
              *     // the fromCurrent static factory method is a shortcut for a common pattern.
              *     var thisProduct = Product.fromCurrent();
-             *     
+             *
              *     // the above is equivalent to:
              *     var thisProduct = new Product(require.mozuData('product'));
              * @memberof MozuModel

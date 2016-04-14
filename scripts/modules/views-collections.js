@@ -6,10 +6,12 @@
 define([
     'backbone',
     'underscore',
+    'modules/jquery-mozu',
     'modules/url-dispatcher',
     'modules/intent-emitter',
-    'modules/get-partial-view'
-], function(Backbone, _, UrlDispatcher, IntentEmitter, getPartialView) {
+    'modules/get-partial-view',
+    'modules/faceting-form'
+], function(Backbone, _, $, UrlDispatcher, IntentEmitter, getPartialView, facetingForm) {
 
     function factory(conf) {
 
@@ -21,6 +23,7 @@ define([
             var url = response.canonicalUrl;
             _$body.html(response.body);
             if (url) _dispatcher.replace(url);
+            if(facetingForm && facetingForm.bindFacetingForm) facetingForm.bindFacetingForm($);
             _$body.removeClass('mz-loading');
         }
 
