@@ -1,6 +1,6 @@
 {% require_script "widgets/countdown" %}
 
-<div id="countdown" class="col-xs-12" style="background-color: {{ model.config.countdownBgColor }};{% if model.config.countdownBgImg %} background-image: url({{ model.config.countdownBgImg.imageUrl }});{% endif %}">
+<div id="countdown" class="col-xs-12" style="background-color: {{ model.config.countdownBgColor }};{% if model.config.countdownBgImg %} background-image: url({% if pageContext.isMobile %}{% make_url 'image' model.config.countdownBgImg with maxWidth=750 as_parameter %}{% else %}{{ model.config.countdownBgImg.imageUrl }}{% endif %}){% endif %}">
   <div class="countdown-date hidden">{{ model.config.countdownDate|date("m/j/Y") }}</div>
   <div class="countdown-before-text col-xs-12">{{ model.config.countdownBeforeText }}</div>
   <div class="col-xs-12 no-pad">

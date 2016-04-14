@@ -9,7 +9,7 @@
 		{% else %}
 			<div class="item">
 		{% endif %}
-			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide1Graphic with max=750 as_parameter %}{% else %}{{ model.config.slide1Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide1AltTxt }}">
+			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide1Graphic with maxWidth=750 as_parameter %}{% else %}{{ model.config.slide1Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide1AltTxt }}">
 			{% if model.config.slide1Caption %}
 				<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
 					{{ model.config.slide1Caption }}
@@ -28,7 +28,7 @@
 		{% else %}
 			<div class="item">
 		{% endif %}
-			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide2Graphic with max=750 as_parameter %}{% else %}{{ model.config.slide2Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide2AltTxt }}">
+			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide2Graphic with maxWidth=750 as_parameter %}{% else %}{{ model.config.slide2Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide2AltTxt }}">
 			{% if model.config.slide2Caption %}
 				<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
 					{{ model.config.slide2Caption }}
@@ -47,7 +47,7 @@
 		{% else %}
 			<div class="item">
 		{% endif %}
-			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide3Graphic with max=750 as_parameter %}{% else %}{{ model.config.slide3Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide3AltTxt }}">
+			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide3Graphic with maxWidth=750 as_parameter %}{% else %}{{ model.config.slide3Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide3AltTxt }}">
 			{% if model.config.slide3Caption %}
 				<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
 					{{ model.config.slide3Caption }}
@@ -66,7 +66,7 @@
 		{% else %}
 			<div class="item">
 		{% endif %}
-			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide4Graphic with max=750 as_parameter %}{% else %}{{ model.config.slide4Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide4AltTxt }}">
+			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide4Graphic with maxWidth=750 as_parameter %}{% else %}{{ model.config.slide4Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide4AltTxt }}">
 			{% if model.config.slide4Caption %}
 				<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
 					{{ model.config.slide4Caption }}
@@ -85,7 +85,7 @@
 		{% else %}
 			<div class="item">
 		{% endif %}
-			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide5Graphic with max=750 as_parameter %}{% else %}{{ model.config.slide5Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide5AltTxt }}">
+			<img class="img-responsive" src="{% if pageContext.isMobile %}{% make_url 'image' model.config.slide5Graphic with maxWidth=750 as_parameter %}{% else %}{{ model.config.slide5Graphic.imageUrl }}{% endif %}" alt="{{ model.config.slide5AltTxt }}">
 			{% if model.config.slide5Caption %}
 				<div class="carousel-caption hidden-xs {% if model.config.enableDots %}dots-on{% endif %} col-xs-12">
 					{{ model.config.slide5Caption }}
