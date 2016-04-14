@@ -2811,7 +2811,7 @@
 		</tr>
 		</table>
 	</div>
-	<div class="col-xs-12 col-md-6">
+	<div class="col-xs-12">
 		<h1>Loading spinner</h1>
 		<table class="border">
 		<tr>
