@@ -367,7 +367,6 @@
   "settings": {
     "showAddressTypeDropdown": true,
     "enablePartialCaching": true,
-    "domainName": "t15242-s21738.sandbox.mozu.com",
 
 
     "extendedPropertiesEnabled": false,

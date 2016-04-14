@@ -106,6 +106,19 @@
             <body class="{% block body-tag-classes %}{% endblock body-tag-classes %}{% if pageContext.isEditMode %} admin-view{% endif %}">
         {% endblock open-body-tag %}
 
+            <style>
+            @font-face {
+                font-family: 'icons-font';
+                src:url('https://{{ siteContext.domains.current.domainName }}/resources/fonts/icons-font.eot?oc1ra4');
+                src:url('https://{{ siteContext.domains.current.domainName }}/resources/fonts/icons-font.eot?oc1ra4#iefix') format('embedded-opentype'),
+                    url('https://{{ siteContext.domains.current.domainName }}/resources/fonts/icons-font.ttf?oc1ra4') format('truetype'),
+                    url('https://{{ siteContext.domains.current.domainName }}/resources/fonts/icons-font.woff?oc1ra4') format('woff'),
+                    url('https://{{ siteContext.domains.current.domainName }}/resources/fonts/icons-font.svg?oc1ra4#icons-font') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+            </style>
+
             {% block push-menu %}
                 {% include "modules/push-menu" %}
             {% endblock push-menu %}
