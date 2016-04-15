@@ -72,31 +72,24 @@ define(['hips/io'], function(io) {
       };
       return historyLogger;
     })(),
-    customer: DataStore(io.getCustomer)
+    customer: DataStore(io.getCustomer),
+    DataStore: DataStore
 
   };
-
-  if(debug)  {
-    window.store = store;
-    window.onerror = function(message, source, lineNum, colNum, error) {
-      store.log.err(message, lineNum);
-    };
-  }
 
 
 
   // cb get supported only for simplicity
   // expect shouldFire to be a function that determines whether
   // the relevant subscriber should be notified of a data change
-  // dataStore(setVal), dataStore(subscribe), dataStore(subscribe, shouldFire)
-  function DataStore(get, shouldFire) {
+  // dataStore(setVal), dataStore(subscribeFn)
+  function DataStore(get) {
     var data = null;
     var subscriptions = [];
     var shouldFireList = [];
     var fire = function() {
         subscriptions.forEach(function(sub, dex) {
-            if(!shouldFireList[dex]) return store.error('invalid shouldFireList');
-            if(shouldFireList[dex]()) sub(data);
+            sub(data);
         });
     };
     var getData = function(cb) {
@@ -112,7 +105,6 @@ define(['hips/io'], function(io) {
         if(data) val(data);
         else {
           subscriptions.push(val);
-          shouldFireList.push(shouldFire || function(){ return true; });
           return;
         }
       }
@@ -124,22 +116,50 @@ define(['hips/io'], function(io) {
       }
       else return data;
     };
-    dataStore.apiGet = getData;
+    function getVal(keys) {
+      if(!keys || typeof keys !== 'string') return 'invalid keys argument';
+      var keys = keys.split('.');
+      var keyLen = keys.length;
+      var result;
+
+      for (var i = 0; i < keyLen; i++) {
+        if(!result) {
+          if(data && typeof data === 'object') result = data[keys[i]];
+          else {
+            result = null;
+            break;
+          }
+        } else {
+          if(result && typeof result === 'object') result = result[keys[i]];
+          else {
+            result = null;
+            break;
+          }
+        }
+      }
+      return result;
+    }
+
+    dataStore.get = getVal; //store.customer.get('data.id')
+    dataStore.update = getData; // query the api again and update the data
     getData();
     return dataStore;
   }
 
-  function logger(color) {
-    return function(message, lineNum, error) {
-      this.history.push({message: message, lineNumber: lineNum, error: error });
-      window.console.log('%c' + message, 'color:' + color);
-    };
-  }
 
 
   function debugOnly(fun) {
     if(debug) return fun;
     else return noop;
   }
+
+
+  if(debug)  {
+    window.store = store;
+    window.onerror = function(message, source, lineNum, colNum, error) {
+      store.log.err(message, lineNum);
+    };
+  }
+
   return store;
 });
