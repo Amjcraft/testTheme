@@ -2164,7 +2164,11 @@ table.zebra-striped {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-::-moz-selection,
+
+/* Styles text selection highlight color */
+::-moz-selection {
+  background: @primary;
+}
 ::selection {
   background: @primary;
 }
