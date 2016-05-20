@@ -1,12 +1,7 @@
 ﻿.mz-checkout-payment {
     clear: both;
-    min-width: 340px;
     .mz-checkout-paymenttitle {
         border-bottom: 1px solid #eee;
-        font-weight: normal;
-        strong {
-            font-size: @fontSizeLarger;
-        }
     }
 
 
@@ -15,53 +10,123 @@
     }
 }
 
-.mz-paymentselector.mz-l-formfieldgroup {
-    .mz-digitalwallets {
-        padding-top: @gutter/2;
-    }
-    display: block;
-    .mz-l-formfieldgroup .mz-l-formfieldgroup-row {
-        display: table-row;
-    }
-    .mz-l-formfieldgroup-row {
-        display: block;
-    }
-    .mz-paymentselector-option .mz-checkoutform-radio {
-        text-align: left;
-        display: block;
-        font-size: @fontSizeLarger;
-    }
-    .mz-l-formfieldgroup-cell {
-        > label {
-            text-align: right;
-            display: block;
-            min-width: 155px;
-        }
-        .mz-paymentselector-reenter-cvv {
-            label {
-                text-align: left;
-                min-width: auto;
-                display: inline-block;
-                margin-right: @gutter/4;
+#checkout-form {
+    #step-payment-info {
+        .mz-accepted-payment {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            i.icon {
+                margin-right: 10px;
+                font-size: 12px;
             }
-        }    
+
+        }
+        .mz-paymentselector-label-separator {
+            margin-top: 10px;
+        }
+        .mz-paymentselector.mz-l-formfieldgroup {
+            .mz-digitalwallets {
+                padding-top: 15px;
+            }
+            .mz-checkoutform-active {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            .mz-l-formfieldgroup-cell {
+                &.radio-cell {
+                    input,
+                    label {
+                        float: left;
+                        line-height: 1;
+                    }
+                    input {
+                        margin-right: 10px;
+                    }
+                    label {
+                        font-weight: bold;
+                        text-align: left;
+                    }
+                }
+                &.saved-cc-dropdown {
+                    @media only screen and (max-width: 767px) {
+                        margin-top: 10px;
+                    }
+                }
+                > label {
+                    display: block;
+                    @media only screen and (min-width: 768px) {
+                        text-align: right;
+                    }
+                }
+                .mz-paymentselector-reenter-cvv {
+                    label,
+                    input {
+                        display: block;
+                        width: 100%;
+                    }
+                    label {
+                        display: inline-block;
+                        margin-top: 20px;
+                        text-align: left;
+                    }
+                    input {
+                        width: 100px;
+                        min-width: 0;
+                    }
+                }  
+            }
+            .mz-paymentselector-option .mz-checkoutform-radio {
+                text-align: left;
+                display: block;
+            }
+            .mz-payment-expiration-month {
+                float: left;
+                min-width: 90px;
+                margin-right: 10px;
+                @media only screen and (max-width: 767px) {
+                    max-width: ~"calc(70% - 10px)";
+                }
+            }
+            .mz-payment-expiration-year {
+                float: left;
+                min-width: 60px;
+                @media only screen and (max-width: 767px) {
+                    max-width: 30%;
+                }
+            }
+            .mz-use-shipping-address {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+        .mz-billing-email {
+            input#billing-email {
+                width: 100%;
+            }
+            .mz-elist-subscribe {
+                label {
+                    white-space: normal;
+                }
+            }
+        }
+        .mz-checkout-digitalcredit {
+            > .mz-l-formfieldgroup-cell {
+                input, 
+                button {
+                    float: left;
+                }
+                input {
+                    @media only screen and (max-width: 767px) {
+                        width: ~"calc(100% - 82px)";
+                    }
+                }
+                button {
+                    @media only screen and (max-width: 767px) {
+                        min-width: 0;
+                    }
+                }
+            }
+        }
     }
-    .mz-payment-credit-card-savepayment-row {
-        margin-left: 155px;
-    }
-}
-
-.mz-paymentselector-label-separator {
-    text-align: center;
-    border-bottom: 1px dashed #eeeeee;
-    text-decoration: none;
-}
-
-.mz-paymentselector-separator {
-    border-top: 1px solid #eee;
-    padding-top: @gutter;
-}
-
-.mz-paymentselector-newcreditcard .mz-l-formfieldgroup-cell:first-child label {
-    min-width: 155px;
 }

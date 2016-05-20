@@ -4,8 +4,8 @@
     "defaultLanguage": "en-US",
     "extends": null,
     "isDesktop": true,
-    "isMobile": false,
-    "isTablet": false,
+    "isMobile": true,
+    "isTablet": true,
     "name": "boilerplate",
     "allowProduction": true,
     "baseTheme": "https://github.com/mozu/core-theme.git",
@@ -354,16 +354,127 @@
       "template": "forgot-password",
       "title": "Forgot Password",
       "userCreatable": false
+    },
+    {
+      "documentType": "web_page",
+      "entityType": "webpage",
+      "id": "Style-Guide",
+      "template": "styleguide",
+      "title": "Style Guide",
+      "userCreatable": true
     }
   ],
   "settings": {
-    "backofficeDateTimeFormat": "m/d/Y H:i:s O",
+    "showAddressTypeDropdown": true,
+    "enablePartialCaching": true,
+
+
     "extendedPropertiesEnabled": false,
     "extendedPropertyParameters": "",
-    "isCvvSuppressed": false,
+
+
     "zipCodeEnabled": true,
     "phoneNumberEnabled": true,
     "billingEmailEnabled": true,
+
+
+    "pageSizeOptions": [
+      12,
+      24,
+      48,
+      96,
+      300
+    ],
+    "defaultPageSize": 24,
+    "defaultSort": "productName asc",
+
+
+    "listProductQuickview": true,
+    "listProductCode": true,
+    "listProductShortDesc": true,
+    "listProductThumbSize": 200,
+
+
+    "productImagesContainerWidth": 500,
+    "maxProductImageThumbnailSize": 50,
+    "pdpImgAlign": "Left",
+
+
+    "showChildCategoriesInFaceting": true,
+    "useSearchAutocomplete": true,
+    "suggestPriorSearchTerms": true,
+
+
+    "isCvvSuppressed": false,
+
+
+    "themeLogo": "",
+    "stickyHeader": false,
+
+
+    "maxTopLevelNavItems": 8,
+    "maxTopLevelNavLabelLength": 20,
+    "alphaSubcats": true,
+    "enableMegaMenu": false,
+    "mm-column-gap-size": "20px",
+    "mm-column-divider-width": "1px",
+    "mm-column-divider-color": "#DDDDDD",
+    "mm-1-col-end": "10",
+    "mm-2-cols-end": "20",
+    "mm-3-cols-end": "30",
+
+
+    "socialIconStyle": "Circle",
+    "socialBloggerUrl": "",
+    "socialFacebookUrl": "",
+    "socialGooglePlusUrl": "",
+    "socialInstagramUrl": "",
+    "socialLinkedinUrl": "",
+    "socialPinterestUrl": "",
+    "socialTumblrUrl": "",
+    "socialTwitterUrl": "",
+    "socialVimeoUrl": "",
+    "socialYouTubeUrl": "",
+
+
+    "themeColor1": "#557CE7",
+    "themeColor2": "#9C3883",
+    "themeColor3": "#CF5757",
+    "themeColor4": "#ED9112",
+    "themeColor5": "#4BAF2E",
+    "themeGray1": "#ECECEC",
+    "themeGray2": "#DDDDDD",
+    "themeGray3": "#666666",
+    "themeGray4": "#2E2E2E",
+    "customInputColor": "#4B71E3",
+    "successNotificationColor": "#42A629",
+    "warningNotificationColor": "#C51A02",
+
+
+    "loadGoogleFonts": [
+      "Source Sans Pro",
+      "Roboto"
+    ],
+    "primaryFont": "Roboto",
+    "secondaryFont": "Source Sans Pro",
+    "fontSize": "14px",
+    "fontSizeMobile": "16px",
+    "textColor": "#2e2e2e",
+    "hyperlinkColor": "#4B71E3",
+    "fontSizeH1": "30px",
+    "fontSizeH2": "24px",
+    "fontSizeH3": "24px",
+    "fontSizeH4": "20px",
+    "fontSizeH5": "20px",
+    "fontSizeH6": "16px",
+
+
+
+
+
+
+
+    "backofficeDateTimeFormat": "m/d/Y H:i:s O",
     "bannerImage": "/resources/images/banner.jpg",
     "bannerImageEnabled": false,
     "bannerImageRepeat": "repeat-x",
@@ -383,43 +494,19 @@
         "tagName": "p"
       }
     ],
-    "defaultPageSize": 15,
-    "defaultSort": "createDate asc",
-    "enablePartialCaching": true,
-    "loadGoogleFonts": [
-      "Source Sans Pro"
-    ],
-    "primaryFont": "Source Sans Pro",
-    "fontSize": "14px",
-    "gutterWidth": "25px",
+    "gutterWidth": "30px",
     "internal-themeAddons": [],
     "itemListingThumbSize": 80,
-    "listProductCode": true,
-    "listProductShortDesc": true,
-    "listProductThumbSize": 160,
-    "maxProductImageThumbnailSize": 50,
     "maxProductSummaryWords": 40,
-    "maxTopLevelNavItems": 8,
-    "maxTopLevelNavLabelLength": 20,
-    "pageSizeOptions": [
-      15,
-      25,
-      50,
-      100
-    ],
     "preselectCountryCode": "US",
-    "productImagesContainerWidth": 350,
     "requireCheckoutAgreeToTerms": true,
-    "suggestPriorSearchTerms": true,
     "searchExpandOnFocus": true,
-    "showAddressTypeDropdown": true,
     "showBreadcrumbs": true,
     "showCartItemDimensions": true,
     "showCartItemImage": true,
     "showCartItemOptions": true,
     "showCartItemWeight": true,
     "showCategoryFacets": true,
-    "showChildCategoriesInFaceting": true,
     "showCheckoutCommentsField": true,
     "showMSRP": true,
     "showProductDetailMeasurements": true,
@@ -427,7 +514,6 @@
     "showProductDetailProperties": true,
     "showProductDetailShortDesc": true,
     "showProductDetailUPC": true,
-    "textColor": "#444444",
     "usStates": [
       {
         "abbreviation": "AL",
@@ -667,7 +753,6 @@
       }
     ],
     "useDebugScripts": false,
-    "useSearchAutocomplete": true,
     "allowCustomerInitiatedReturns": true,
     "visaCheckoutSdkUrl": "https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js"
   },
@@ -1080,6 +1165,416 @@
       "id": "deal-of-the-day",
       "validPageTypes": [
         "*"
+      ]
+    },
+    {
+      "displayName": "Promo Blocks",
+      "displayTemplate": "cms/promo-blocks",
+      "icon": "/resources/admin/widgets/30_promo-blocks.png",
+      "id": "promo-blocks",
+      "validPageTypes": [
+        "*"
+      ],
+      "defaultConfig": {
+        "promoStyle": "slideUp",
+        "promoSlideUpHeight": 250,
+        "promoTextboxBg": "rgba(59, 69, 168, 0.4)",
+        "promoTextColor": "#FFFFFF",
+        "promoTextShadow": true,
+        "promoButtonColor": "Primary",
+        "promoButtonAlign": "Left",
+        "promoButtonFullWidth": true
+      },
+      "editViewFields": [
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "promoStyle",
+          "fieldLabel": "Select your style of promo",
+          "allowBlank": false,
+          "store": [
+            [
+              "slideUp",
+              "Details slide up on hover"
+            ],
+            [
+              "detailsOnHover",
+              "Details appear on image hover"
+            ],
+            [
+              "imgAboveDetails",
+              "Image above details"
+            ],
+            [
+              "detailsOverlayImg",
+              "Details overlay image"
+            ]
+          ]
+        },
+        {
+          "xtype": "mz-input-number",
+          "name": "promoSlideUpHeight",
+          "fieldLabel": "Promo height (px). \"Slide Up\" style only.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "promoGraphic",
+          "fieldLabel": "Upload your promo graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoTextboxBg",
+          "fieldLabel": "Textbox Background Color",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoTextColor",
+          "fieldLabel": "Text Color",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "promoTextShadow",
+          "fieldLabel": "Enable Text Shadow",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "promoTitle",
+          "fieldLabel": "Title (Leave empty to hide.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-textarea",
+          "name": "promoDescription",
+          "fieldLabel": "Description (Leave empty to hide.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "promoLinkUrl",
+          "fieldLabel": "Link URL",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "promoLinkAll",
+          "fieldLabel": "Link whole promo box",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "promoButtonText",
+          "fieldLabel": "Button Text (Leave empty to hide.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "promoButtonColor",
+          "fieldLabel": "Button Color (Colors assigned in Theme Settings)",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Primary",
+            "Secondary",
+            "Color3",
+            "Color4",
+            "Color5",
+            "Gray",
+            "Custom"
+          ]
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoButtonBgColorCustom",
+          "fieldLabel": "Custom Button Background Color (Requires \"Custom\" button color.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "promoButtonTextColorCustom",
+          "fieldLabel": "Custom Button Text Color (Requires \"Custom\" button color.)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "promoButtonAlign",
+          "fieldLabel": "Align Button",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Left",
+            "Center",
+            "Right"
+          ]
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "promoButtonFullWidth",
+          "fieldLabel": "Button is full width",
+          "allowBlank": true
+        }
+      ]
+    },
+    {
+      "displayName": "Slideshow",
+      "displayTemplate": "cms/slideshow",
+      "icon": "/resources/admin/widgets/31_slideshow.png",
+      "id": "slideshow",
+      "validPageTypes": [
+        "*"
+      ],
+      "defaultConfig": {
+        "enableArrows": true,
+        "enableDots": true,
+        "dotsStyle": "Circle",
+        "dotsAlign": "Center"
+      },
+      "editViewFields": [
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<p style='color:red;''>Be sure to make all your images the same size before uploading!</p><br><br><h3>Slide 1</h3><hr>"
+          }
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide1Graphic",
+          "fieldLabel": "Upload your slide 1 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide1AltTxt",
+          "fieldLabel": "Slide 1 Alt Text (accessability standard)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide1Link",
+          "fieldLabel": "Slide 1 Link URL",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide1Caption",
+          "fieldLabel": "Slide 1 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 2</h3><hr>"
+          }
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide2Graphic",
+          "fieldLabel": "Upload your slide 2 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide2AltTxt",
+          "fieldLabel": "Slide 2 Alt Text (accessability standard)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide2Link",
+          "fieldLabel": "Slide 2 Link URL",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide2Caption",
+          "fieldLabel": "Slide 2 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 3</h3><hr>"
+          }
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide3Graphic",
+          "fieldLabel": "Upload your slide 3 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide3AltTxt",
+          "fieldLabel": "Slide 3 Alt Text (accessability standard)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide3Link",
+          "fieldLabel": "Slide 3 Link URL",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide3Caption",
+          "fieldLabel": "Slide 3 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 4</h3><hr>"
+          }
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide4Graphic",
+          "fieldLabel": "Upload your slide 4 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide4AltTxt",
+          "fieldLabel": "Slide 4 Alt Text (accessability standard)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide4Link",
+          "fieldLabel": "Slide 4 Link URL",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide4Caption",
+          "fieldLabel": "Slide 4 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Slide 5</h3><hr>"
+          }
+        },
+        {
+          "xtype": "mz-input-image",
+          "name": "slide5Graphic",
+          "fieldLabel": "Upload your slide 5 graphic. To update, delete and re-upload.",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide5AltTxt",
+          "fieldLabel": "Slide 5 Alt Text (accessability standard)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide5Link",
+          "fieldLabel": "Slide 5 Link URL",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "slide5Caption",
+          "fieldLabel": "Slide 5 Caption (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "box",
+          "autoEl": {
+              "html": "<br><br><h3>Navigation</h3><hr>"
+          }
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "enableArrows",
+          "fieldLabel": "Display slide nav arrows",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "enableDots",
+          "fieldLabel": "Display slide indicator dots on the bottom",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "dotsStyle",
+          "fieldLabel": "Inicator dots style",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Circle",
+            "Square",
+            "Rectangle"
+          ]
+        },
+        {
+          "xtype": "mz-input-dropdown",
+          "name": "dotsAlign",
+          "fieldLabel": "Inicator dots alignment",
+          "allowBlank": false,
+          "forceSelection": true,
+          "store": [
+            "Left",
+            "Center",
+            "Right"
+          ]
+        }
+      ]
+    },
+    {
+      "displayName": "Countdown",
+      "displayTemplate": "cms/countdown",
+      "icon": "/resources/admin/widgets/32_countdown.png",
+      "id": "countdown",
+      "validPageTypes": [
+        "*"
+      ],
+      "defaultConfig": {
+        "countdownBgColor": "#2e2e2e"
+      },
+      "editViewFields": [
+        {
+          "xtype": "mz-input-image",
+          "name": "countdownBgImg",
+          "fieldLabel": "Countdown background image (optional)",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-color",
+          "name": "countdownBgColor",
+          "fieldLabel": "Countdown background color",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "countdownBeforeText",
+          "fieldLabel": "Text before countdown",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-date",
+          "name": "countdownDate",
+          "fieldLabel": "Date for countdown (MM/DD/YYYY)",
+          "allowBlank": false
+        },
+        {
+          "xtype": "mz-input-checkbox",
+          "name": "countdownDaysOnly",
+          "fieldLabel": "Only list days in countdown",
+          "allowBlank": true
+        },
+        {
+          "xtype": "mz-input-text",
+          "name": "countdownAfterText",
+          "fieldLabel": "Text after countdown",
+          "allowBlank": true
+        }
       ]
     }
   ]

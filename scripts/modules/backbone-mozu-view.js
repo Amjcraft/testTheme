@@ -3,8 +3,9 @@
     "underscore",
     "hyprlive",
     "backbone",
-    "modules/views-messages"
-], function ($, _, Hypr, Backbone, messageViewFactory) {
+    "modules/views-messages",
+    "hips/store"
+], function ($, _, Hypr, Backbone, messageViewFactory, store) {
 
     var MozuView = Backbone.MozuView = Backbone.View.extend(
 
@@ -62,6 +63,10 @@
             }
             Backbone.Validation.bind(this);
             Backbone.MozuView.trigger('create', this);
+            if(store) {
+              if(conf.name) store.views[conf.name] = this;
+              else store.views[this.template.path.replace(/\//g, '_')] = this;
+            }
 
         },
             enqueueRender: function () {
@@ -91,8 +96,8 @@
             this.$el[isLoading ? 'addClass' : 'removeClass']('is-loading');
         },
             /**
-             * Get the context that will be sent to the template by the MozuView#render method. In the base implementation, this returns an object with a single property, `model`, whose value is the JSON representation of the `model` property of this view. This object is sent to Hypr, which extends it on to the global context object always present in every template, which includes `siteContext`, `labels`, etc. 
-             * 
+             * Get the context that will be sent to the template by the MozuView#render method. In the base implementation, this returns an object with a single property, `model`, whose value is the JSON representation of the `model` property of this view. This object is sent to Hypr, which extends it on to the global context object always present in every template, which includes `siteContext`, `labels`, etc.
+             *
              * Override this method to add another base-level variable to be available in this template.
              * @example
              * // base implementation
@@ -122,7 +127,7 @@
                     model: model
                 };
             },
-            
+
             /**
              * Renders the template into the element specified at the `el` property, using the JSON representation of the `model` and whatever else is added by {@link MozuView#getRenderContext}.
              */

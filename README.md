@@ -53,3 +53,4 @@ Use the new [Mozu Theme Generator](http://npmjs.com/package/generator-mozu-theme
 0. Make any necessary corrections based on visual errors or console errors.
 
 0. Repeat the last two steps until your theme is free from errors and regressions.
+

@@ -18,6 +18,10 @@
         {
             name: "modules/common",
             include: [
+                'hips/preload',
+                'hips/io',
+                'hips/helpers',
+                'hips/store',
                 'modules/api',
                 'modules/backbone-mozu',
                 'modules/cart-monitor',

@@ -37,7 +37,7 @@
   <span class="mz-validationmessage" data-mz-validationmessage-for="quantity"></span>
 </div>
   <div class="mz-productdetail-conversion-buttons">
-  <button id="add-to-cart" class="mz-productdetail-addtocart mz-button mz-button-large {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="addToCart" >
+  <button id="add-to-cart" class="mz-productdetail-addtocart mz-button {% if not model.purchasableState.isPurchasable %}is-disabled{% endif %}" {% if not model.purchasableState.isPurchasable %} disabled="disabled" {% endif %} data-mz-action="addToCart" >
       {{ labels.addToCart }}
   </button>
 
@@ -90,14 +90,16 @@
 {% if model.properties and themeSettings.showProductDetailProperties %}
 <div class="mz-productdetail-properties mz-l-stack-section">
   <h4 class="mz-l-stack-sectiontitle">{{ labels.properties }}</h4>
-  <dl class="mz-propertylist mz-propertylist-justified">
+  <dl class="mz-propertylist mz-propertylist-justified zebra-striped">
     {% for property in model.properties %}
-    {% if property.values and not property.isHidden %}
-    <dt>{{property.attributeDetail.name}}</dt>
-    {% for v in property.values %}
-    <dd>{% if v.stringValue %}{{v.stringValue}}{% else %}{{v.value}}{% endif %}</dd>
-    {% endfor %}
-    {% endif %}
+      {% if property.values and not property.isHidden %}
+        <dr class="col-xs-12">
+          <dt>{{property.attributeDetail.name}}</dt>
+          {% for v in property.values %}
+            <dd>{% if v.stringValue %}{{v.stringValue}}{% else %}{{v.value}}{% endif %}</dd>
+          {% endfor %}
+        </dr>
+      {% endif %}
     {% endfor %}
   </dl>
 </div>
@@ -105,29 +107,33 @@
 
 {% if model.measurements and themeSettings.showProductDetailMeasurements and not model.bundledProducts %}
 <div class="mz-productdetail-measurements mz-l-stack-section">
-    <h4 class="mz-l-stack-sectiontitle">{{ labels.measurements }}</h4>
-    <dl class="mz-propertylist mz-propertylist-justified">
+  <h4 class="mz-l-stack-sectiontitle">{{ labels.measurements }}</h4>
+  <dl class="mz-propertylist mz-propertylist-justified zebra-striped">
+    <dr class="col-xs-12">
       <dt>{{ labels.weight }}</dt>
       <dd itemprop="weight" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageWeight.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageWeight.unit }}</span>
-	  </dd>
-	  
-	  <dt>{{ labels.length }}</dt>
+  	  </dd>
+    </dr>
+    <dr class="col-xs-12">
+  	  <dt>{{ labels.length }}</dt>
       <dd itemprop="length" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageLength.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageLength.unit }}</span>
-	  </dd>
-    
-	  <dt>{{ labels.width }}</dt>
+  	  </dd>
+    </dr>
+    <dr class="col-xs-12">
+  	  <dt>{{ labels.width }}</dt>
       <dd itemprop="width" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageWidth.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageWidth.unit }}</span>
-	  </dd>
-    
-	  <dt>{{ labels.height }}</dt>
+  	  </dd>
+    </dr>
+    <dr class="col-xs-12">
+  	  <dt>{{ labels.height }}</dt>
       <dd itemprop="height" itemscope itemtype="http://schema.org/QuantitativeValue">
         <span itemprop="value">{{ model.measurements.packageHeight.value }}</span> <span itemprop="unitCode">{{ model.measurements.packageHeight.unit }}</span>
-	  </dd>
-
-    </dl>
+  	  </dd>
+    </dr>
+  </dl>
 </div>
 
 

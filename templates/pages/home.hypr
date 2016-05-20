@@ -4,8 +4,73 @@
 
 {% block body-tag-classes %} mz-homepage {% endblock body-tag-classes %}
 
+{% block breadcrumbs %}
+{% endblock breadcrumbs %}
+
 {% block body-content %}
-    {% dropzone "home" scope="template" %}
+	{% if pageContext.isEditMode %}
+		<div class="admin-message info-message col-xs-12">
+			{{ labels.currentlyViewing }}: 
+			<b class="visible-xs-inline">{{ labels.mobile }}. </b>
+			<b class="visible-sm-inline">{{ labels.tablet }}. </b>
+			<b class="hidden-xs hidden-sm">{{ labels.desktop }}. </b>
+			{{ labels.toggleDevice }}
+		</div>
+	{% endif %}
+	<div class="slideshow hero col-xs-12">
+    	{% dropzone "slideshow" scope="template" %}
+	</div>
+	<div class="countdown-widget col-xs-12">
+    	{% dropzone "countdown" scope="template" %}
+	</div>
+	<div class="promos-widget-wrapper hero col-xs-12">
+    	{% dropzone "hero" scope="template" %}
+	</div>
+	<div class="promos-widget-wrapper promos-row-1 col-xs-12 no-pad">
+		<div class="promo promo-1 col-xs-12 col-sm-6">
+	    	{% dropzone "promo1" scope="template" %}
+		</div>
+		<div class="promo promo-1 col-xs-12 col-sm-6">
+	    	{% dropzone "promo1-right" scope="template" %}
+		</div>
+	</div>
+	<div class="promos-widget-wrapper promos-row-2 col-xs-12 no-pad">
+		<div class="promo promo-2 col-xs-12 col-sm-6 col-md-4">
+	    	{% dropzone "promo2" scope="template" %}
+		</div>
+		<div class="promo promo-3 col-xs-12 col-sm-6 col-md-4">
+	    	{% dropzone "promo3" scope="template" %}
+		</div>
+		<div class="promo promo-4 col-xs-12 col-md-4">
+	    	{% dropzone "promo4" scope="template" %}
+		</div>
+	</div>
+	<div class="promos-widget-wrapper promos-row-3 col-xs-12 no-pad">
+		<div class="promo promo-5 col-xs-12 col-sm-6">
+	    	{% dropzone "promo5" scope="template" %}
+		</div>
+		<div class="promo promo-6 col-xs-12 col-sm-6">
+	    	{% dropzone "promo6" scope="template" %}
+		</div>
+	</div>
+	<div class="featured-products-widget col-xs-12">
+		<h2>{{ labels.featuredProducts }}</h2>
+    	{% dropzone "featured-products" scope="template" %}
+    </div>
+	<div class="promos-widget-wrapper promos-row-4 col-xs-12 no-pad">
+		<div class="promo promo-7 col-xs-12 col-sm-6 col-md-3">
+	    	{% dropzone "promo7" scope="template" %}
+    	</div>
+		<div class="promo promo-8 col-xs-12 col-sm-6 col-md-3">
+	    	{% dropzone "promo8" scope="template" %}
+		</div>
+		<div class="promo promo-9 col-xs-12 col-sm-6 col-md-3">
+	    	{% dropzone "promo9" scope="template" %}
+    	</div>
+		<div class="promo promo-10 col-xs-12 col-sm-6 col-md-3">
+	    	{% dropzone "promo10" scope="template" %}
+		</div>
+	</div>
 {% endblock body-content %}
 
 {% block body-below-content %}

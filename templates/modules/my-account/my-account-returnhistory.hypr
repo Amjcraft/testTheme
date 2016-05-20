@@ -11,6 +11,6 @@
         {% include "modules/common/page-numbers" %}
     </div>
   {% else %}
-    {{ labels.accountNoReturns }}
+    <div class="info-message">{{ labels.accountNoReturns }}</div>
   {% endif %}
 </div>

@@ -1,4 +1,14 @@
-﻿require(["modules/jquery-mozu", "underscore", "hyprlive", "modules/backbone-mozu", "modules/cart-monitor", "modules/models-product", "modules/views-productimages", "modules/jquery-dateinput-localized"], function ($, _, Hypr, Backbone, CartMonitor, ProductModels, ProductImageViews) {
+﻿require([  
+    "modules/jquery-mozu", 
+    "underscore", 
+    "hyprlive", 
+    "modules/backbone-mozu", 
+    "modules/cart-monitor", 
+    "modules/models-product", 
+    "modules/views-productimages", 
+    "modules/jquery-dateinput-localized",
+    "shim!vendor/imagezoom[jQuery=jquery]"
+], function ($, _, Hypr, Backbone, CartMonitor, ProductModels, ProductImageViews) {
 
     var ProductView = Backbone.MozuView.extend({
         templateName: 'modules/product/product-detail',
@@ -98,12 +108,14 @@
         var productView = new ProductView({
             el: $('#product-detail'),
             model: product,
-            messagesEl: $('[data-mz-message-bar]')
+            messagesEl: $('[data-mz-message-bar]'),
+            name: 'productView'
         });
 
         var productImagesView = new ProductImageViews.ProductPageImagesView({
             el: $('[data-mz-productimages]'),
-            model: product
+            model: product,
+            name: 'productImagesView'
         });
 
         window.productView = productView;

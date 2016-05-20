@@ -1,7 +1,13 @@
-<section class="mz-facetingform">
-    {% if model.hasValueFacets %}
-    <div class="mz-l-sidebaritem">
-        <button class="mz-button mz-facetingform-clearall" data-mz-action="clearFacets" data-mz-url="{% make_url "facet" "clear"  %}">{{ labels.clearAllFilters }}</button>
+{% require_script "modules/faceting-form" %}
+{% if pageContext.isMobile %}
+    <button class="mobile-facets-toggle top-toggle closed icon">
+        <span class="hide-filters hidden">{{ labels.filtersHide }}</span><span class="show-filters">{{ labels.filtersShow }}</span> <i class="icon chevron2-down"></i>
+    </button>
+{% endif %}
+<section class="mz-facetingform col-xs-12 no-pad" {% if pageContext.isMobile %}style="display: none;"{% endif %}>
+    {% if model.hasValueFacets and pageContext.pagination.facetValueFilter %}
+    <div class="mz-l-sidebaritem col-xs-12 no-pad">
+        <button class="mz-button gray mz-facetingform-clearall" data-mz-action="clearFacets" data-mz-url="{% make_url "facet" "clear"  %}">{{ labels.clearAllFilters }}</button>
     </div>
     {% endif %}
     {% for facet in model.facets %}
@@ -15,9 +21,14 @@
     {% endfor %}
     {% for facet in model.facets %}
     {% if facet.values and facet.facetType != "Hierarchy" %}
-    <div class="mz-l-sidebaritem">
-        <h4>{{ facet.label }}</h4>
-        <ul class="mz-facetingform-facet mz-facetingform-facet-hierarchy">
+    <div class="mz-l-sidebaritem col-xs-12 no-pad">
+        {% if pageContext.isMobile %}{% comment %} Toggles closed on mobile {% endcomment %}
+            <a class="accordion-toggle collapsed col-xs-12 no-pad" data-toggle="collapse" data-parent="#footer-collapse" href="#facet_{{ forloop.counter0}}" aria-expanded="false"><h6>{{ facet.label }} <i class="icon chevron2-up"></i></h6></a>
+            <ul id="facet_{{ forloop.counter0}}" class="mz-facetingform-facet mz-facetingform-facet-hierarchy collapse col-xs-12 no-pad" aria-expanded="false">
+        {% else %}{% comment %} Toggles opene on tablet/desktop {% endcomment %}
+            <a class="accordion-toggle col-xs-12 no-pad" data-toggle="collapse" data-parent="#footer-collapse" href="#facet_{{ forloop.counter0}}" aria-expanded="true"><h6>{{ facet.label }} <i class="icon chevron2-up"></i></h6></a>
+            <ul id="facet_{{ forloop.counter0}}" class="mz-facetingform-facet mz-facetingform-facet-hierarchy collapse in col-xs-12 no-pad" aria-expanded="true">
+        {% endif %}
             {% for fval in facet.values %}
                     <li>
                         <input type="checkbox" id="{{facet.field|slugify }}_{{ fval.value|slugify }}" class="mz-facetingform-value" {% if fval.isApplied %}checked="checked"{% endif %} data-mz-facet="{{ facet.field }}" data-mz-facet-value="{{ fval.value }}" data-mz-url="{% make_url "facet" fval %}">
@@ -28,9 +39,14 @@
     </div>
     {% endif %}
     {% endfor %}
-    {% if model.hasValueFacets %}
-    <div class="mz-l-sidebaritem">
-        <button class="mz-button mz-facetingform-clearall" data-mz-action="clearFacets" data-mz-url="{% make_url "facet" "clear"  %}">{{ labels.clearAllFilters }}</button>
+    {% if model.hasValueFacets and pageContext.pagination.facetValueFilter %}
+    <div class="mz-l-sidebaritem col-xs-12 no-pad">
+        <button class="mz-button gray mz-facetingform-clearall" data-mz-action="clearFacets" data-mz-url="{% make_url "facet" "clear"  %}">{{ labels.clearAllFilters }}</button>
     </div>
+    {% endif %}
+    {% if pageContext.isMobile %}
+        <button class="mobile-facets-toggle bottom-toggle icon">
+            <span class="hide-filters">{{ labels.filtersHide }}</span> <i class="icon chevron2-up"></i>
+        </button>
     {% endif %}
 </section>
