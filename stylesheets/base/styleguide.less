@@ -70,19 +70,9 @@ Anything not listed there will be under variables.less
 
 
 @font-icons : 					'icons-font';
-@theme-settings-domainName: 't15242-s21738.sandbox.mozu.com';
-@font-face {
-    font-family: 'icons-font';
-    src:url('https://@{theme-settings-domainName}/resources/fonts/icons-font.eot?oc1ra4');
-    src:url('https://@{theme-settings-domainName}/resources/fonts/icons-font.eot?oc1ra4#iefix') format('embedded-opentype'),
-        url('https://@{theme-settings-domainName}/resources/fonts/icons-font.ttf?oc1ra4') format('truetype'),
-        url('https://@{theme-settings-domainName}/resources/fonts/icons-font.woff?oc1ra4') format('woff'),
-        url('https://@{theme-settings-domainName}/resources/fonts/icons-font.svg?oc1ra4#icons-font') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
+//@theme-settings-domainName: '';
 // @font-face {
 //     font-family: 'icons-font';
 //     src:url('../../resources/fonts/icons-font.eot?ny78um');
@@ -93,9 +83,6 @@ Anything not listed there will be under variables.less
 //     font-weight: normal;
 //     font-style: normal;
 // }
-
-
-
 @icon-alert-info-circle-punched : "\e900";
 @icon-alert-question-circle-punched : "\e901";
 @icon-alert-warning-circle-punched : "\e902";
@@ -1714,6 +1701,7 @@ i {
 	textarea {
 		padding: 9px 15px;
 		min-width: 200px;
+		line-height: normal;
 		color: @color-text;
 		border: 1px solid #bbb;
 		&:focus::-webkit-input-placeholder {color: transparent;} /* Chrome, Safari */
@@ -1866,6 +1854,7 @@ input[type="submit"] {
 	color: #fff;
 	font-family: @font1;
 	font-weight: bold;
+	line-height: normal;
 	cursor: pointer;
 	background-color: @color1;
 	border-radius: @button-border-radius;
@@ -2187,7 +2176,11 @@ table.zebra-striped {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-::-moz-selection,
+
+/* Styles text selection highlight color */
+::-moz-selection {
+  background: @primary;
+}
 ::selection {
   background: @primary;
 }

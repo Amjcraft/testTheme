@@ -12,17 +12,19 @@
 		a {
 			height: 100%;
 			@media only screen and (max-width: 767px) {
-				position: relative;
-				top: 50%;
-				-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
-				-ms-transform: translateY(-50%); /* IE 9 */
-				transform: translateY(-50%);
 				display: block;
 
 			}
 			img {
 				margin-right: auto;
 				margin-left: auto;
+				@media only screen and (max-width: 767px) {
+					position: relative;
+					top: 50%;
+					-webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+					-ms-transform: translateY(-50%); /* IE 9 */
+					transform: translateY(-50%);
+				}
 			}
 		}
 	}

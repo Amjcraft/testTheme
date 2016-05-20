@@ -87,7 +87,7 @@
     			&:hover {
     				color: @header1-icons-hover-color;
     				.mz-cartmonitor {
-	    				background-color: @header1-icons-hover-color;
+	    				background-color: @header1-icons-hover-color !important; /* important for print styling */
 	    				&:before {
 	    					border-right-color: @header1-icons-hover-color;
 	    				}
@@ -105,9 +105,9 @@
 	    			margin-left: 5px;
 	    			padding: 6px 11px;
 	    			vertical-align: middle;
-	    			color: #fff;
+	    			color: #fff !important; /* important for print styling */
 	    			border-radius: 4px;
-		    		background-color: @header1-icons-color;
+		    		background-color: @header1-icons-color !important; /* important for print styling */
 		    		&:before {
 		    			content: '';
 					    position: absolute;

@@ -36,7 +36,7 @@
     <div class="mz-l-paginatedlist col-xs-12">
 {% endif %}
     <div class="mz-l-paginatedlist-header col-xs-12 no-pad">
-        <div data-mz-pagesort class="mz-sortby col-xs-12 col-sm-12 col-lg-4 no-pad-l">
+        <div data-mz-pagesort class="mz-sortby col-xs-12 col-lg-4 no-pad-l">
             {% include "modules/common/page-sort" %}
         </div>
         <div data-mz-pagenumbers class="mz-pagenumbers col-xs-12 col-md-6 col-lg-4 no-pad">

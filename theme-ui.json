@@ -14,11 +14,6 @@
                     "xtype": "mz-input-checkbox",
                     "name": "enablePartialCaching",
                     "fieldLabel": "Enable partial caching using the Hypr {% partial_cache %} tag"
-                },
-                {
-                  "xtype": "mz-input-text",
-                  "name": "domainName",
-                  "fieldLabel": "current domain this theme is hosted on for use in less."
                 }
             ]
         },

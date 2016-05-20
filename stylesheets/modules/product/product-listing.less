@@ -10,8 +10,10 @@
         @productlisting-max-img-size : @theme-settings-listProductThumbSize;
         @productlisting-max-img-size : ~"@{theme-settings-listProductThumbSize}px";
         position: relative;
-        height: @productlisting-max-img-size;
         margin-bottom: 10px;
+        @media only screen and (min-width: 501px) {
+            height: @productlisting-max-img-size;
+        }
         a {
             text-decoration: none;
             @media only screen and (min-width: 501px) {
