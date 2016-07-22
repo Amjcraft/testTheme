@@ -1,4 +1,9 @@
-﻿<div class="mz-productlist {% block module-classes %}{% endblock module-classes %} col-xs-12 no-pad">
+﻿{% if themeSettings.listProductQuickview and pageContext.isDesktop %}
+    {% require_script "modules/quickview" %}
+    <div
+{% endif %}
+
+<div class="mz-productlist {% block module-classes %}{% endblock module-classes %} col-xs-12 no-pad">
     {% if model.items %}
 		{% block featured-products-carousel %}{% endblock featured-products-carousel %}
 	    {% block productlist-list %}

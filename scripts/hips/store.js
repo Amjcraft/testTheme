@@ -118,7 +118,7 @@ define(['hips/io'], function(io) {
     };
     function getVal(keys) {
       if(!keys || typeof keys !== 'string') return 'invalid keys argument';
-      var keys = keys.split('.');
+      keys = keys.split('.');
       var keyLen = keys.length;
       var result;
 
