@@ -193,7 +193,8 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'jshint:develop',
         'copy',
-        'mozutheme:quickcompile'
+        'mozutheme:quickcompile',
+        'compress'
     ]);
     grunt.registerTask('build-production', [
         'jshint:production',

@@ -2,26 +2,9 @@
     <div class="mz-productlisting-image">
         {% if themeSettings.listProductQuickview and pageContext.isDesktop %}
             <!-- Button triggers modal -->
-            <button id="quickview-toggle" class="primary" type="button" data-toggle="modal" data-target="#quickview_{{ model.productCode }}">
+            <button id="quickview-toggle" class="primary" type="button" data-toggle="modal" data-target="{{ model.productCode }}">
                 {{ labels.quickview }}
             </button>
-
-            <!-- Modal -->
-            <div class="quickview modal fade" id="quickview_{{ model.productCode }}" tabindex="-1" role="dialog" aria-labelledby="Product Quickview">
-                <div class="modal-dialog col-xs-12 no-pad" role="document">
-                    <div class="modal-content col-xs-12 no-pad">
-                        <div class="modal-header col-xs-12">
-                            <h2 class="mz-pagetitle" itemprop="name">
-                                {{ model.content.productName }}
-                                <button type="button" class="close no-style" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon exit1-circle gray4"></i></span></button>
-                            </h2>
-                        </div>
-                        <div class="modal-body col-xs-12 no-pad">
-                            {% include "modules/quickview" %}
-                        </div>
-                    </div>
-                </div>
-            </div>
         {% endif %}
         {% block product-image %}
         <a href="{% make_url "product" model %}">
