@@ -7,13 +7,7 @@
     "isMobile": true,
     "isTablet": true,
     "name": "boilerplate",
-    "allowProduction": true,
-    "baseTheme": "https://github.com/mozu/core-theme.git",
-    "baseThemeVersion": {
-      "commit": "c93e710b1bca845f9fcad54bebd7d1be3d4d14d7",
-      "version": "9.2.1"
-    },
-    "baseThemeChannel": "stable"
+    "allowProduction": true
   },
   "editors": [
     {
